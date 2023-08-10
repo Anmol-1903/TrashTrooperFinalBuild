@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
             Target.position = Vector3.Lerp(wetClamp.position, dryClamp.position, controller.value);
             if (Vector3.Distance(transform.position, Target.position) > .1f && Time.timeScale == 1f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, Target.position, current_speed / 200);
+                transform.position = Vector3.MoveTowards(transform.position, Target.position, current_speed * Time.deltaTime);
                 if ((Vector3.Distance(transform.position, dryClamp.position) > .1f) || (Vector3.Distance(transform.position, wetClamp.position) > .1f))
                 {
                     _uncleController.SetBool("isRunning", true);
