@@ -8,6 +8,10 @@ TagManager:
   - DryClamp
   - CamLeft
   - CamRight
+  - SpawnLocation
+  - gloves
+  - timeslower
+  - Bullet
   layers:
   - Default
   - TransparentFX

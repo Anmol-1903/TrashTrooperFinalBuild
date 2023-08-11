@@ -31,20 +31,29 @@ public class catch_system : MonoBehaviour
     [SerializeField] TextMeshProUGUI capacity_txt;
     [SerializeField] TextMeshProUGUI picker_txt;
     [Header("------GameObjects------")]
-    [SerializeField]Transform wetDustBinTrans;
+    [SerializeField] Transform wetDustBinTrans;
     [SerializeField] Transform dryDustBinTrans;
     [SerializeField] GameObject playerTrans;
 
 
     private void Awake()
     {
+        playerTrans = GameObject.FindGameObjectWithTag("Player");
+        wetDustBinTrans = GameObject.FindGameObjectWithTag("WetClamp").transform;
+        dryDustBinTrans = GameObject.FindGameObjectWithTag("DryClamp").transform;
         playerMovement = playerTrans.GetComponent<PlayerMove>();
     }
     private void Start()
     {
-        picker_txt.enabled = false;
-        capacity_txt.enabled = false;
-        if(PlayerPrefs.GetInt("SelectedPowerUp") == 1)
+        if (picker_txt != null)
+        {
+            picker_txt.enabled = false;
+        }
+        if (capacity_txt != null)
+        {
+            capacity_txt.enabled = false;
+        }
+        if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
         {
             capacity = upgraded_Capacity;
         }
@@ -60,22 +69,26 @@ public class catch_system : MonoBehaviour
         {
             if (wetwasteInventory)
             {
-            Debug.Log("Collected");
                 wetCollect = wetCollect + capacity - current_capacity;
-                wetWasteText.text = "Wet: " + (wetCollect).ToString();
                 wetwasteInventory = false;
                 current_capacity = capacity;
+                if (wetWasteText != null)
+                {
+                    wetWasteText.text = "Wet: " + (wetCollect).ToString();
+                }
             }
         }
         else if (Vector3.Distance(playerTrans.transform.position, dryDustBinTrans.position) < distance && playerMovement.isRighrunning)
         {
             if (drywasteInventory)
             {
-            Debug.Log("Collected");
                 dryCollect += capacity - current_capacity;
-                dryWasteText.text = "Dry: " + (dryCollect).ToString();
                 drywasteInventory = false;
                 current_capacity = capacity;
+                if (dryWasteText != null)
+                {
+                    dryWasteText.text = "Dry: " + (dryCollect).ToString();
+                }
             }
         }
         this.glovePower = playerMovement.glovePower;
@@ -106,9 +119,9 @@ public class catch_system : MonoBehaviour
     }
     public void CatchTrash()
     {
-        if (wetWasteInTrigger )
+        if (wetWasteInTrigger)
         {
-            if(current_capacity > 0 && !drywasteInventory)
+            if (current_capacity > 0 && !drywasteInventory)
             {
                 Destroy(wetWaste);
                 wetWasteInTrigger = false;
@@ -121,7 +134,10 @@ public class catch_system : MonoBehaviour
                         current_capacity = capacity;
                         wetwasteInventory = false;
                         wetCollect++;
-                        wetWasteText.text = "Wet: " + (wetCollect).ToString();
+                        if (wetWasteText != null)
+                        {
+                            wetWasteText.text = "Wet: " + (wetCollect).ToString();
+                        }
                     }
                 }
             }
@@ -141,7 +157,7 @@ public class catch_system : MonoBehaviour
                 Destroy(dryWaste);
                 dryWasteInTrigger = false;
                 current_capacity--;
-                drywasteInventory= true;
+                drywasteInventory = true;
                 if (glovePower)
                 {
                     if (drywasteInventory)
@@ -149,17 +165,23 @@ public class catch_system : MonoBehaviour
                         current_capacity = capacity;
                         drywasteInventory = false;
                         dryCollect++;
-                        dryWasteText.text = "Dry: " + (dryCollect).ToString();
+                        if (dryWasteText != null)
+                        {
+                            dryWasteText.text = "Dry: " + (dryCollect).ToString();
+                        }
                     }
                 }
             }
-            else if(current_capacity > 0 && wetwasteInventory)
+            else if (current_capacity > 0 && wetwasteInventory)
             {
                 StartCoroutine(waiting());
             }
             else
             {
-                capacity_txt.enabled = true;
+                if (capacity_txt != null)
+                {
+                    capacity_txt.enabled = true;
+                }
             }
         }
     }
@@ -169,6 +191,4 @@ public class catch_system : MonoBehaviour
         yield return new WaitForSeconds(3f);
         picker_txt.enabled = false;
     }
-    
-    
 }
