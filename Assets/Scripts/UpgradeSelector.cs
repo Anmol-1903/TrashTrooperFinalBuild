@@ -10,6 +10,14 @@ public class UpgradeSelector : MonoBehaviour
     {
         for (int i = 0; i < _upgradeToggles.Length; i++)
         {
+            if (PlayerPrefs.GetInt("LevelsPassed") >= _upgradeToggles[i]._levelNeededToBeCleared)
+            {
+                _upgradeToggles[i].isAvailable = true;
+            }
+            else
+            {
+                _upgradeToggles[i].isAvailable = false;
+            }
             _upgradeToggles[i]._upgrade.interactable = _upgradeToggles[i].isAvailable;
             if(PlayerPrefs.GetInt("SelectedPowerUp") == i + 1)
             {
@@ -44,4 +52,5 @@ public class Upgrades
 {
     public Toggle _upgrade;
     public bool isAvailable;
+    public int _levelNeededToBeCleared;
 }

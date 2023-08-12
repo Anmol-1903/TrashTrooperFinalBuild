@@ -12,6 +12,8 @@ TagManager:
   - gloves
   - timeslower
   - Bullet
+  - WetWaste
+  - DryWaste
   layers:
   - Default
   - TransparentFX

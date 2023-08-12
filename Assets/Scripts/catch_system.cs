@@ -147,7 +147,10 @@ public class catch_system : MonoBehaviour
             }
             else
             {
-                capacity_txt.enabled = true;
+                if (capacity_txt != null)
+                {
+                    capacity_txt.enabled = true;
+                }
             }
         }
         else if (dryWasteInTrigger)
@@ -187,8 +190,11 @@ public class catch_system : MonoBehaviour
     }
     IEnumerator waiting()
     {
-        picker_txt.enabled = true;
-        yield return new WaitForSeconds(3f);
-        picker_txt.enabled = false;
+        if (picker_txt != null)
+        {
+            picker_txt.enabled = true;
+            yield return new WaitForSeconds(3f);
+            picker_txt.enabled = false;
+        }
     }
 }

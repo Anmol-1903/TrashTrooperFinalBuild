@@ -4,6 +4,8 @@ public class TrashSpawner : MonoBehaviour
     [SerializeField] GameObject[] _spawnPositions;
     [SerializeField] Transform _selectedSpawnPosition;
 
+    [SerializeField] Transform _container;
+
     [SerializeField] float[] _timeBetweenTrashSpawn;
     float _selectedTimeBetweenTrashSpawn;
 
@@ -35,7 +37,7 @@ public class TrashSpawner : MonoBehaviour
         {
             _trashToSpawn = _wetTrashPrefabs[Random.Range(0, _wetTrashPrefabs.Length)];
         }
-        Instantiate(_trashToSpawn, _selectedSpawnPosition.position, Quaternion.identity);
+        Instantiate(_trashToSpawn, _selectedSpawnPosition.position, Quaternion.identity, _container);
         _selectedTimeBetweenTrashSpawn = _timeBetweenTrashSpawn[Random.Range(0, _timeBetweenTrashSpawn.Length)];
         Invoke("SpawnTrash", _selectedTimeBetweenTrashSpawn);
     }

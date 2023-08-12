@@ -5199,8 +5199,10 @@ MonoBehaviour:
   _upgradeToggles:
   - _upgrade: {fileID: 749080739}
     isAvailable: 0
+    _levelNeededToBeCleared: 1
   - _upgrade: {fileID: 373185004}
     isAvailable: 0
+    _levelNeededToBeCleared: 2
   allOff: 0
   _upgradeNumber: 0
 --- !u!114 &1267567564

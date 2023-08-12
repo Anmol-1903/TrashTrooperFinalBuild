@@ -4,22 +4,22 @@ public class TrashDeSpawner : MonoBehaviour
 {
     [SerializeField] Slider _cleanlinessMeter;
     [SerializeField] int _maximumValue;
-    float _apparentValue;
+    public float _cleanliness;
     private void Start()
     {
         _cleanlinessMeter.maxValue = _maximumValue;
-        _apparentValue = _maximumValue;
-        _cleanlinessMeter.value = _apparentValue;
+        _cleanliness = _maximumValue;
+        _cleanlinessMeter.value = _cleanliness;
     }
     private void Update()
     {
-        _cleanlinessMeter.value = Mathf.Lerp(_cleanlinessMeter.value, _apparentValue, Time.deltaTime);
+        _cleanlinessMeter.value = Mathf.Lerp(_cleanlinessMeter.value, _cleanliness, Time.deltaTime);
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("WetWaste") || other.CompareTag("DryWaste"))
+        if (other.CompareTag("WetWaste") || other.CompareTag("DryWaste"))
         {
-            _apparentValue -= other.GetComponent<Trash>()._dirtiness;
+            _cleanliness -= other.GetComponent<Trash>()._dirtiness;
             Destroy(other.gameObject);
         }
     }

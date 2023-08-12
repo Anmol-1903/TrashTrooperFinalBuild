@@ -26,14 +26,19 @@ public class PauseMenu : MonoBehaviour
         _pauseMenu.SetActive(true);
         _HUD.SetActive(false);
     }
-    public void GoToScene(int sceneIndex)
+    public void GoToMainMenu()
     {
-        _pauseMenu.SetActive(false);
-        _loadingScreen.SetActive(true);
-        StartCoroutine(LoadLevel(sceneIndex));
+        StartCoroutine(LoadLevel(0));
+    }
+    public void RestartLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
     IEnumerator LoadLevel(int _levelNumber)
     {
+        _pauseMenu.SetActive(false);
+        _HUD.SetActive(false);
+        _loadingScreen.SetActive(true);
         AsyncOperation _operation = SceneManager.LoadSceneAsync(_levelNumber);
         while (!_operation.isDone)
         {
