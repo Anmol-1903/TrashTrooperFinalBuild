@@ -16,6 +16,14 @@ public class Trash : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player");
         playerMove = _player.GetComponent<PlayerMove>();
     }
+    private void Start()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if(rb != null)
+        {
+            rb.AddTorque(Random.Range(-100,100), Random.Range(-100, 100), Random.Range(-100, 100));
+        }
+    }
     private void Update()
     {
         if (playerMove.timeSlowerPower)

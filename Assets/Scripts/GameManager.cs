@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("LevelsPassed"));
         if (_counter <= 0)
         {
             if (Time.timeScale > 0.25f)
