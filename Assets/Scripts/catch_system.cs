@@ -19,7 +19,12 @@ public class catch_system : MonoBehaviour
     GameObject wetWaste;
     GameObject dryWaste;
 
+    [SerializeField] Color defaultColor;
+    [SerializeField] Color wetWasteColor;
+    [SerializeField] Color dryWasteColor;
+
     //SerializeField variables
+    [SerializeField] Image _bg;
     [SerializeField] Slider controller;
     [SerializeField] int default_Capacity;
     [SerializeField] int upgraded_Capacity;
@@ -30,6 +35,7 @@ public class catch_system : MonoBehaviour
     [SerializeField] TextMeshProUGUI wetWasteText;
     [SerializeField] TextMeshProUGUI capacity_txt;
     [SerializeField] TextMeshProUGUI picker_txt;
+    [SerializeField] TextMeshProUGUI _inventoryText;
     [Header("------GameObjects------")]
     [SerializeField] Transform wetDustBinTrans;
     [SerializeField] Transform dryDustBinTrans;
@@ -62,6 +68,23 @@ public class catch_system : MonoBehaviour
             capacity = default_Capacity;
         }
         current_capacity = capacity;
+    }
+    private void LateUpdate()
+    {
+        _inventoryText.text = (capacity - current_capacity).ToString() + "/" + (capacity).ToString();
+        if (wetwasteInventory)
+        {
+            _bg.color = Color.Lerp(_bg.color, wetWasteColor, Time.deltaTime);
+        }
+        else if (drywasteInventory)
+        {
+            _bg.color = Color.Lerp(_bg.color, dryWasteColor, Time.deltaTime);
+        }
+        else
+        {
+            _bg.color = Color.Lerp(_bg.color, defaultColor, Time.deltaTime);
+        }
+        
     }
     private void Update()
     {

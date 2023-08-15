@@ -15,21 +15,29 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] Animator _uncleController;
 
+    [SerializeField] GameObject Gloves;
+    [SerializeField] GameObject Hat;
+
     [SerializeField] GameObject ButtonInput;
     [SerializeField] GameObject SliderInput;
-
 
     float current_speed;
     Transform wetClamp;
     Transform dryClamp;
-    Transform gloveTrans;
     public bool glovePower;
     public bool timeSlowerPower;
 
     public bool isRighrunning;
     public bool isLeftrunning;
+    private void Awake()
+    {
+        Gloves = GameObject.FindGameObjectWithTag("Gloves");
+        Hat = GameObject.FindGameObjectWithTag("Cap");
+    }
     private void Start()
     {
+        Gloves.SetActive(false);
+        Hat.SetActive(false);
         Time.timeScale = 1f;
     }
     private void OnEnable()
@@ -137,37 +145,34 @@ public class PlayerMove : MonoBehaviour
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, wetClamp.position.x, dryClamp.position.x), 0, 0);
     }
-   /* private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("gloves"))
         {
-
             StartCoroutine(gloveTimer());
-            gloves_Move = other.gameObject.GetComponent<gloves_move>();
-            gloveTrans = other.gameObject.GetComponent<Transform>();
-            gloveTrans.parent = playerTrans.transform;
-            gloveTrans.position = playerTrans.transform.position + offset;
-            gloves_Move.speed = 0;
-            Debug.Log(other.gameObject.name);
+            Gloves.SetActive(true);
+            Hat.SetActive(true);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("timeslower"))
         {
             StartCoroutine(TimeSlowerTimer());
             Destroy(other.gameObject);
         }
-    }*/
+    }
     IEnumerator gloveTimer()
     {
         glovePower = true;
         yield return new WaitForSeconds(glovePower_timer);
         glovePower = false;
-        Destroy(gloveTrans.gameObject);
+        Gloves.SetActive(false);
     }
     IEnumerator TimeSlowerTimer()
     {
         timeSlowerPower = true;
         yield return new WaitForSeconds(TimeSlowertimer);
         timeSlowerPower = false;
+        Hat.SetActive(false);
     }
     void Rotate()
     {
