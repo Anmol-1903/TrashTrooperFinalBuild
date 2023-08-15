@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2394718265675352702}
   - component: {fileID: -9105826944078552320}
   - component: {fileID: -5235334338457097064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Apple_Rotten_GEO
   m_TagString: WetWaste
   m_Icon: {fileID: 0}
@@ -65,6 +65,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e136fb70da46d744da0b464ac1edcb0f, type: 2}
+  - {fileID: 2100000, guid: 24609f1029c6a5b49a3b8f3b9b839c93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

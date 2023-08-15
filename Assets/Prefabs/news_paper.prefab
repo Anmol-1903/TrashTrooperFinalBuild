@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5031290673590774056}
   - component: {fileID: 4780795977535928819}
   - component: {fileID: -1089834506690176251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: news_paper
   m_TagString: DryWaste
   m_Icon: {fileID: 0}
@@ -65,6 +65,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e136fb70da46d744da0b464ac1edcb0f, type: 2}
+  - {fileID: 2100000, guid: e1658c4ad0312574da6910d344b2fe29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
