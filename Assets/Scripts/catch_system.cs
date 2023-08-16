@@ -8,8 +8,8 @@ public class catch_system : MonoBehaviour
     //Private variables
     bool wetWasteInTrigger;
     bool dryWasteInTrigger;
-    bool drywasteInventory;
-    bool wetwasteInventory;
+    [SerializeField] bool drywasteInventory;
+    [SerializeField] bool wetwasteInventory;
     int wetCollect;
     int dryCollect;
     public int current_capacity;

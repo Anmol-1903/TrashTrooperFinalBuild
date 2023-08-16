@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Trash : MonoBehaviour
 {
     [Tooltip("How much this trash will bring the cleanliness bar down")]
@@ -34,14 +35,10 @@ public class Trash : MonoBehaviour
         {
             _speed = normalSpeed;
         }
-        transform.position += new Vector3(0f, -_speed * Time.deltaTime, 0f);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Tutorial"))
+        if(SceneManager.GetActiveScene().name.Equals("Tutorial") && transform.position.y <= 1)
         {
-            normalSpeed = 0;
-            other.gameObject.SetActive(false);
+            return;
         }
+        transform.position += new Vector3(0f, -_speed * Time.deltaTime, 0f);
     }
 }
