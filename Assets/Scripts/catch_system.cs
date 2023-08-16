@@ -71,18 +71,24 @@ public class catch_system : MonoBehaviour
     }
     private void LateUpdate()
     {
-        _inventoryText.text = (capacity - current_capacity).ToString() + "/" + (capacity).ToString();
-        if (wetwasteInventory)
+        if (_inventoryText != null)
         {
-            _bg.color = Color.Lerp(_bg.color, wetWasteColor, Time.deltaTime);
+            _inventoryText.text = (capacity - current_capacity).ToString() + "/" + (capacity).ToString();
         }
-        else if (drywasteInventory)
+        if (_bg != null)
         {
-            _bg.color = Color.Lerp(_bg.color, dryWasteColor, Time.deltaTime);
-        }
-        else
-        {
-            _bg.color = Color.Lerp(_bg.color, defaultColor, Time.deltaTime);
+            if (wetwasteInventory)
+            {
+                _bg.color = Color.Lerp(_bg.color, wetWasteColor, Time.deltaTime);
+            }
+            else if (drywasteInventory)
+            {
+                _bg.color = Color.Lerp(_bg.color, dryWasteColor, Time.deltaTime);
+            }
+            else
+            {
+                _bg.color = Color.Lerp(_bg.color, defaultColor, Time.deltaTime);
+            }
         }
         
     }

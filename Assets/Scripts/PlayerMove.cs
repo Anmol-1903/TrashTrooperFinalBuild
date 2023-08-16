@@ -145,7 +145,7 @@ public class PlayerMove : MonoBehaviour
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, wetClamp.position.x, dryClamp.position.x), 0, 0);
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("gloves"))
         {

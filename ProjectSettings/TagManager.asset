@@ -16,6 +16,9 @@ TagManager:
   - DryWaste
   - Cap
   - Gloves
+  - Tutorial
+  - Trash1Collected
+  - Trash2Collected
   layers:
   - Default
   - TransparentFX

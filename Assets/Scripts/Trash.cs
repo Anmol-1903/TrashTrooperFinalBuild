@@ -36,4 +36,12 @@ public class Trash : MonoBehaviour
         }
         transform.position += new Vector3(0f, -_speed * Time.deltaTime, 0f);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Tutorial"))
+        {
+            normalSpeed = 0;
+            other.gameObject.SetActive(false);
+        }
+    }
 }
