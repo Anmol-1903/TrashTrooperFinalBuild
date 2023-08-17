@@ -18,39 +18,58 @@ public class MainMenu : MonoBehaviour
     }
     public void Main()
     {
-        TurnOffAllGameObjects();
-        _mainMenu.SetActive(true);
+        if (_mainMenu != null)
+        {
+            TurnOffAllGameObjects();
+            _mainMenu.SetActive(true);
+        }
     }
     public void Play()
     {
-        TurnOffAllGameObjects();
-        _levelSelector.SetActive(true);
+        if (_levelSelector != null)
+        {
+            TurnOffAllGameObjects();
+            _levelSelector.SetActive(true);
+        }
     }
     public void Settings()
     {
-        TurnOffAllGameObjects();
-        _settings.SetActive(true);
+        if (_settings != null)
+        {
+            TurnOffAllGameObjects();
+            _settings.SetActive(true);
+        }
     }
     public void Credits()
     {
-        TurnOffAllGameObjects();
-        _credits.SetActive(true);
+        if (_credits != null)
+        {
+            TurnOffAllGameObjects();
+            _credits.SetActive(true);
+        }
     }
     public void Quit()
     {
-        TurnOffAllGameObjects();
-        _quit.SetActive(true);
+        if (_quit != null)
+        {
+            TurnOffAllGameObjects();
+            _quit.SetActive(true);
+        }
     }
     public void Upgrades()
     {
-        TurnOffAllGameObjects();
-        _upgrades.SetActive(true);
+        if (_upgrades != null)
+        {
+            TurnOffAllGameObjects();
+            _upgrades.SetActive(true);
+        }
     }
 
     public void LoadingScreen(int _levelNumber)
     {
         TurnOffAllGameObjects();
-        _asynLoader.SetActive(true);
+        if (_asynLoader != null)
+            _asynLoader.SetActive(true);
         StartCoroutine(LoadLevel(_levelNumber));
     }
     public void QuitGame()
@@ -59,18 +78,25 @@ public class MainMenu : MonoBehaviour
     }
     void TurnOffAllGameObjects()
     {
-        _mainMenu.SetActive(false);
-        _asynLoader.SetActive(false);
-        _levelSelector.SetActive(false);
-        _upgrades.SetActive(false);
-        _settings.SetActive(false);
-        _credits.SetActive(false);
-        _quit.SetActive(false);
+        if (_mainMenu != null)
+            _mainMenu.SetActive(false);
+        if (_asynLoader != null)
+            _asynLoader.SetActive(false);
+        if (_levelSelector != null)
+            _levelSelector.SetActive(false);
+        if (_upgrades != null)
+            _upgrades.SetActive(false);
+        if (_settings != null)
+            _settings.SetActive(false);
+        if (_credits != null)
+            _credits.SetActive(false);
+        if (_quit != null)
+            _quit.SetActive(false);
     }
     IEnumerator LoadLevel(int _levelNumber)
     {
         AsyncOperation _operation = SceneManager.LoadSceneAsync(_levelNumber);
-        while (!_operation.isDone)
+        while (!_operation.isDone && _progressBar != null)
         {
             float _progress = Mathf.Clamp01(_operation.progress / .9f);
             _progressBar.value = _progress;
