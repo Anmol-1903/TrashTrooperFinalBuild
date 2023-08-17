@@ -7,6 +7,7 @@ public class Tutorial_Manager : MonoBehaviour
     [SerializeField] GameObject _hello;
     [SerializeField] Transform _player, _dustbin1, _dustbin2;
     [SerializeField] GameObject canvas1, canvas2, canvas3;
+    [SerializeField] GameObject tutorialEnd;
     private void Start()
     {
         DeactivateAllObjects();
@@ -39,6 +40,12 @@ public class Tutorial_Manager : MonoBehaviour
         if (Vector3.Distance(_player.position, _dustbin2.position) < 2f)
         {
             Submitted2ndTrash();
+        }
+        if(Trash3 == null && Vector3.Distance(_player.position, _dustbin2.position) < 2f)
+        {
+            tutorialEnd.SetActive(true);
+            gameObject.SetActive(false);
+            Debug.Log("Hi");
         }
     }
     public void HelloTrooper()

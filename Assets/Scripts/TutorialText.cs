@@ -41,7 +41,6 @@ public class TutorialText : MonoBehaviour
         else
         {
             TM = GetComponentInParent<Tutorial_Manager>();
-            Debug.Log("BEGINS");
             TM.HelloTrooper();
         }
     }
