@@ -54,7 +54,7 @@ public class PlayerMove : MonoBehaviour
             SliderInput.SetActive(false);
             ButtonInput.SetActive(true);
         }
-        _uncleController = GetComponent<Animator>();
+        _uncleController = GetComponentInChildren<Animator>();
         if(PlayerPrefs.GetInt("SelectedPowerUp") == 2)
         {
             current_speed = fastSpeed;
@@ -153,7 +153,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Clamper()
     {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, wetClamp.position.x, dryClamp.position.x), 0, 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, wetClamp.position.x, dryClamp.position.x), transform.position.y, 0);
         if(Vector3.Distance(playerTrans.transform.position, wetClamp.position) < .25f || Vector3.Distance(playerTrans.transform.position, dryClamp.position) < .25f)
         {
             transform.eulerAngles = Vector3.zero;
