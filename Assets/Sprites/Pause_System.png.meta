@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b691cc3a516d5747a7b2cb752abbf31
+guid: 2fe66ed78eaa96945b180047939248da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,106 +141,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_Menu_Key_0
+      name: Pause_System_0
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 740
-        width: 563
-        height: 664
+        x: 187
+        y: 1183
+        width: 627
+        height: 627
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22917d289bb8813499577f66829f4aa9
-      internalID: 1399367182
+      spriteID: 9f12a4f0d88831f44ac9d554e626c588
+      internalID: -1638192814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_2
+      name: Pause_System_1
       rect:
         serializedVersion: 2
-        x: 274
-        y: 105
-        width: 458
-        height: 540
+        x: 1182
+        y: 1185
+        width: 627
+        height: 627
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d797373278cbcc40993f1782c534a47
-      internalID: -1218940504
+      spriteID: fde6893dfbe5ea344a798c5965493aeb
+      internalID: 1578725806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_3
+      name: Pause_System_2
       rect:
         serializedVersion: 2
-        x: 1075
-        y: 105
-        width: 458
-        height: 540
+        x: 185
+        y: 195
+        width: 627
+        height: 627
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 550507f569648704c877968e50c5782a
-      internalID: 502615598
+      spriteID: 6be31bbdffb8fad4db2bf6227885a6b8
+      internalID: 1635140791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_4
+      name: Pause_System_3
       rect:
         serializedVersion: 2
-        x: 1805
-        y: 105
-        width: 458
-        height: 540
+        x: 1182
+        y: 195
+        width: 627
+        height: 627
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcb2db039f95dd46a8cfccf9f9a92d3
-      internalID: -791305303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Menu_Key_1
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 105
-        width: 458
-        height: 540
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2797ea0191a764c8b2da5912042834
-      internalID: 813375354
+      spriteID: eb2f1fed6c49df44f96f19a57c8b9413
+      internalID: 1215410740
       vertices: []
       indices: 
       edges: []
@@ -248,7 +227,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: a804d3d7f2992f649b5ca23a9548beb4
     internalID: 0
     vertices: []
     indices: 
@@ -256,11 +235,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Main_Menu_Key_0: 1399367182
-      Main_Menu_Key_1: 813375354
-      Main_Menu_Key_2: -1218940504
-      Main_Menu_Key_3: 502615598
-      Main_Menu_Key_4: -791305303
+      Pause_System_0: -1638192814
+      Pause_System_1: 1578725806
+      Pause_System_2: 1635140791
+      Pause_System_3: 1215410740
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b691cc3a516d5747a7b2cb752abbf31
+guid: 75a9f385e857df940a3c6d8e1359019c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main_Menu_Key_0
+      name: Main_Menu_Final_Touvh_copy_0
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 740
-        width: 563
-        height: 664
+        x: 1025
+        y: 780
+        width: 564
+        height: 640
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22917d289bb8813499577f66829f4aa9
-      internalID: 1399367182
+      spriteID: 9b7dff1ec49d29b4784e4f69d9f1994e
+      internalID: 1084306423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_2
+      name: Main_Menu_Final_Touvh_copy_1
       rect:
         serializedVersion: 2
         x: 274
-        y: 105
+        y: 135
         width: 458
-        height: 540
+        height: 526
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d797373278cbcc40993f1782c534a47
-      internalID: -1218940504
+      spriteID: f088194ad71dd5d49ab106dd24c60f80
+      internalID: -1472574847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_3
+      name: Main_Menu_Final_Touvh_copy_2
       rect:
         serializedVersion: 2
         x: 1075
-        y: 105
+        y: 135
         width: 458
-        height: 540
+        height: 526
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 550507f569648704c877968e50c5782a
-      internalID: 502615598
+      spriteID: 6eb0a6a85ca09fa44a66a5c422282372
+      internalID: -406506899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main_Menu_Key_4
+      name: Main_Menu_Final_Touvh_copy_3
       rect:
         serializedVersion: 2
-        x: 1805
-        y: 105
+        x: 1806
+        y: 131
         width: 458
-        height: 540
+        height: 526
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,29 +218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcb2db039f95dd46a8cfccf9f9a92d3
-      internalID: -791305303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Main_Menu_Key_1
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 105
-        width: 458
-        height: 540
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2797ea0191a764c8b2da5912042834
-      internalID: 813375354
+      spriteID: e01583548e6e0ab47971daf85c570d88
+      internalID: 765665880
       vertices: []
       indices: 
       edges: []
@@ -248,7 +227,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: eaf339b4e00a3ea4d855bacfabe6237a
     internalID: 0
     vertices: []
     indices: 
@@ -256,11 +235,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Main_Menu_Key_0: 1399367182
-      Main_Menu_Key_1: 813375354
-      Main_Menu_Key_2: -1218940504
-      Main_Menu_Key_3: 502615598
-      Main_Menu_Key_4: -791305303
+      Main_Menu_Final_Touvh_copy_0: 1084306423
+      Main_Menu_Final_Touvh_copy_1: -1472574847
+      Main_Menu_Final_Touvh_copy_2: -406506899
+      Main_Menu_Final_Touvh_copy_3: 765665880
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

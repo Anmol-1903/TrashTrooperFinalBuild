@@ -14,18 +14,15 @@ public class SettingsMenu : MonoBehaviour
 
     [SerializeField] Slider _musicSlider;
     [SerializeField] Slider _audioSlider;
-    [SerializeField] TextMeshProUGUI _text;
 
     public void OnEnable()
     {
         if(PlayerPrefs.GetInt("controllerType") == 1)
         {
-            _text.text = "Slider";
             controller.isOn = true;
         }
         else if(PlayerPrefs.GetInt("controllerType") == 0)
         {
-            _text.text = "Button";
             controller.isOn = false;
         }
         _musicSlider.maxValue = sliderDivision;
