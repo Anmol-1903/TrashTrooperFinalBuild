@@ -42,11 +42,16 @@ public class catch_system : MonoBehaviour
     [SerializeField] GameObject playerTrans;
 
 
+    [SerializeField] Animator _dryDustbinLid;
+    [SerializeField] Animator _wetDustbinLid;
+
     private void Awake()
     {
         playerTrans = GameObject.FindGameObjectWithTag("Player");
         wetDustBinTrans = GameObject.FindGameObjectWithTag("WetClamp").transform;
         dryDustBinTrans = GameObject.FindGameObjectWithTag("DryClamp").transform;
+        _wetDustbinLid = GameObject.FindGameObjectWithTag("WetClamp").GetComponentInParent<Animator>();
+        _dryDustbinLid = GameObject.FindGameObjectWithTag("DryClamp").GetComponentInParent<Animator>();
         playerMovement = playerTrans.GetComponent<PlayerMove>();
     }
     private void Start()
@@ -68,6 +73,7 @@ public class catch_system : MonoBehaviour
             capacity = default_Capacity;
         }
         current_capacity = capacity;
+        this.glovePower = playerMovement.glovePower;
     }
     private void LateUpdate()
     {
@@ -90,37 +96,51 @@ public class catch_system : MonoBehaviour
                 _bg.color = Color.Lerp(_bg.color, defaultColor, Time.deltaTime);
             }
         }
-        
     }
     private void Update()
     {
-        if (Vector3.Distance(playerTrans.transform.position, wetDustBinTrans.position) < distance && playerMovement.isLeftrunning)
+        if (Vector3.Distance(playerTrans.transform.position, wetDustBinTrans.position) < distance)
         {
-            if (wetwasteInventory)
+            _wetDustbinLid.SetBool("Open", true);
+            if (playerMovement.isLeftrunning)
             {
-                wetCollect = wetCollect + capacity - current_capacity;
-                wetwasteInventory = false;
-                current_capacity = capacity;
-                if (wetWasteText != null)
+                if (wetwasteInventory)
                 {
-                    wetWasteText.text = "Wet: " + (wetCollect).ToString();
+                    wetCollect = wetCollect + capacity - current_capacity;
+                    wetwasteInventory = false;
+                    current_capacity = capacity;
+                    if (wetWasteText != null)
+                    {
+                        wetWasteText.text = "Wet: " + (wetCollect).ToString();
+                    }
                 }
             }
         }
-        else if (Vector3.Distance(playerTrans.transform.position, dryDustBinTrans.position) < distance && playerMovement.isRighrunning)
+        else
         {
-            if (drywasteInventory)
+            _wetDustbinLid.SetBool("Open", false);
+        }
+        if (Vector3.Distance(playerTrans.transform.position, dryDustBinTrans.position) < distance)
+        {
+            _dryDustbinLid.SetBool("Open", true);
+            if (playerMovement.isRighrunning)
             {
-                dryCollect += capacity - current_capacity;
-                drywasteInventory = false;
-                current_capacity = capacity;
-                if (dryWasteText != null)
+                if (drywasteInventory)
                 {
-                    dryWasteText.text = "Dry: " + (dryCollect).ToString();
+                    dryCollect += capacity - current_capacity;
+                    drywasteInventory = false;
+                    current_capacity = capacity;
+                    if (dryWasteText != null)
+                    {
+                        dryWasteText.text = "Dry: " + (dryCollect).ToString();
+                    }
                 }
             }
         }
-        this.glovePower = playerMovement.glovePower;
+        else
+        {
+            _dryDustbinLid.SetBool("Open", false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

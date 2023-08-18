@@ -84,22 +84,29 @@ public class PlayerMove : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("controllerType") == 1)
         {
-            if (controller.value > 0.5f)
+            if (controller != null)
             {
-                transform.position += new Vector3(current_speed * Time.deltaTime, 0, 0);
-                transform.eulerAngles = new Vector3(0, -90f, 0);
-                _uncleController.SetBool("isRunning", true);
-            }
-            else if (controller.value < -0.5f)
-            {
-                transform.position += new Vector3(-current_speed * Time.deltaTime, 0, 0);
-                transform.eulerAngles = new Vector3(0, 90f, 0);
-                _uncleController.SetBool("isRunning", true);
+                if (controller.value > 0.5f)
+                {
+                    transform.position += new Vector3(current_speed * Time.deltaTime, 0, 0);
+                    transform.eulerAngles = new Vector3(0, -90f, 0);
+                    _uncleController.SetBool("isRunning", true);
+                }
+                else if (controller.value < -0.5f)
+                {
+                    transform.position += new Vector3(-current_speed * Time.deltaTime, 0, 0);
+                    transform.eulerAngles = new Vector3(0, 90f, 0);
+                    _uncleController.SetBool("isRunning", true);
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    _uncleController.SetBool("isRunning", false);
+                }
             }
             else
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                _uncleController.SetBool("isRunning", false);
+                PlayerMovement();
             }
         }
         else if (PlayerPrefs.GetInt("controllerType") == 0)
@@ -120,7 +127,7 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.eulerAngles = Vector3.zero;
                 _uncleController.SetBool("isRunning", false);
             }
         }
@@ -134,7 +141,7 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.eulerAngles = Vector3.zero;
                 _uncleController.SetBool("isRunning", false);
             }
         }
@@ -147,6 +154,11 @@ public class PlayerMove : MonoBehaviour
     void Clamper()
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, wetClamp.position.x, dryClamp.position.x), 0, 0);
+        if(Vector3.Distance(playerTrans.transform.position, wetClamp.position) < .25f || Vector3.Distance(playerTrans.transform.position, dryClamp.position) < .25f)
+        {
+            transform.eulerAngles = Vector3.zero;
+            _uncleController.SetBool("isRunning", false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -179,6 +191,9 @@ public class PlayerMove : MonoBehaviour
     }
     public void SliderPointerUp()
     {
-        controller.value = 0f;
+        if (controller != null)
+        {
+            controller.value = 0f;
+        }
     }
 }
