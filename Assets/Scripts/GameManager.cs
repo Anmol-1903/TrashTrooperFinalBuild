@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _counter = _gameDuration;
+        Application.targetFrameRate = -1;
     }
     private void Update()
     {
