@@ -28,7 +28,7 @@ public class SettingsMenu : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetFloat("AudioSliderValue"));
+        Debug.Log(PlayerPrefs.GetFloat("AudioSliderValue") * muteAudio);
     }
     public void GetController()
     {
