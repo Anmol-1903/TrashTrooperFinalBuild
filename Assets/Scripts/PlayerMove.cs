@@ -84,26 +84,29 @@ public class PlayerMove : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("controllerType") == 1)
         {
-            Target.position = Vector3.Lerp(wetClamp.position, dryClamp.position, controller.value);
-            if (Vector3.Distance(transform.position, Target.position) > .1f && Time.timeScale == 1f)
+            if (controller.value > 0.5f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, Target.position, current_speed * Time.deltaTime);
-                if ((Vector3.Distance(transform.position, dryClamp.position) > .1f) || (Vector3.Distance(transform.position, wetClamp.position) > .1f))
-                {
-                    _uncleController.SetBool("isRunning", true);
-                }
+                transform.position += new Vector3(current_speed * Time.deltaTime, 0, 0);
+                transform.eulerAngles = new Vector3(0, -90f, 0);
+                _uncleController.SetBool("isRunning", true);
+            }
+            else if (controller.value < -0.5f)
+            {
+                transform.position += new Vector3(-current_speed * Time.deltaTime, 0, 0);
+                transform.eulerAngles = new Vector3(0, 90f, 0);
+                _uncleController.SetBool("isRunning", true);
             }
             else
             {
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 _uncleController.SetBool("isRunning", false);
             }
-            Rotate();
         }
-        else if(PlayerPrefs.GetInt("controllerType") == 0)
+        else if (PlayerPrefs.GetInt("controllerType") == 0)
         {
-            PlayerMovement();   
-            Clamper();
+            PlayerMovement();
         }
+        Clamper();
     }
     void PlayerMovement()
     {
@@ -174,27 +177,8 @@ public class PlayerMove : MonoBehaviour
         timeSlowerPower = false;
         Hat.SetActive(false);
     }
-    void Rotate()
+    public void SliderPointerUp()
     {
-        if (Vector3.Distance(transform.position, Target.position) > .1f && transform.position.x < Target.position.x)
-        {
-            isRighrunning = true;
-            isLeftrunning = false;
-            transform.eulerAngles = new Vector3(0, -90f, 0);
-        }
-        else if (Vector3.Distance(transform.position, Target.position) > .1f && transform.position.x > Target.position.x)
-        {
-            isLeftrunning = true;
-            isRighrunning = false;
-            transform.eulerAngles = new Vector3(0, 90f, 0);
-        }
-        else
-        {
-            isRighrunning = false;
-            isLeftrunning = false;
-            transform.eulerAngles = Vector3.zero;
-        }
+        controller.value = 0f;
     }
-
-
 }
