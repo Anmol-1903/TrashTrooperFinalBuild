@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8a485a4385db6e4888b603211aa796c
+guid: efb7abaa0a0192148aabfcb5d5657982
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,12 +141,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Settings_2_copy_0
+      name: bars_only_copy_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 261
-        width: 414
+        x: 69
+        y: 264
+        width: 365
         height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13729437062e333469a6e67e8295ec7b
-      internalID: -971513205
+      spriteID: ac9a7bc8d5d952048b5b6f55e772c78d
+      internalID: 820417617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings_2_copy_1
+      name: bars_only_copy_1
       rect:
         serializedVersion: 2
-        x: 156
-        y: 57
-        width: 349
-        height: 151
+        x: 69
+        y: 51
+        width: 365
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49aec405d44ff2147abb97f6f0440117
-      internalID: 1870219493
+      spriteID: 096520197596d5a488024d68899ab613
+      internalID: -494551249
       vertices: []
       indices: 
       edges: []
@@ -185,7 +185,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8f66f55d7f5e4c54fa45dbe04f3c982d
+    spriteID: b4a95b1bb57ca9e4caa8447d3aa1d931
     internalID: 0
     vertices: []
     indices: 
@@ -193,8 +193,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Settings_2_copy_0: -971513205
-      Settings_2_copy_1: 1870219493
+      bars_only_copy_0: 820417617
+      bars_only_copy_1: -494551249
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

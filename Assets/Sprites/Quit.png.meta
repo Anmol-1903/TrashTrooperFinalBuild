@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8a485a4385db6e4888b603211aa796c
+guid: 918d2d7cc2c88b543bd11ffa34da2ac8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 194, y: 182, z: 187, w: 191}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -141,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Settings_2_copy_0
+      name: Quit_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 261
-        width: 414
-        height: 173
+        x: 193
+        y: 181
+        width: 1621
+        height: 629
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,29 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13729437062e333469a6e67e8295ec7b
-      internalID: -971513205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Settings_2_copy_1
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 57
-        width: 349
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49aec405d44ff2147abb97f6f0440117
-      internalID: 1870219493
+      spriteID: 1da0ac63e61154d4d80d1899e0286e2c
+      internalID: 1018280220
       vertices: []
       indices: 
       edges: []
@@ -185,16 +164,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8f66f55d7f5e4c54fa45dbe04f3c982d
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Settings_2_copy_0: -971513205
-      Settings_2_copy_1: 1870219493
+      Quit_0: 1018280220
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
