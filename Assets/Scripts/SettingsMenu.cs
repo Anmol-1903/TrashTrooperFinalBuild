@@ -26,10 +26,6 @@ public class SettingsMenu : MonoBehaviour
         GetMusic();
         GetAudio();
     }
-    private void Update()
-    {
-        Debug.Log(PlayerPrefs.GetFloat("AudioSliderValue") * muteAudio);
-    }
     public void GetController()
     {
         if (PlayerPrefs.GetInt("controllerType") == 1)
@@ -55,47 +51,45 @@ public class SettingsMenu : MonoBehaviour
     public void GetMusic()
     {
         _musicSlider.maxValue = sliderDivision;
-        _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue");
         muteMusic = PlayerPrefs.GetInt("MuteMusic");
         _musicMixer.SetFloat("Music", (_musicSlider.value * muteMusic * (100 / sliderDivision)) - 80);
         if (PlayerPrefs.GetInt("MuteMusic") == 0)
         {
             _musicButton.isOn = true;
+            _musicSlider.value = 0;
         }
         else
         {
             _musicButton.isOn = false;
+            _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue");
         }
     }
     public void GetAudio()
     {
         _audioSlider.maxValue = sliderDivision;
-        _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue");
         muteAudio = PlayerPrefs.GetInt("MuteAudio");
         _audioMixer.SetFloat("Audio", (_audioSlider.value * muteAudio * (100 / sliderDivision)) - 80);
         if (PlayerPrefs.GetInt("MuteAudio") == 0)
         {
             _audioButton.isOn = true;
+            _audioSlider.value = 0;
         }
         else
         {
             _audioButton.isOn = false;
+            _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue");
         }
     }
     public void SetMusic(float volume)
     {
         _musicMixer.SetFloat("Music", (volume * muteMusic * (100 / sliderDivision)) - 80);
-        PlayerPrefs.SetFloat("MusicSliderValue", volume);
-    }
-    public void SetAudio(float volume)
-    {
-        _audioMixer.SetFloat("Audio", (volume * muteAudio * (100 / sliderDivision)) - 80);
-        PlayerPrefs.SetFloat("AudioSliderValue", volume);
     }
     public void MuteMusic()
     {
         if (_musicButton.isOn)
         {
+            PlayerPrefs.SetFloat("MusicSliderValue", _musicSlider.value);
+            _musicSlider.value = 0;
             muteMusic = 0;
             _musicSlider.interactable = false;
         }
@@ -103,25 +97,42 @@ public class SettingsMenu : MonoBehaviour
         {
             muteMusic = 1;
             _musicSlider.interactable = true;
+            _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue");
         }
         PlayerPrefs.SetInt("MuteMusic", muteMusic);
-        SetMusic(PlayerPrefs.GetFloat("MusicSliderValue"));
         _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue") * muteMusic;
+    }
+    public void SetAudio(float volume)
+    {
+        _audioMixer.SetFloat("Audio", (volume * muteAudio * (100 / sliderDivision)) - 80);
     }
     public void MuteAudio()
     {
         if (_audioButton.isOn)
         {
+            PlayerPrefs.SetFloat("AudioSliderValue", _audioSlider.value);
+            _audioSlider.value = 0;
             muteAudio = 0;
             _audioSlider.interactable = false;
         }
         else
         {
+            _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue");
             muteAudio = 1;
             _audioSlider.interactable = true;
         }
         PlayerPrefs.SetInt("MuteAudio", muteAudio);
-        SetAudio(PlayerPrefs.GetFloat("AudioSliderValue"));
-        _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue") * muteAudio;
+        _audioMixer.SetFloat("Audio", (PlayerPrefs.GetFloat("AudioSliderValue") * muteAudio * (100 / sliderDivision)) - 80);
+    }
+    public void Save()
+    {
+        if (!_audioButton.isOn)
+        {
+            PlayerPrefs.SetFloat("AudioSliderValue", _audioSlider.value);
+        }
+        if (!_musicButton.isOn)
+        {
+            PlayerPrefs.SetFloat("MusicSliderValue", _musicSlider.value);
+        }
     }
 }
