@@ -5541,10 +5541,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1185822112}
   m_HandleRect: {fileID: 32037443}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: -1
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5915,8 +5915,8 @@ MonoBehaviour:
   controller: {fileID: 1598268878}
   Target: {fileID: 1906089005}
   _uncleController: {fileID: 0}
-  Gloves: {fileID: 0}
-  Hat: {fileID: 0}
+  Gloves: {fileID: 2093562481}
+  Hat: {fileID: 1900555189}
   ButtonInput: {fileID: 1023236694}
   SliderInput: {fileID: 1598268876}
   glovePower: 0
@@ -6682,6 +6682,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 0, y: -1, z: 0}
+--- !u!1 &1900555189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391193718175552794, guid: 82187994ee055184583506db0500bd26, type: 3}
+  m_PrefabInstance: {fileID: 1726019195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1906089004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7426,6 +7431,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075591095}
   m_CullTransparentMesh: 1
+--- !u!1 &2093562481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 863170846311425793, guid: 82187994ee055184583506db0500bd26, type: 3}
+  m_PrefabInstance: {fileID: 1726019195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &275100388757525296
 MeshFilter:
   m_ObjectHideFlags: 0
