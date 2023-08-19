@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8863708647580168185}
   m_Layer: 0
   m_Name: gloves
-  m_TagString: Gloves
+  m_TagString: glove_powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

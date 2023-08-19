@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3605212268767903486}
   m_Layer: 0
   m_Name: cap
-  m_TagString: Cap
+  m_TagString: cap_powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

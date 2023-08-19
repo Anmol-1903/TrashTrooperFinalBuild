@@ -1339,7 +1339,7 @@ Transform:
   m_GameObject: {fileID: 8112580047607511290}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2.7, y: 2.7, z: 2.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2056464774743294998}
@@ -1419,7 +1419,6 @@ GameObject:
   - component: {fileID: 8959002453306659508}
   - component: {fileID: 8959002453306659519}
   - component: {fileID: 8959002453306659515}
-  - component: {fileID: 8959002453306659512}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1470,7 +1469,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1020768, y: 3.0089502, z: 2.7483613}
+  m_Size: {x: 2.5512805, y: 3.0089502, z: 5.206963}
   m_Center: {x: -0.10034621, y: 1.4729295, z: -0.7613448}
 --- !u!114 &8959002453306659519
 MonoBehaviour:
@@ -1484,6 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706d19bcc1908d943a9a509152515607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerup_collected: {fileID: 8300000, guid: b56c6e79c4f4a794bb9f035f0ca9fbdc, type: 3}
   speed: 6.25
   fastSpeed: 15
   glovePower_timer: 5
@@ -1492,10 +1492,9 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0.7}
   controller: {fileID: 0}
   Target: {fileID: 0}
-  x: 0
-  _uncleController: {fileID: 0}
-  Gloves: {fileID: 0}
-  Hat: {fileID: 0}
+  _uncleController: {fileID: 8959002453682685348}
+  Gloves: {fileID: 8623931545004122794}
+  Hat: {fileID: 8635855172678201165}
   ButtonInput: {fileID: 0}
   SliderInput: {fileID: 0}
   glovePower: 0
@@ -1538,27 +1537,6 @@ MonoBehaviour:
   playerTrans: {fileID: 0}
   _dryDustbinLid: {fileID: 0}
   _wetDustbinLid: {fileID: 0}
---- !u!95 &8959002453306659512
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959002453306659490}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c8a50ee248bee044f81a3cf9d3ec0497, type: 3}
-  m_Controller: {fileID: 9100000, guid: d2efc754d837c1e42b8321e068671bb1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9130756031484027889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,11 +1740,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: cap
       objectReference: {fileID: 0}
+    - target: {fileID: 8198722888643562475, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
+      propertyPath: m_TagString
+      value: Cap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
 --- !u!4 &2056464774743294998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1915446357044191408, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
+  m_PrefabInstance: {fileID: 441088335604278438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8635855172678201165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8198722888643562475, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
   m_PrefabInstance: {fileID: 441088335604278438}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8671943849848638350
@@ -1779,6 +1766,10 @@ PrefabInstance:
     - target: {fileID: 1150303499659847972, guid: d006cff1f293a924689944f725ab7e29, type: 3}
       propertyPath: m_Name
       value: gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150303499659847972, guid: d006cff1f293a924689944f725ab7e29, type: 3}
+      propertyPath: m_TagString
+      value: Gloves
       objectReference: {fileID: 0}
     - target: {fileID: 3509622460263432801, guid: d006cff1f293a924689944f725ab7e29, type: 3}
       propertyPath: m_RootOrder
@@ -1945,5 +1936,10 @@ PrefabInstance:
 --- !u!4 &5254647382232041967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3509622460263432801, guid: d006cff1f293a924689944f725ab7e29, type: 3}
+  m_PrefabInstance: {fileID: 8671943849848638350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8623931545004122794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1150303499659847972, guid: d006cff1f293a924689944f725ab7e29, type: 3}
   m_PrefabInstance: {fileID: 8671943849848638350}
   m_PrefabAsset: {fileID: 0}

@@ -4752,6 +4752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelComplete: {fileID: 0}
   _gameDuration: 99999
   _counter: 0
   _minCleanlinessValue: 0
@@ -6612,6 +6613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190d08e1dda4a664d98f83936828574f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _failClip: {fileID: 0}
   _cleanlinessMeter: {fileID: 1366860400}
   _maximumValue: 100
   _cleanliness: 0
@@ -8744,9 +8746,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: Target
       value: 
       objectReference: {fileID: 1906089005}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: fastSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: controller
       value: 

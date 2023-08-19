@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
+    [SerializeField] AudioClip powerup_collected;
     [SerializeField] float speed;
     [SerializeField] float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
@@ -12,7 +13,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Vector3 offset;
     [SerializeField] Slider controller;
     [SerializeField] Transform Target;
-    public bool x;
 
     [SerializeField] Animator _uncleController;
 
@@ -163,16 +163,18 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("gloves"))
+        if (other.gameObject.CompareTag("glove_powerup"))
         {
             StartCoroutine(gloveTimer());
             Gloves.SetActive(true);
-            Hat.SetActive(true);
+            AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("timeslower"))
+        if (other.gameObject.CompareTag("cap_powerup"))
         {
             StartCoroutine(TimeSlowerTimer());
+            Hat.SetActive(true);
+            AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
     }

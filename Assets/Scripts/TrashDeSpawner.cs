@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TrashDeSpawner : MonoBehaviour
 {
+    [SerializeField] AudioClip _failClip;
     [SerializeField] Slider _cleanlinessMeter;
     [SerializeField] int _maximumValue;
     public float _cleanliness;
@@ -20,6 +21,7 @@ public class TrashDeSpawner : MonoBehaviour
         if (other.CompareTag("WetWaste") || other.CompareTag("DryWaste"))
         {
             _cleanliness -= other.GetComponent<Trash>()._dirtiness;
+            AudioManager.Instance.TrashFallDown(_failClip);
             Destroy(other.gameObject);
         }
     }
