@@ -12,7 +12,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] GameObject playerTrans;
     [SerializeField] Vector3 offset;
     [SerializeField] Slider controller;
-    [SerializeField] Transform Target;
 
     [SerializeField] Animator _uncleController;
 
