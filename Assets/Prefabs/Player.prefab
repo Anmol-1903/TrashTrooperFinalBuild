@@ -1416,11 +1416,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8959002453306659517}
   - component: {fileID: 8959002453306659513}
-  - component: {fileID: 8959002453306659509}
+  - component: {fileID: 8959002453306659508}
   - component: {fileID: 8959002453306659519}
   - component: {fileID: 8959002453306659515}
   - component: {fileID: 8959002453306659512}
-  - component: {fileID: 8959002453306659508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1460,8 +1459,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 92
   m_CollisionDetection: 1
---- !u!136 &8959002453306659509
-CapsuleCollider:
+--- !u!65 &8959002453306659508
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1470,10 +1469,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.1020768, y: 3.0089502, z: 2.7483613}
+  m_Center: {x: -0.10034621, y: 1.4729295, z: -0.7613448}
 --- !u!114 &8959002453306659519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,6 +1492,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0.7}
   controller: {fileID: 0}
   Target: {fileID: 0}
+  x: 0
   _uncleController: {fileID: 0}
   Gloves: {fileID: 0}
   Hat: {fileID: 0}
@@ -1560,19 +1559,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &8959002453306659508
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8959002453306659490}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 2.5, z: 1}
-  m_Center: {x: 0, y: 0.7, z: -1}
 --- !u!1 &9130756031484027889
 GameObject:
   m_ObjectHideFlags: 0
