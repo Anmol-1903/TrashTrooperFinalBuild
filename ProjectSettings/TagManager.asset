@@ -9,7 +9,6 @@ TagManager:
   - CamLeft
   - CamRight
   - SpawnLocation
-  - timeslower
   - Bullet
   - WetWaste
   - DryWaste
@@ -18,7 +17,8 @@ TagManager:
   - Tutorial
   - Trash1Collected
   - Trash2Collected
-  - gloves
+  - cap_powerup
+  - glove_powerup
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     TrashDeSpawner TDS;
+    
+    [SerializeField] AudioClip _levelComplete;
 
     [SerializeField] float _gameDuration;
     [SerializeField] float _counter;
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 _nextLevelPanel.SetActive(true);
+                AudioManager.Instance.BG_Music(_levelComplete);
                 if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
                 {
                     PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);

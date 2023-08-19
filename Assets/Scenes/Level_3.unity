@@ -2028,7 +2028,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2817,6 +2817,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8925708120297136704, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925708120297136704, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925708120297136704, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659490, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2872,6 +2884,14 @@ PrefabInstance:
     - target: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: speed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: fastSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: controller
@@ -3295,7 +3315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840748982}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82b0564e173af0d48b68e59572eb2695, type: 3}
   m_Name: 
@@ -4306,6 +4326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelComplete: {fileID: 0}
   _gameDuration: 99999
   _counter: 0
   _minCleanlinessValue: 0
@@ -5762,6 +5783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190d08e1dda4a664d98f83936828574f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _failClip: {fileID: 0}
   _cleanlinessMeter: {fileID: 1366860400}
   _maximumValue: 100
   _cleanliness: 0
