@@ -2213,12 +2213,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591155969}
-  m_LocalRotation: {x: -0.937902, y: -0.0005145953, z: -0.3468972, w: -0.0013913057}
-  m_LocalPosition: {x: -0.358, y: 0.0059, z: -0.433}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.727682, y: -0.68097657, z: -0.07346098, w: 0.0367873}
+  m_LocalPosition: {x: 0.023287337, y: 0.20727916, z: 0.1907922}
+  m_LocalScale: {x: 1.1287379, y: 1.0137099, z: 0.8868557}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4601080888150304353}
+  m_Father: {fileID: 1216385067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180.129, y: -40.595, z: -0.11099243}
 --- !u!23 &591155971
@@ -4538,13 +4538,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216385066}
-  m_LocalRotation: {x: 0.20067576, y: -0.18449804, z: -0.6511784, w: 0.70827705}
-  m_LocalPosition: {x: -0.2252, y: 0.0277, z: -0.6005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.6511784, y: 0.70827705, z: -0.20067576, w: 0.18449804}
+  m_LocalPosition: {x: -1.6488001, y: 0.4155, z: 11.0075}
+  m_LocalScale: {x: 14.843441, y: 7.212837, z: 10.639599}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3155429248449342597}
-  m_RootOrder: 2
+  m_Children:
+  - {fileID: 591155970}
+  m_Father: {fileID: 1818454218}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 2.521, y: -31.548, z: -85.902}
 --- !u!23 &1216385068
 MeshRenderer:
@@ -5481,14 +5482,16 @@ MonoBehaviour:
   lines:
   - Hello Trooper, Welcome to trash.
   - Literally.
-  - "The environment is getting dirty day by day but, people are so irresponsible
-    these days that they throw all their trash on the streets like this Earth is
-    not their home but, just\u2026 that small apartment."
+  - 'The environment is getting dirty day by day but, people are so irresponsible
+    these days that they throw all their trash on the streets. '
+  - "Like this Earth is not their home but, just\u2026 that small apartment."
   - "Their houses shine but environment doesn\u2019t."
   - "Global warming is rising each day and one day this Planet won\u2019t even be
-    habitable, because of them.\r\nNow you trooper, are given the responsibility
-    to clean this mess and save the Earth, our beautiful home. Because that cleaner
-    girl is on leave today. Again."
+    habitable, because of them.\r\n"
+  - Now you trooper, are given the responsibility to clean this mess and save the
+    Earth, our beautiful home.
+  - Because that cleaner girl is on leave today.
+  - Again.
   text_speed: 0.025
   TM: {fileID: 0}
 --- !u!1001 &1386827301
@@ -7619,7 +7622,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -5.5}
   m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1216385067}
   m_Father: {fileID: 1655848480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8633,7 +8637,6 @@ Transform:
   m_Children:
   - {fileID: 4601080888150304353}
   - {fileID: 537211771}
-  - {fileID: 1216385067}
   m_Father: {fileID: 543450653291129870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8858,10 +8861,9 @@ Transform:
   m_GameObject: {fileID: 1908151321270346663}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.17218551, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 591155970}
+  m_Children: []
   m_Father: {fileID: 3155429248449342597}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9239,7 +9241,7 @@ Transform:
   m_GameObject: {fileID: 4240413041928734279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1687339, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8555361366553919582}
