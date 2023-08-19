@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] Vector3 offset;
     [SerializeField] Slider controller;
     [SerializeField] Transform Target;
+    public bool x;
 
     [SerializeField] Animator _uncleController;
 
