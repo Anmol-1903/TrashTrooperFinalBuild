@@ -43,9 +43,9 @@ public class Tutorial_Manager : MonoBehaviour
         }
         if(Trash3 == null && Vector3.Distance(_player.position, _dustbin2.position) < 2f)
         {
+            PlayerPrefs.SetInt("HitCountKey", 1);
             tutorialEnd.SetActive(true);
             gameObject.SetActive(false);
-            Debug.Log("Hi");
         }
     }
     public void HelloTrooper()
