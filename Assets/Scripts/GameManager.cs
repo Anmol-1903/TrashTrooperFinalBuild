@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     TrashDeSpawner TDS;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _progressBar;
 
+    [SerializeField] private TextMeshProUGUI _gameTimer;
+
     //[SerializeField] AudioClip _ingamebgclip;
 
 
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        _gameTimer.text = (int)_counter + " Seconds";
         if (_counter <= 0)
         {
             if (Time.timeScale > 0.25f)
