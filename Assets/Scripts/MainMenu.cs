@@ -79,6 +79,13 @@ public class MainMenu : MonoBehaviour
             _asynLoader.SetActive(true);
         StartCoroutine(LoadLevel(_levelNumber));
     }
+    public void PlayTutorial()
+    {
+        TurnOffAllGameObjects();
+        if (_asynLoader != null)
+            _asynLoader.SetActive(true);
+        StartCoroutine(LoadLevelByName("Tutorial"));
+    }
     public void QuitGame()
     {
         Application.Quit();
