@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject _asynLoader;
     private void Start()
     {
+        PlayerPrefs.GetInt("tutorialLevelPlayed", 0);
         Main();
     }
     public void Main()
@@ -26,11 +27,17 @@ public class MainMenu : MonoBehaviour
     }
     public void Play()
     {
+        if (PlayerPrefs.GetInt("tutorialLevelPlayed") == 0)
+        {  //0 = not player | 1 = played
+            SceneManager.LoadScene(4);
+        }
+
         if (_levelSelector != null)
         {
             TurnOffAllGameObjects();
             _levelSelector.SetActive(true);
         }
+        
     }
     public void Settings()
     {
@@ -96,6 +103,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadLevel(int _levelNumber)
     {
         AsyncOperation _operation = SceneManager.LoadSceneAsync(_levelNumber);
+        PlayerPrefs.SetInt("tutorialLevelPlayed", 1);
         while (!_operation.isDone && _progressBar != null)
         {
             float _progress = Mathf.Clamp01(_operation.progress / .9f);

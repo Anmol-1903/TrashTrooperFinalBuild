@@ -3341,6 +3341,7 @@ MonoBehaviour:
   _nextLevelPanel: {fileID: 1587836589}
   _loadingScreen: {fileID: 2075591095}
   _progressBar: {fileID: 1099279115}
+  _ingamebgclip: {fileID: 8300000, guid: 99665bd0eebf0ad468f38490ff775989, type: 3}
 --- !u!4 &1291695669
 Transform:
   m_ObjectHideFlags: 0
@@ -5324,6 +5325,10 @@ PrefabInstance:
       propertyPath: capacity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _inventoryText
+      value: 
+      objectReference: {fileID: 421893159}
     - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: default_Capacity
       value: 4

@@ -30,6 +30,11 @@ public class AudioManager : MonoBehaviour
         bg_music.clip = music;
         bg_music.Play();
     }
+    public void STOP_BG_Music(AudioClip music)
+    {
+        bg_music.clip = music;
+        bg_music.Stop();
+    }
     public void TrashFallDown(AudioClip music)
     {
         trash_falldown.clip = music;

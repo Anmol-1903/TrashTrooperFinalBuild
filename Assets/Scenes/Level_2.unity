@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.2509804, g: 0.19215688, b: 0.17254902, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.04
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -8542,6 +8542,14 @@ PrefabInstance:
       propertyPath: _inventoryText
       value: 
       objectReference: {fileID: 421893159}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: default_Capacity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: upgraded_Capacity
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_RootOrder
       value: 2

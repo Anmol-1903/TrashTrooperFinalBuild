@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _progressBar;
+
+    //[SerializeField] AudioClip _ingamebgclip;
+
+
     private void Awake()
     {
         TDS = GameObject.FindObjectOfType<TrashDeSpawner>();
@@ -72,9 +76,9 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel(string level)
     {
-        TurnOffAllGameObjects();
         _loadingScreen.SetActive(true);
         StartCoroutine(LoadLevel(level));
+        TurnOffAllGameObjects();
     }
     void TurnOffAllGameObjects()
     {
@@ -97,11 +101,13 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadLevel(string level)
     {
         AsyncOperation _operation = SceneManager.LoadSceneAsync(level);
+        
         while (!_operation.isDone)
         {
             float _progress = Mathf.Clamp01(_operation.progress / .9f);
             _progressBar.value = _progress;
             yield return null;
+            //AudioManager.Instance.BG_Music(_ingamebgclip);
         }
     }
 }
