@@ -41,6 +41,9 @@ public class catch_system : MonoBehaviour
     [SerializeField] Transform dryDustBinTrans;
     [SerializeField] GameObject playerTrans;
 
+    [SerializeField] AudioClip _wetTrashDispose;
+    [SerializeField] AudioClip _dryTrashDispose;
+
 
     [SerializeField] Animator _dryDustbinLid;
     [SerializeField] Animator _wetDustbinLid;
@@ -60,9 +63,9 @@ public class catch_system : MonoBehaviour
         {
             picker_txt.enabled = false;
         }
-        if (capacity_txt != null)
+        if (capacity_txt == null)
         {
-            capacity_txt.enabled = false;
+            Debug.LogWarning("Inventory Text Unassigned");
         }
         if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
         {
@@ -109,6 +112,7 @@ public class catch_system : MonoBehaviour
                     wetCollect = wetCollect + capacity - current_capacity;
                     wetwasteInventory = false;
                     current_capacity = capacity;
+                    AudioManager.Instance.TrashDispose(_wetTrashDispose);
                     if (wetWasteText != null)
                     {
                         wetWasteText.text = "Wet: " + (wetCollect).ToString();
@@ -130,6 +134,7 @@ public class catch_system : MonoBehaviour
                     dryCollect += capacity - current_capacity;
                     drywasteInventory = false;
                     current_capacity = capacity;
+                    AudioManager.Instance.TrashDispose(_dryTrashDispose);
                     if (dryWasteText != null)
                     {
                         dryWasteText.text = "Dry: " + (dryCollect).ToString();
