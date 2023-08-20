@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        _gameTimer.text = (int)_counter + " Seconds";
+        _gameTimer.text = ((int)_counter)/60 + " : " + ((int)_counter) % 60;
         if (_counter <= 0)
         {
             if (Time.timeScale > 0.25f)
