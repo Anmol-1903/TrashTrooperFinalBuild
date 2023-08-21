@@ -38,7 +38,6 @@ public class catch_system : MonoBehaviour
     [SerializeField] TextMeshProUGUI _capacityText;
     [SerializeField] TextMeshProUGUI dryWasteText;
     [SerializeField] TextMeshProUGUI wetWasteText;
-    [SerializeField] TextMeshProUGUI capacity_txt;
     [SerializeField] TextMeshProUGUI picker_txt;
     [SerializeField] TextMeshProUGUI _inventoryText;
     [Header("------GameObjects------")]
@@ -68,10 +67,7 @@ public class catch_system : MonoBehaviour
         {
             picker_txt.enabled = false;
         }
-        if (capacity_txt == null)
-        {
-            Debug.LogWarning("Inventory Text Unassigned");
-        }
+     
         if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
         {
             capacity = upgraded_Capacity;
@@ -229,13 +225,7 @@ public class catch_system : MonoBehaviour
             {
                 StartCoroutine(waiting());
             }
-            else
-            {
-                if (capacity_txt != null)
-                {
-                    capacity_txt.enabled = true;
-                }
-            }
+          
         }
         else if (dryWasteInTrigger)
         {
@@ -269,13 +259,7 @@ public class catch_system : MonoBehaviour
             {
                 StartCoroutine(waiting());
             }
-            else
-            {
-                if (capacity_txt != null)
-                {
-                    capacity_txt.enabled = true;
-                }
-            }
+          
         }
     }
     IEnumerator waiting()
