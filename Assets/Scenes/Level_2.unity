@@ -4577,7 +4577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
-  _gameDuration: 180
+  _gameDuration: 240
   _counter: 0
   _minCleanlinessValue: 0
   _restartPanel: {fileID: 341932944}
@@ -8679,6 +8679,14 @@ PrefabInstance:
       propertyPath: _inventoryText
       value: 
       objectReference: {fileID: 421893159}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _dryTrashDispose
+      value: 
+      objectReference: {fileID: 8300000, guid: d3797211effcf8a4ab28ed217eadb93e, type: 3}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _wetTrashDispose
+      value: 
+      objectReference: {fileID: 8300000, guid: f71ba9987806f00459c7a69c0e83f9da, type: 3}
     - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: default_Capacity
       value: 4
