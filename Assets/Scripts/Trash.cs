@@ -42,5 +42,3 @@ public class Trash : MonoBehaviour
         transform.position += new Vector3(0f, -_speed * Time.deltaTime, 0f);
     }
 }
-
-                                // Dinner time

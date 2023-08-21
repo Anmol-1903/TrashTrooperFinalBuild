@@ -51,9 +51,8 @@ public class SettingsMenu : MonoBehaviour
     public void GetMusic()
     {
         _musicSlider.maxValue = sliderDivision;
-        muteMusic = PlayerPrefs.GetInt("MuteMusic");
-        _musicMixer.SetFloat("Music", (_musicSlider.value * muteMusic * (100 / sliderDivision)) - 80);
-        if (PlayerPrefs.GetInt("MuteMusic") == 0)
+        muteMusic = PlayerPrefs.GetInt("MuteMusic", 1);
+        if (PlayerPrefs.GetInt("MuteMusic", 1) == 0)
         {
             _musicButton.isOn = true;
             _musicSlider.value = 0;
@@ -61,15 +60,15 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             _musicButton.isOn = false;
-            _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue");
+            _musicSlider.value = PlayerPrefs.GetFloat("MusicSliderValue", 43);
         }
+        _musicMixer.SetFloat("Music", (_musicSlider.value * muteMusic * (100 / sliderDivision)) - 80);
     }
     public void GetAudio()
     {
         _audioSlider.maxValue = sliderDivision;
-        muteAudio = PlayerPrefs.GetInt("MuteAudio");
-        _audioMixer.SetFloat("Audio", (_audioSlider.value * muteAudio * (100 / sliderDivision)) - 80);
-        if (PlayerPrefs.GetInt("MuteAudio") == 0)
+        muteAudio = PlayerPrefs.GetInt("MuteAudio",1);
+        if (PlayerPrefs.GetInt("MuteAudio",1) == 0)
         {
             _audioButton.isOn = true;
             _audioSlider.value = 0;
@@ -77,8 +76,9 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             _audioButton.isOn = false;
-            _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue");
+            _audioSlider.value = PlayerPrefs.GetFloat("AudioSliderValue",70);
         }
+        _audioMixer.SetFloat("Audio", (_audioSlider.value * muteAudio * (100 / sliderDivision)) - 80);
     }
     public void SetMusic(float volume)
     {
