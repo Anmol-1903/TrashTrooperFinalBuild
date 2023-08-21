@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject _levelSelector;
     [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _settings;
+    [SerializeField] GameObject _resetGame;
     [SerializeField] GameObject _upgrades;
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _quit;
@@ -86,6 +87,15 @@ public class MainMenu : MonoBehaviour
             _asynLoader.SetActive(true);
         StartCoroutine(LoadLevelByName("Tutorial"));
     }
+    public void ClearAllPlayerPrefs()
+    {
+        TurnOffAllGameObjects();
+        _resetGame.SetActive(true);
+    }
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     public void QuitGame()
     {
         Application.Quit();
@@ -106,6 +116,8 @@ public class MainMenu : MonoBehaviour
             _credits.SetActive(false);
         if (_quit != null)
             _quit.SetActive(false);
+        if (_resetGame != null)
+            _resetGame.SetActive(false);
     }
     IEnumerator LoadLevel(int _levelNumber)
     {

@@ -1491,7 +1491,6 @@ MonoBehaviour:
   playerTrans: {fileID: 8959002453306659490}
   offset: {x: 0, y: 0, z: 0.7}
   controller: {fileID: 0}
-  Target: {fileID: 0}
   _uncleController: {fileID: 8959002453682685348}
   Gloves: {fileID: 8623931545004122794}
   Hat: {fileID: 8635855172678201165}
@@ -1518,6 +1517,8 @@ MonoBehaviour:
   current_capacity: 0
   capacity: 2
   glovePower: 0
+  TrashBags: []
+  _trashBagSize: 1
   defaultColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   wetWasteColor: {r: 0, g: 0.6666667, b: 0, a: 1}
   dryWasteColor: {r: 0, g: 0.33333334, b: 1, a: 1}
@@ -1535,6 +1536,8 @@ MonoBehaviour:
   wetDustBinTrans: {fileID: 0}
   dryDustBinTrans: {fileID: 0}
   playerTrans: {fileID: 0}
+  _wetTrashDispose: {fileID: 0}
+  _dryTrashDispose: {fileID: 0}
   _dryDustbinLid: {fileID: 0}
   _wetDustbinLid: {fileID: 0}
 --- !u!1 &9130756031484027889
@@ -1739,6 +1742,10 @@ PrefabInstance:
     - target: {fileID: 8198722888643562475, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
       propertyPath: m_Name
       value: cap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198722888643562475, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8198722888643562475, guid: fdc5214320636e24198e62013eaa4f27, type: 3}
       propertyPath: m_TagString
