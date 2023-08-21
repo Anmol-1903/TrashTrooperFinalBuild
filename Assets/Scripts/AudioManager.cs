@@ -9,7 +9,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource trash_falldown;
     [SerializeField] AudioSource powerup_collect;
     [SerializeField] AudioSource trash_dispose;
-    
 
     private void Awake()
     {
