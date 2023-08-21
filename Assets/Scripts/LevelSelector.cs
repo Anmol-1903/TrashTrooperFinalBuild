@@ -12,10 +12,12 @@ public class LevelSelector : MonoBehaviour
         {
             if(i <= _levelCleared)
             {
+                if(_levelButtons[i] != null)
                 _levelButtons[i].interactable = true;
             }
             else
             {
+                if(_levelButtons[i] != null)
                 _levelButtons[i].interactable = false;
             }
         }

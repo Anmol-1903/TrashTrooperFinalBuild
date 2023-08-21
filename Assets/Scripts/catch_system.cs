@@ -67,7 +67,7 @@ public class catch_system : MonoBehaviour
         {
             picker_txt.enabled = false;
         }
-     
+
         if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
         {
             capacity = upgraded_Capacity;
@@ -83,7 +83,6 @@ public class catch_system : MonoBehaviour
             trashBag.SetActive(false);
         }
         if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
-
             TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
     }
     private void LateUpdate()
@@ -121,12 +120,15 @@ public class catch_system : MonoBehaviour
                     wetwasteInventory = false;
                     current_capacity = capacity;
                     AudioManager.Instance.TrashDispose(_wetTrashDispose);
-                    foreach (var trashBag in TrashBags)
+                    if (capacity - current_capacity < 4)
                     {
-                        trashBag.SetActive(false);
+                        foreach (var trashBag in TrashBags)
+                        {
+                            trashBag.SetActive(false);
+                        }
+                        if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
+                            TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                     }
-                    if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
-                        TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                     if (wetWasteText != null)
                     {
                         wetWasteText.text = "Wet: " + (wetCollect).ToString();
@@ -149,12 +151,15 @@ public class catch_system : MonoBehaviour
                     drywasteInventory = false;
                     current_capacity = capacity;
                     AudioManager.Instance.TrashDispose(_dryTrashDispose);
-                    foreach (var trashBag in TrashBags)
+                    if (capacity - current_capacity < 4)
                     {
-                        trashBag.SetActive(false);
+                        foreach (var trashBag in TrashBags)
+                        {
+                            trashBag.SetActive(false);
+                        }
+                        if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
+                            TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                     }
-                    if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
-                        TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                     if (dryWasteText != null)
                     {
                         dryWasteText.text = "Dry: " + (dryCollect).ToString();
@@ -198,12 +203,15 @@ public class catch_system : MonoBehaviour
             if (current_capacity > 0 && !drywasteInventory)
             {
                 Destroy(wetWaste);
-                foreach (var trashBag in TrashBags)
+                if (capacity - current_capacity < 4)
                 {
-                    trashBag.SetActive(false);
+                    foreach (var trashBag in TrashBags)
+                    {
+                        trashBag.SetActive(false);
+                    }
+                    if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
+                        TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                 }
-                if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
-                    TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                 wetWasteInTrigger = false;
                 current_capacity--;
                 wetwasteInventory = true;
@@ -225,19 +233,22 @@ public class catch_system : MonoBehaviour
             {
                 StartCoroutine(waiting());
             }
-          
+
         }
         else if (dryWasteInTrigger)
         {
             if (current_capacity > 0 && !wetwasteInventory)
             {
                 Destroy(dryWaste);
-                foreach (var trashBag in TrashBags)
+                if (capacity - current_capacity < 4)
                 {
-                    trashBag.SetActive(false);
+                    foreach (var trashBag in TrashBags)
+                    {
+                        trashBag.SetActive(false);
+                    }
+                    if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
+                        TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                 }
-                if (TrashBags[(capacity - current_capacity) / _trashBagSize] != null)
-                    TrashBags[(capacity - current_capacity) / _trashBagSize].SetActive(true);
                 dryWasteInTrigger = false;
                 current_capacity--;
                 drywasteInventory = true;
@@ -259,7 +270,7 @@ public class catch_system : MonoBehaviour
             {
                 StartCoroutine(waiting());
             }
-          
+
         }
     }
     IEnumerator waiting()

@@ -24,7 +24,8 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        BG_Music(bg_clip);
+        if (bg_clip != null)
+            BG_Music(bg_clip);
     }
     public void BG_Music(AudioClip music)
     {

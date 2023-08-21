@@ -1515,7 +1515,7 @@ MonoBehaviour:
   drywasteInventory: 0
   wetwasteInventory: 0
   current_capacity: 0
-  capacity: 2
+  capacity: 5
   glovePower: 0
   TrashBags:
   - {fileID: 6639021465870561501}
@@ -1534,7 +1534,6 @@ MonoBehaviour:
   _capacityText: {fileID: 0}
   dryWasteText: {fileID: 0}
   wetWasteText: {fileID: 0}
-  capacity_txt: {fileID: 0}
   picker_txt: {fileID: 0}
   _inventoryText: {fileID: 0}
   wetDustBinTrans: {fileID: 0}
