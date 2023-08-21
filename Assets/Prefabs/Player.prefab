@@ -1484,8 +1484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerup_collected: {fileID: 8300000, guid: b56c6e79c4f4a794bb9f035f0ca9fbdc, type: 3}
-  speed: 6.25
-  fastSpeed: 15
+  speed: 12
+  fastSpeed: 20
   glovePower_timer: 5
   TimeSlowertimer: 10
   playerTrans: {fileID: 8959002453306659490}
@@ -1517,15 +1517,19 @@ MonoBehaviour:
   current_capacity: 0
   capacity: 2
   glovePower: 0
-  TrashBags: []
+  TrashBags:
+  - {fileID: 6639021465870561501}
+  - {fileID: 2520999792623677893}
+  - {fileID: 7840481147665405058}
+  - {fileID: 2243960739213256933}
   _trashBagSize: 1
   defaultColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
   wetWasteColor: {r: 0, g: 0.6666667, b: 0, a: 1}
   dryWasteColor: {r: 0, g: 0.33333334, b: 1, a: 1}
   _bg: {fileID: 0}
   controller: {fileID: 0}
-  default_Capacity: 2
-  upgraded_Capacity: 4
+  default_Capacity: 4
+  upgraded_Capacity: 8
   distance: 1.5
   _capacityText: {fileID: 0}
   dryWasteText: {fileID: 0}
@@ -1536,8 +1540,8 @@ MonoBehaviour:
   wetDustBinTrans: {fileID: 0}
   dryDustBinTrans: {fileID: 0}
   playerTrans: {fileID: 0}
-  _wetTrashDispose: {fileID: 0}
-  _dryTrashDispose: {fileID: 0}
+  _wetTrashDispose: {fileID: 8300000, guid: f71ba9987806f00459c7a69c0e83f9da, type: 3}
+  _dryTrashDispose: {fileID: 8300000, guid: d3797211effcf8a4ab28ed217eadb93e, type: 3}
   _dryDustbinLid: {fileID: 0}
   _wetDustbinLid: {fileID: 0}
 --- !u!1 &9130756031484027889
