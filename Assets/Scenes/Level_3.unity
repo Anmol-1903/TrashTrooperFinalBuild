@@ -5808,7 +5808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190d08e1dda4a664d98f83936828574f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _failClip: {fileID: 0}
+  _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 1366860400}
   _maximumValue: 100
   _cleanliness: 0

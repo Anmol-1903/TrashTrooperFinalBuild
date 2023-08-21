@@ -433,6 +433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_box
       objectReference: {fileID: 0}
+    - target: {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4383315318147321875, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -517,6 +521,10 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -907,7 +915,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &188543787
 MeshRenderer:
@@ -1062,6 +1070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: nuts_pack
       objectReference: {fileID: 0}
+    - target: {fileID: 2649331488501985184, guid: 822f2d57804d93d4597a279693967333, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7417189436983258355, guid: 822f2d57804d93d4597a279693967333, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1149,7 +1161,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &210455377
 MeshCollider:
@@ -1323,7 +1335,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &252782441
 MeshCollider:
@@ -1559,7 +1571,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &257548049
 Transform:
@@ -1988,6 +2000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish
       objectReference: {fileID: 0}
+    - target: {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1955716327706542520, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -2125,6 +2141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5608275512462039095, guid: c2748d6926a95e148893d423b80289e8, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -2252,7 +2272,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &379862673
 Transform:
@@ -2428,7 +2448,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &430295981
 MeshCollider:
@@ -2576,6 +2596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple_Rotten_GEO
       objectReference: {fileID: 0}
+    - target: {fileID: 880613100639499054, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5810303419433911494, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -2677,6 +2701,10 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -2895,6 +2923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange_Peel_GEO (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1020290591670054102, guid: c297e48d0a990df4e838bd74664da205, type: 3}
     - {fileID: -6796913712822589429, guid: c297e48d0a990df4e838bd74664da205, type: 3}
@@ -2915,6 +2947,10 @@ PrefabInstance:
     - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Name
       value: news_paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2882252493098922885, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Materials.Array.size
@@ -3136,7 +3172,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &601975570
 MeshCollider:
@@ -3228,6 +3264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3315,7 +3355,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &620073778
 MeshCollider:
@@ -3488,7 +3528,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &639450749
 Transform:
@@ -3648,7 +3688,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &654338427
 MeshCollider:
@@ -4521,6 +4561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cane
       objectReference: {fileID: 0}
+    - target: {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8006348257383629863, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -4549,6 +4593,10 @@ PrefabInstance:
     - target: {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_Name
       value: egg (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_RootOrder
@@ -4626,6 +4674,10 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -5176,7 +5228,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &841865855
 MeshRenderer:
@@ -5541,6 +5593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: news_paper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2882252493098922885, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -5706,7 +5762,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &961669832
 MeshCollider:
@@ -5857,6 +5913,10 @@ PrefabInstance:
     - target: {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
       propertyPath: m_Name
       value: Orange_Peel_GEO (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1020290591670054102, guid: c297e48d0a990df4e838bd74664da205, type: 3}
@@ -6220,7 +6280,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1043406789
 MeshCollider:
@@ -6348,6 +6408,10 @@ PrefabInstance:
     - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Name
       value: news_paper (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2882252493098922885, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Materials.Array.size
@@ -6704,7 +6768,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1169324418
 MeshCollider:
@@ -6855,6 +6919,10 @@ PrefabInstance:
     - target: {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
       propertyPath: m_Name
       value: Orange_Peel_GEO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1020290591670054102, guid: c297e48d0a990df4e838bd74664da205, type: 3}
@@ -7020,7 +7088,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &1216641356
 MeshRenderer:
@@ -7373,7 +7441,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1248163943
 MeshCollider:
@@ -7678,7 +7746,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &1293016202
 MeshRenderer:
@@ -7967,6 +8035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8053,7 +8125,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1361708271
 Transform:
@@ -8266,6 +8338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana_peel
       objectReference: {fileID: 0}
+    - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8897364443706082906, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -8346,6 +8422,10 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -8503,6 +8583,10 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -9111,7 +9195,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1496558096
 Transform:
@@ -9195,7 +9279,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1503018002
 MeshCollider:
@@ -9914,6 +9998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: egg
       objectReference: {fileID: 0}
+    - target: {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -10123,6 +10211,10 @@ PrefabInstance:
     - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_Name
       value: banana_peel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8897364443706082906, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_Materials.Array.size
@@ -10447,7 +10539,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1818756641
 MeshCollider:
@@ -10542,7 +10634,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1825321810
 Transform:
@@ -10944,7 +11036,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1934332365
 MeshCollider:
@@ -11177,7 +11269,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1976138329
 MeshCollider:
@@ -11393,6 +11485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chips_pack
       objectReference: {fileID: 0}
+    - target: {fileID: 6130638514126643399, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8771199192151659052, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -11606,7 +11702,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &2100101848
 MeshCollider:
@@ -11914,7 +12010,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &1078300702718106118
 MeshRenderer:
@@ -12007,7 +12103,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &3986555586454600776
 MeshRenderer:
@@ -12072,7 +12168,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5575819674354683616
 Transform:
@@ -12137,5 +12233,5 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
