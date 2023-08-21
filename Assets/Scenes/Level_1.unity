@@ -137,7 +137,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8959150
 Transform:
@@ -219,20 +219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple_Rotten_GEO
       objectReference: {fileID: 0}
-    - target: {fileID: 880613100639499054, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5810303419433911494, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 2394718265675352702, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-    - {fileID: -9105826944078552320, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -5235334338457097064, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
 --- !u!4 &14125815 stripped
@@ -384,10 +375,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana_peel (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8897364443706082906, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -449,11 +436,6 @@ PrefabInstance:
       value: -0.009
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 3951052027842389803, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
-    - {fileID: -7911308013220908085, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 5906596305344990062, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
 --- !u!4 &96070707 stripped
@@ -852,7 +834,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &267314986
 MeshCollider:
@@ -988,20 +970,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cane
       objectReference: {fileID: 0}
-    - target: {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8006348257383629863, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 3050099758712690149, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
-    - {fileID: 1398184900631538689, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 8418196086069596608, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
 --- !u!4 &271600954 stripped
@@ -1019,10 +992,6 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -1085,11 +1054,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &303846993 stripped
@@ -1265,7 +1229,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &366895228
 Transform:
@@ -1372,20 +1336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chips_pack
       objectReference: {fileID: 0}
-    - target: {fileID: 6130638514126643399, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8771199192151659052, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 3204048586603317641, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
-    - {fileID: 2276801039322660581, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -2857727495806497813, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
 --- !u!4 &407407212 stripped
@@ -2071,10 +2026,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2124,11 +2075,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &577257920 stripped
@@ -3083,10 +3029,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_box (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4383315318147321875, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3148,11 +3090,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: -449318267532291458, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-    - {fileID: 3990637487419731397, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 6180005226488049532, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
 --- !u!4 &792260376 stripped
@@ -3170,10 +3107,6 @@ PrefabInstance:
     - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Name
       value: news_paper (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2882252493098922885, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Materials.Array.size
@@ -3236,11 +3169,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 5031290673590774056, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
-    - {fileID: 4780795977535928819, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -1089834506690176251, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
 --- !u!4 &792532499 stripped
@@ -3270,7 +3198,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &823890098
 MeshCollider:
@@ -3669,10 +3597,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: banana_peel
       objectReference: {fileID: 0}
-    - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8897364443706082906, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3722,11 +3646,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 3951052027842389803, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
-    - {fileID: -7911308013220908085, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 5906596305344990062, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
 --- !u!4 &902622582 stripped
@@ -3909,10 +3828,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_box
       objectReference: {fileID: 0}
-    - target: {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4383315318147321875, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -3974,11 +3889,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: -449318267532291458, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-    - {fileID: 3990637487419731397, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 6180005226488049532, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
 --- !u!4 &974256102 stripped
@@ -3996,10 +3906,6 @@ PrefabInstance:
     - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Name
       value: news_paper
-      objectReference: {fileID: 0}
-    - target: {fileID: 860487493283345284, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2882252493098922885, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
       propertyPath: m_Materials.Array.size
@@ -4062,11 +3968,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 5031290673590774056, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
-    - {fileID: 4780795977535928819, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -1089834506690176251, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 183f5994fb59c1347a680ec353d20542, type: 3}
 --- !u!4 &986907923 stripped
@@ -4175,20 +4076,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple_Rotten_GEO (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 880613100639499054, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5810303419433911494, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 2394718265675352702, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-    - {fileID: -9105826944078552320, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -5235334338457097064, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
 --- !u!4 &1023369744 stripped
@@ -4570,20 +4462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple_Rotten_GEO (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 880613100639499054, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5810303419433911494, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 2394718265675352702, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-    - {fileID: -9105826944078552320, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -5235334338457097064, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
 --- !u!4 &1095018109 stripped
@@ -4736,20 +4619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cane (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 8006348257383629863, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 3050099758712690149, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
-    - {fileID: 1398184900631538689, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 8418196086069596608, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
 --- !u!4 &1108416913 stripped
@@ -4805,10 +4679,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4858,11 +4728,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &1269710430 stripped
@@ -4880,10 +4745,6 @@ PrefabInstance:
     - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_Name
       value: Beer_Bottle (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
@@ -4934,11 +4795,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &1277231886 stripped
@@ -5303,10 +5159,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: egg
       objectReference: {fileID: 0}
-    - target: {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -5364,11 +5216,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: -2830455874391652964, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
-    - {fileID: 4730269914002874802, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 134154614959679385, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
 --- !u!4 &1441109239 stripped
@@ -5570,10 +5417,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: nuts_pack
       objectReference: {fileID: 0}
-    - target: {fileID: 2649331488501985184, guid: 822f2d57804d93d4597a279693967333, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 7417189436983258355, guid: 822f2d57804d93d4597a279693967333, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -5635,11 +5478,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 8186062459404905675, guid: 822f2d57804d93d4597a279693967333, type: 3}
-    - {fileID: -4203681651370641148, guid: 822f2d57804d93d4597a279693967333, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -1711752397017563252, guid: 822f2d57804d93d4597a279693967333, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 822f2d57804d93d4597a279693967333, type: 3}
 --- !u!4 &1535302742 stripped
@@ -5869,20 +5707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple_Rotten_GEO (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 880613100639499054, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5810303419433911494, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 2394718265675352702, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
-    - {fileID: -9105826944078552320, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: -5235334338457097064, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 82a3fec1bde9de64ea21442761eddac0, type: 3}
 --- !u!4 &1551542679 stripped
@@ -6299,10 +6128,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_box (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 4383315318147321875, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -6364,11 +6189,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: -449318267532291458, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
-    - {fileID: 3990637487419731397, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 6180005226488049532, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
 --- !u!4 &1697626044 stripped
@@ -6492,10 +6312,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle
       objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -6545,11 +6361,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &1762339310 stripped
@@ -6574,7 +6385,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1783523260
 MeshCollider:
@@ -6704,7 +6515,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1818454218
 Transform:
@@ -6811,10 +6622,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beer_Bottle (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 2319130321213397833, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -6864,11 +6671,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: 7872326924773706630, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
-    - {fileID: 3615417573953496927, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 7010341757447158650, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
 --- !u!4 &1880995779 stripped
@@ -7298,10 +7100,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish
       objectReference: {fileID: 0}
-    - target: {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1955716327706542520, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -7363,11 +7161,6 @@ PrefabInstance:
       value: 87.206
       objectReference: {fileID: 0}
     m_RemovedComponents:
-<<<<<<< HEAD
-=======
-    - {fileID: -9100004864474993569, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
-    - {fileID: 2968848618965877049, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
->>>>>>> d91f1b541d988842430eb781b38f392427e720f7
     - {fileID: 19237370712381252, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
 --- !u!4 &2109404713 stripped
@@ -7790,7 +7583,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &919132149572925108
 GameObject:
@@ -7874,7 +7667,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &2886833068403017877
 MeshRenderer:
@@ -8227,7 +8020,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6429264745070120820
 Transform:
@@ -8438,7 +8231,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &7929067285068093389
 MeshRenderer:
@@ -8503,7 +8296,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &8357730073785863943
 MeshRenderer:
