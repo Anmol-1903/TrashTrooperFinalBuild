@@ -89,12 +89,13 @@ public class MainMenu : MonoBehaviour
     }
     public void ClearAllPlayerPrefs()
     {
-        TurnOffAllGameObjects();
+        //TurnOffAllGameObjects();
         _resetGame.SetActive(true);
     }
     public void DeleteData()
     {
         PlayerPrefs.DeleteAll();
+        StartCoroutine(LoadLevelByName("MainMenu"));
     }
     public void QuitGame()
     {
@@ -139,4 +140,11 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
     }
+    public void openurl(string url)
+    {
+
+        Application.OpenURL(url);
+    }
+
+
 }
