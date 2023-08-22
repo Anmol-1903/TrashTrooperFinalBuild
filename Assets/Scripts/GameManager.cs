@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider _progressBar;
 
     [SerializeField] private TextMeshProUGUI _gameTimer;
-
+    [SerializeField] IntestitialAds _ia;
     //[SerializeField] AudioClip _ingamebgclip;
 
 
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                _ia.ShowAd();
                 _nextLevelPanel.SetActive(true);
                 AudioManager.Instance.BG_Music(_levelComplete);
                 if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
