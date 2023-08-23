@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using System.Collections;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
@@ -13,8 +14,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject _credits;
     [SerializeField] GameObject _quit;
     [SerializeField] GameObject _asynLoader;
+
+
+    [SerializeField] AudioMixer _musicMixer;
+    [SerializeField] AudioMixer _audioMixer;
     private void Start()
     {
+        _musicMixer.SetFloat("Music",-9);
+        _audioMixer.SetFloat("Audio",0);
         Main();
     }
     public void Main()

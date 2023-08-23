@@ -6,6 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     TrashDeSpawner TDS;
+    IntestitialAd _ia;
     
     [SerializeField] AudioClip _levelComplete;
 
@@ -21,14 +22,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider _progressBar;
 
     [SerializeField] private TextMeshProUGUI _gameTimer;
-    [SerializeField] IntestitialAd _ia;
+    bool _adRunning = false;
     //[SerializeField] AudioClip _ingamebgclip;
 
 
     private void Awake()
     {
-        TDS = GameObject.FindObjectOfType<TrashDeSpawner>();
-        _ia = GameObject.FindObjectOfType<IntestitialAd>();
+        TDS = FindObjectOfType<TrashDeSpawner>();
+        _ia = FindObjectOfType<IntestitialAd>();
     }
     private void Start()
     {
@@ -46,7 +47,11 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                _ia.ShowAd();
+                if (!_adRunning)
+                {
+                    _ia.ShowAd();
+                    _adRunning = true;
+                }
                 _nextLevelPanel.SetActive(true);
                 AudioManager.Instance.BG_Music(_levelComplete);
                 if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)

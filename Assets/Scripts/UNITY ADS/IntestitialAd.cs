@@ -49,7 +49,6 @@ public class IntestitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShow
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log("Completed");
-
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)

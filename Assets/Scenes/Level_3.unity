@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17042695, g: 0.16536415, b: 0.1598921, a: 1}
+  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2191,7 +2191,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Level_2
+          m_StringArgument: End
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &490924448
@@ -4579,7 +4579,6 @@ MonoBehaviour:
   _loadingScreen: {fileID: 2075591095}
   _progressBar: {fileID: 1099279115}
   _gameTimer: {fileID: 1251544248}
-  _ia: {fileID: 0}
 --- !u!4 &1291695669
 Transform:
   m_ObjectHideFlags: 0

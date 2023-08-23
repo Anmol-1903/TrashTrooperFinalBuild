@@ -16,6 +16,10 @@ public class TrashDeSpawner : MonoBehaviour
     {
         _cleanlinessMeter.value = Mathf.Lerp(_cleanlinessMeter.value, _cleanliness, Time.deltaTime);
     }
+    public void HealNature(float amount)
+    {
+            _cleanliness += amount;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("WetWaste") || other.CompareTag("DryWaste"))

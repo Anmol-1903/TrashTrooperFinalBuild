@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17042695, g: 0.16536415, b: 0.1598921, a: 1}
+  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
-  _gameDuration: 6
+  _gameDuration: 121
   _counter: 0
   _minCleanlinessValue: 0
   _restartPanel: {fileID: 341932944}
@@ -5010,7 +5010,6 @@ MonoBehaviour:
   _loadingScreen: {fileID: 182752967}
   _progressBar: {fileID: 659496240}
   _gameTimer: {fileID: 884046939}
-  _ia: {fileID: 0}
 --- !u!4 &1291695669
 Transform:
   m_ObjectHideFlags: 0
@@ -7568,6 +7567,10 @@ PrefabInstance:
     - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: capacity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: distance
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: controller
