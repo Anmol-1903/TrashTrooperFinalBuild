@@ -19,6 +19,10 @@ public class TrashDeSpawner : MonoBehaviour
     public void HealNature(float amount)
     {
             _cleanliness += amount;
+        if (_cleanliness > _cleanlinessMeter.maxValue)
+        {
+            _cleanliness = _cleanlinessMeter.maxValue;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

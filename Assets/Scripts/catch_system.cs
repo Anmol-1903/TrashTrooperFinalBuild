@@ -121,7 +121,7 @@ public class catch_system : MonoBehaviour
                 if (wetwasteInventory)
                 {
                     Debug.Log("WetDisposed");
-                    //floor.HealNature((capacity - current_capacity) * _healPerTrash);
+                    floor.HealNature((capacity - current_capacity) * _healPerTrash);
                     wetCollect = wetCollect + capacity - current_capacity;
                     wetwasteInventory = false;
                     current_capacity = capacity;
@@ -154,7 +154,7 @@ public class catch_system : MonoBehaviour
                 if (drywasteInventory)
                 {
                     Debug.Log("DryDisposed");
-                    //floor.HealNature((capacity - current_capacity) * _healPerTrash);
+                    floor.HealNature((capacity - current_capacity) * _healPerTrash);
                     dryCollect += capacity - current_capacity;
                     drywasteInventory = false;
                     current_capacity = capacity;
