@@ -4,6 +4,8 @@ public class LevelSelector : MonoBehaviour
 {
     [SerializeField] Button[] _levelButtons;
     [SerializeField] int _levelCleared;
+    [SerializeField] IntestitialAd _ia;
+
 
     private void OnEnable()
     {

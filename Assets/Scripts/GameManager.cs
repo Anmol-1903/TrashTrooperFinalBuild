@@ -21,13 +21,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider _progressBar;
 
     [SerializeField] private TextMeshProUGUI _gameTimer;
-    [SerializeField] IntestitialAds _ia;
+    [SerializeField] IntestitialAd _ia;
     //[SerializeField] AudioClip _ingamebgclip;
 
 
     private void Awake()
     {
         TDS = GameObject.FindObjectOfType<TrashDeSpawner>();
+        _ia = GameObject.FindObjectOfType<IntestitialAd>();
     }
     private void Start()
     {
