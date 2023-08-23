@@ -20,8 +20,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] AudioMixer _audioMixer;
     private void Start()
     {
-        _musicMixer.SetFloat("Music",PlayerPrefs.GetFloat("Music", -9));
-        _audioMixer.SetFloat("Audio", PlayerPrefs.GetFloat("Audio", 0));
+        if (_musicMixer != null)
+            _musicMixer.SetFloat("Music", PlayerPrefs.GetFloat("Music", -9));
+        if (_audioMixer != null)
+            _audioMixer.SetFloat("Audio", PlayerPrefs.GetFloat("Audio", 0));
         Main();
     }
     public void Main()

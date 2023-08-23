@@ -20,6 +20,9 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] GameObject ButtonInput;
     [SerializeField] GameObject SliderInput;
+    [Header("Higher = Harder press")]
+    [Range(0,1)]
+    [SerializeField] float _sliderMoveDistance;
 
     float current_speed;
     Transform wetClamp;
@@ -86,13 +89,13 @@ public class PlayerMove : MonoBehaviour
         {
             if (controller != null)
             {
-                if (controller.value > 0.5f)
+                if (controller.value > _sliderMoveDistance)
                 {
                     transform.position += new Vector3(current_speed * Time.deltaTime, 0, 0);
                     transform.eulerAngles = new Vector3(0, -90f, 0);
                     _uncleController.SetBool("isRunning", true);
                 }
-                else if (controller.value < -0.5f)
+                else if (controller.value < -_sliderMoveDistance)
                 {
                     transform.position += new Vector3(-current_speed * Time.deltaTime, 0, 0);
                     transform.eulerAngles = new Vector3(0, 90f, 0);
