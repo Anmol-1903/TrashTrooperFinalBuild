@@ -12040,8 +12040,8 @@ MonoBehaviour:
   _credits: {fileID: 950963327}
   _quit: {fileID: 292081389}
   _asynLoader: {fileID: 549926240}
-  _musicMixer: {fileID: 0}
-  _audioMixer: {fileID: 0}
+  _musicMixer: {fileID: 24100000, guid: 553f0ac5984835d478ac1db10d1f9c16, type: 2}
+  _audioMixer: {fileID: 24100000, guid: 775225279ba4f774d829c7b800843a56, type: 2}
 --- !u!1 &1934332364
 GameObject:
   m_ObjectHideFlags: 0
