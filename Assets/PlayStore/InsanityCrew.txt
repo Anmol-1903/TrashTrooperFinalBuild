@@ -1,0 +1,4 @@
+Pass: InsanityCrew
+
+Alias: TrashTrooper
+Pass: InsanityCrew
