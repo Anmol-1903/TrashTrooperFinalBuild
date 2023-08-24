@@ -5,6 +5,7 @@ public class TrashDeSpawner : MonoBehaviour
     [SerializeField] AudioClip _failClip;
     [SerializeField] Slider _cleanlinessMeter;
     [SerializeField] int _maximumValue;
+    [SerializeField] float _healPerAmount;
     public float _cleanliness;
     private void Start()
     {
@@ -18,7 +19,7 @@ public class TrashDeSpawner : MonoBehaviour
     }
     public void HealNature(float amount)
     {
-            _cleanliness += amount;
+        _cleanliness += (amount * _healPerAmount);
         if (_cleanliness > _cleanlinessMeter.maxValue)
         {
             _cleanliness = _cleanlinessMeter.maxValue;

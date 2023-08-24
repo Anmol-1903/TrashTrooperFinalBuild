@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 2337297852947651348}
   - component: {fileID: 6596452890032147779}
   m_Layer: 0
-  m_Name: Trashl lvl4
+  m_Name: Trash lvl4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 8959002453306659513}
   - component: {fileID: 8959002453306659508}
   - component: {fileID: 8959002453306659519}
-  - component: {fileID: 8959002453306659515}
+  - component: {fileID: 2143893884}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1469,7 +1469,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5512805, y: 3.0089502, z: 5.206963}
+  m_Size: {x: 2.5512805, y: 3.0089502, z: 3.7346969}
   m_Center: {x: -0.10034621, y: 1.4729295, z: -0.7613448}
 --- !u!114 &8959002453306659519
 MonoBehaviour:
@@ -1496,11 +1496,12 @@ MonoBehaviour:
   Hat: {fileID: 8635855172678201165}
   ButtonInput: {fileID: 0}
   SliderInput: {fileID: 0}
+  _sliderMoveDistance: 0
   glovePower: 0
   timeSlowerPower: 0
   isRighrunning: 0
   isLeftrunning: 0
---- !u!114 &8959002453306659515
+--- !u!114 &2143893884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1509,40 +1510,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8959002453306659490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ecafff33e659046bdcfbda74335200, type: 3}
+  m_Script: {fileID: 11500000, guid: d81f48f7c00c89e4487269cf05d0f1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drywasteInventory: 0
-  wetwasteInventory: 0
-  current_capacity: 0
-  capacity: 5
-  glovePower: 0
-  TrashBags:
-  - {fileID: 6639021465870561501}
-  - {fileID: 2520999792623677893}
-  - {fileID: 7840481147665405058}
-  - {fileID: 2243960739213256933}
-  _trashBagSize: 1
-  defaultColor: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
-  wetWasteColor: {r: 0, g: 0.6666667, b: 0, a: 1}
-  dryWasteColor: {r: 0, g: 0.33333334, b: 1, a: 1}
-  _bg: {fileID: 0}
-  controller: {fileID: 0}
-  default_Capacity: 4
-  upgraded_Capacity: 8
-  distance: 1.5
-  _capacityText: {fileID: 0}
-  dryWasteText: {fileID: 0}
-  wetWasteText: {fileID: 0}
-  picker_txt: {fileID: 0}
-  _inventoryText: {fileID: 0}
-  wetDustBinTrans: {fileID: 0}
-  dryDustBinTrans: {fileID: 0}
-  playerTrans: {fileID: 0}
-  _wetTrashDispose: {fileID: 8300000, guid: f71ba9987806f00459c7a69c0e83f9da, type: 3}
-  _dryTrashDispose: {fileID: 8300000, guid: d3797211effcf8a4ab28ed217eadb93e, type: 3}
-  _dryDustbinLid: {fileID: 0}
-  _wetDustbinLid: {fileID: 0}
+  _wet_Trash_Dispose: {fileID: 8300000, guid: f71ba9987806f00459c7a69c0e83f9da, type: 3}
+  _dry_Trash_Dispose: {fileID: 8300000, guid: d3797211effcf8a4ab28ed217eadb93e, type: 3}
+  _wet_Text: {fileID: 0}
+  _dry_Text: {fileID: 0}
+  _wet_Dustbin_Lid: {fileID: 0}
+  _dry_Dustbin_Lid: {fileID: 0}
+  _distance: 1
+  _trash_In_Inventory: {fileID: 0}
+  _max_Dry_capacity: 3
+  _max_Wet_capacity: 3
 --- !u!1 &9130756031484027889
 GameObject:
   m_ObjectHideFlags: 0

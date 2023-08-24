@@ -758,8 +758,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797445148}
-        m_TargetAssemblyTypeName: catch_system, Assembly-CSharp
+      - m_Target: {fileID: 1093007562}
+        m_TargetAssemblyTypeName: BetterCatchSystem, Assembly-CSharp
         m_MethodName: CatchTrash
         m_Mode: 1
         m_Arguments:
@@ -4592,17 +4592,6 @@ PrefabInstance:
       objectReference: {fileID: 2034465904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
---- !u!114 &797445148 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8959002453306659515, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-  m_PrefabInstance: {fileID: 797445146}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ecafff33e659046bdcfbda74335200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &797445149 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
@@ -4901,6 +4890,8 @@ MonoBehaviour:
   _credits: {fileID: 0}
   _quit: {fileID: 0}
   _asynLoader: {fileID: 0}
+  _musicMixer: {fileID: 0}
+  _audioMixer: {fileID: 0}
 --- !u!4 &935438177
 Transform:
   m_ObjectHideFlags: 0
@@ -6145,6 +6136,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
   m_PrefabInstance: {fileID: 797445146}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1093007562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+  m_PrefabInstance: {fileID: 797445146}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81f48f7c00c89e4487269cf05d0f1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093807686
 GameObject:
   m_ObjectHideFlags: 0
@@ -9894,6 +9896,7 @@ MonoBehaviour:
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 1474924028}
   _maximumValue: 100
+  _healPerAmount: 0
   _cleanliness: 0
 --- !u!65 &1818454223
 BoxCollider:

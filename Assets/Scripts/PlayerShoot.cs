@@ -2,15 +2,17 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] float _cooldown = 5f;
-    float _countdown;
-    bool _canShoot;
     [SerializeField] GameObject[] _prefabs;
     [SerializeField] GameObject _shootButton;
-    catch_system _cs;
+
+    float _countdown;
+    bool _canShoot;
+    
+    BetterCatchSystem _cs;
     GameObject _selectedPrefab;
     private void Awake()
     {
-        _cs = FindObjectOfType<catch_system>();
+        _cs = FindObjectOfType<BetterCatchSystem>();
     }
     private void Start()
     {
@@ -18,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
     }
     private void Update()
     {
-        if (_cs.current_capacity == _cs.capacity && _canShoot)
+        if ((_cs._dry_capacity > 0 || _cs._wet_capacity > 0) && _canShoot)
         {
             _shootButton.SetActive(true);
         }
