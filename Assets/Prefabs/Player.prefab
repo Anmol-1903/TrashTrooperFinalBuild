@@ -1515,14 +1515,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wet_Trash_Dispose: {fileID: 8300000, guid: f71ba9987806f00459c7a69c0e83f9da, type: 3}
   _dry_Trash_Dispose: {fileID: 8300000, guid: d3797211effcf8a4ab28ed217eadb93e, type: 3}
+  _wet_Dustbin: {fileID: 0}
+  _dry_Dustbin: {fileID: 0}
   _wet_Text: {fileID: 0}
   _dry_Text: {fileID: 0}
   _wet_Dustbin_Lid: {fileID: 0}
   _dry_Dustbin_Lid: {fileID: 0}
+  throwCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.286776
+      outSlope: 5.286776
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.052614372
+    - serializedVersion: 3
+      time: 1
+      value: -0.0000076293945
+      inSlope: -5.404534
+      outSlope: -5.404534
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.047052503
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _distance: 1
   _trash_In_Inventory: {fileID: 0}
   _max_Dry_capacity: 3
   _max_Wet_capacity: 3
+  _dry_capacity: 3
+  _wet_capacity: 3
 --- !u!1 &9130756031484027889
 GameObject:
   m_ObjectHideFlags: 0

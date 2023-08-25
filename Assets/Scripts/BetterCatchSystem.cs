@@ -1,9 +1,13 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 public class BetterCatchSystem : MonoBehaviour
 {
     [SerializeField] AudioClip _wet_Trash_Dispose;
     [SerializeField] AudioClip _dry_Trash_Dispose;
+
+    [SerializeField] GameObject _wet_Dustbin;
+    [SerializeField] GameObject _dry_Dustbin;
 
     [SerializeField] TextMeshProUGUI _wet_Text;
     [SerializeField] TextMeshProUGUI _dry_Text;
@@ -11,10 +15,17 @@ public class BetterCatchSystem : MonoBehaviour
     [SerializeField] Animator _wet_Dustbin_Lid;
     [SerializeField] Animator _dry_Dustbin_Lid;
 
+    float _trash_Animation_Duration = 1f;
+    float _trash_Animation_Height = 1f;
+
+    [SerializeField] AnimationCurve throwCurve;
+
     Transform _wet_Dustbin_Trans;
     Transform _dry_Dustbin_Trans;
 
     [SerializeField] float _distance = 1f;
+
+    bool _glove_enabled;
 
     bool _dry_Waste_In_Trigger;
     bool _wet_Waste_In_Trigger;
@@ -26,13 +37,12 @@ public class BetterCatchSystem : MonoBehaviour
     [SerializeField] int _max_Dry_capacity = 3;
     [SerializeField] int _max_Wet_capacity = 3;
     
-    public int _dry_capacity = 3;
-    public int _wet_capacity = 3;
+    [HideInInspector] public int _dry_capacity = 3;
+    [HideInInspector] public int _wet_capacity = 3;
     int _capacity_upgrade;
 
     TrashDeSpawner floor;
     PlayerMove playerMovement;
-
 
     private void Awake()
     {
@@ -54,6 +64,7 @@ public class BetterCatchSystem : MonoBehaviour
     }
     private void Update()
     {
+        _glove_enabled = playerMovement.glovePower;
         if (Vector3.Distance(transform.position, _wet_Dustbin_Trans.position) < _distance)
         {
             if (playerMovement.isLeftrunning)
@@ -94,7 +105,6 @@ public class BetterCatchSystem : MonoBehaviour
             if (_dry_Dustbin_Lid != null)
                 _dry_Dustbin_Lid.SetBool("Open", false);
         }
-
         if (_wet_Text != null)
             _wet_Text.text = (_max_Wet_capacity - _wet_capacity).ToString() + "/" + (_max_Wet_capacity).ToString();
         if (_dry_Text != null)
@@ -140,17 +150,65 @@ public class BetterCatchSystem : MonoBehaviour
     {
         if (_wet_Waste_In_Trigger)
         {
-            _wet_capacity--;
-            _wet_Waste_In_Trigger = false;
-            _wet_Waste_In_Inventory = true;
-            Destroy(_trash_In_Inventory);
+            if (_glove_enabled)
+            {
+                _trash_Animation_Duration = Vector3.Distance(_trash_In_Inventory.transform.position, _wet_Dustbin.transform.position)/15;
+                _trash_Animation_Height = Vector3.Distance(_trash_In_Inventory.transform.position, _wet_Dustbin.transform.position)/5;
+                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _wet_Dustbin.transform, _trash_In_Inventory, _wet_Trash_Dispose));
+            }
+            else
+            {
+                _wet_capacity--;
+                _wet_Waste_In_Trigger = false;
+                _wet_Waste_In_Inventory = true;
+                Destroy(_trash_In_Inventory);
+            }
         }
         else if (_dry_Waste_In_Trigger)
         {
-            _dry_capacity--;
-            _dry_Waste_In_Trigger = false;
-            _dry_Waste_In_Inventory = true;
-            Destroy(_trash_In_Inventory);
+            if (_glove_enabled)
+            {
+                _trash_Animation_Duration = Vector3.Distance(_trash_In_Inventory.transform.position, _dry_Dustbin.transform.position)/15;
+                _trash_Animation_Height = Vector3.Distance(_trash_In_Inventory.transform.position, _dry_Dustbin.transform.position)/5;
+                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _dry_Dustbin.transform, _trash_In_Inventory, _dry_Trash_Dispose));
+            }
+            else
+            {
+                _dry_capacity--;
+                _dry_Waste_In_Trigger = false;
+                _dry_Waste_In_Inventory = true;
+                Destroy(_trash_In_Inventory);
+            }
+        }
+    }
+    IEnumerator StartTrashAnimation(Vector3 startPosition, Transform targetPosition, GameObject _trash, AudioClip _trash_Dispose_Clip)
+    {
+        float timePassed = 0f;
+        Vector3 throwDirection = (targetPosition.position - startPosition).normalized;
+        float distance = Vector3.Distance(startPosition, targetPosition.position);
+        float throwForce = distance / _trash_Animation_Duration;
+        while (timePassed < _trash_Animation_Duration)
+        {
+            float normalizedTime = timePassed / _trash_Animation_Duration;
+            float yOffset = throwCurve.Evaluate(normalizedTime) * _trash_Animation_Height;
+            if (_trash != null)
+            {
+                targetPosition.GetComponentInParent<Animator>().SetBool("Open", true);
+                _trash.transform.position = startPosition + throwDirection * throwForce * timePassed + Vector3.up * yOffset;
+                timePassed += Time.deltaTime;
+                if (Vector3.Distance(_trash.transform.position, targetPosition.position) < 1f)
+                {
+                    AudioManager.Instance.TrashDispose(_trash_Dispose_Clip);
+                    yield return new WaitForSecondsRealtime(0.5f);
+                    if (Vector3.Distance(transform.position, targetPosition.position) > 5f)
+                    {
+                        Debug.Log("NIKAL LAWDE");
+                        targetPosition.GetComponentInParent<Animator>().SetBool("Open", false);
+                    }
+                    Destroy(_trash);
+                }
+            }
+            yield return null;
         }
     }
 }

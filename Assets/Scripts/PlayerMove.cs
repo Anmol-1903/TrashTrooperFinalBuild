@@ -9,11 +9,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
     [SerializeField] float TimeSlowertimer = 10f;
-    [SerializeField] GameObject playerTrans;
     [SerializeField] Vector3 offset;
     [SerializeField] Slider controller;
 
-    [SerializeField] Animator _uncleController;
 
     [SerializeField] GameObject Gloves;
     [SerializeField] GameObject Hat;
@@ -24,18 +22,21 @@ public class PlayerMove : MonoBehaviour
     [Range(0,1)]
     [SerializeField] float _sliderMoveDistance;
 
+    Animator _uncleController;
+    GameObject playerTrans;
     float current_speed;
     Transform wetClamp;
     Transform dryClamp;
-    public bool glovePower;
-    public bool timeSlowerPower;
+    [HideInInspector] public bool glovePower;
+    [HideInInspector] public bool timeSlowerPower;
 
-    public bool isRighrunning;
-    public bool isLeftrunning;
+    [HideInInspector] public bool isRighrunning;
+    [HideInInspector] public bool isLeftrunning;
     private void Awake()
     {
         Gloves = GameObject.FindGameObjectWithTag("Gloves");
         Hat = GameObject.FindGameObjectWithTag("Cap");
+        playerTrans = GetComponent<GameObject>();
     }
     private void Start()
     {

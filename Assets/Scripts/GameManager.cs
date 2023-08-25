@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float _gameDuration;
     [SerializeField] float _counter;
+    [Range(0,100)]
     [SerializeField] float _minCleanlinessValue;
 
     [SerializeField] GameObject _restartPanel;

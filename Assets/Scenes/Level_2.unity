@@ -9885,6 +9885,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1562917433}
     - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _dry_Dustbin
+      value: 
+      objectReference: {fileID: 6957799351338705531}
+    - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _wet_Dustbin
+      value: 
+      objectReference: {fileID: 7787765951222046057}
+    - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: _dry_Dustbin_Lid
       value: 
       objectReference: {fileID: 6429264745070120821}

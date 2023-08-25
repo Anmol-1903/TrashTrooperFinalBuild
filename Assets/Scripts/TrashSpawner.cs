@@ -1,8 +1,8 @@
 using UnityEngine;
 public class TrashSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject[] _spawnPositions;
-    [SerializeField] Transform _selectedSpawnPosition;
+    GameObject[] _spawnPositions;
+    Transform _selectedSpawnPosition;
 
     [SerializeField] Transform _container;
 
@@ -13,6 +13,7 @@ public class TrashSpawner : MonoBehaviour
     [SerializeField] GameObject[] _wetTrashPrefabs;
 
     [Header("WetSpawnChance will be (100 - DrySpawnChance)")]
+    [Range(0,100)]
     [SerializeField] int _drySpawnChance = 50;
 
     GameObject _trashToSpawn;

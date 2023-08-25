@@ -5,9 +5,8 @@ public class Trash : MonoBehaviour
     [Tooltip("How much this trash will bring the cleanliness bar down")]
     public int _dirtiness;
 
-
     float _speed;
-    [SerializeField] float slowSpeed = 1;
+    public float slowSpeed = 1;
     public float normalSpeed = 5;
 
     [SerializeField] GameObject _player;

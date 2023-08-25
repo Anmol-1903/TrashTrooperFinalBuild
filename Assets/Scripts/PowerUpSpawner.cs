@@ -4,7 +4,7 @@ public class PowerUpSpawner : MonoBehaviour
     [SerializeField] float[] timer_For_PowerUps_To_Spawn;
     [SerializeField] float counter;
     [SerializeField] GameObject[] PowerUps;
-    [SerializeField] GameObject[] spawnPositions;
+    GameObject[] spawnPositions;
 
     GameObject PowerUptoSpawn;
     private Transform currentSpawmnPoint;
