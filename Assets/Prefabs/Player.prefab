@@ -1488,10 +1488,10 @@ MonoBehaviour:
   fastSpeed: 20
   glovePower_timer: 5
   TimeSlowertimer: 10
-  playerTrans: {fileID: 8959002453306659490}
   offset: {x: 0, y: 0, z: 0.7}
   controller: {fileID: 0}
-  _uncleController: {fileID: 8959002453682685348}
+  _capTimer: {fileID: 0}
+  _gloveTimer: {fileID: 0}
   Gloves: {fileID: 8623931545004122794}
   Hat: {fileID: 8635855172678201165}
   ButtonInput: {fileID: 0}
