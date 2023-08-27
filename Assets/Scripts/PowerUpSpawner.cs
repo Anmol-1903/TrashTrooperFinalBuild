@@ -16,7 +16,10 @@ public class PowerUpSpawner : MonoBehaviour
 
     private void Update()
     {
-        PowerUpSpawningSystem();
+        if(PowerUps.Length != 0)
+        {
+            PowerUpSpawningSystem();
+        }
     }
 
     void PowerUpSpawningSystem()
