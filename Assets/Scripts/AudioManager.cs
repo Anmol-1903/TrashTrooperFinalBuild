@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource trash_falldown;
     [SerializeField] AudioSource powerup_collect;
     [SerializeField] AudioSource trash_dispose;
+    [SerializeField] AudioSource trash_collect;
 
     private void Awake()
     {
@@ -50,5 +51,9 @@ public class AudioManager : MonoBehaviour
     {
         trash_dispose.clip = music;
         trash_dispose.Play();
+    }
+    public void TrashCollect()
+    {
+        trash_collect.Play();
     }
 }

@@ -161,6 +161,7 @@ public class BetterCatchSystem : MonoBehaviour
                 _wet_capacity--;
                 _wet_Waste_In_Trigger = false;
                 _wet_Waste_In_Inventory = true;
+                AudioManager.Instance.TrashCollect();
                 Destroy(_trash_In_Inventory);
             }
         }
@@ -177,6 +178,7 @@ public class BetterCatchSystem : MonoBehaviour
                 _dry_capacity--;
                 _dry_Waste_In_Trigger = false;
                 _dry_Waste_In_Inventory = true;
+                AudioManager.Instance.TrashCollect();
                 Destroy(_trash_In_Inventory);
             }
         }
