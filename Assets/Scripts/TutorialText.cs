@@ -56,4 +56,10 @@ public class TutorialText : MonoBehaviour
             texts.text = lines[index];
         }
     }
+    public void SkipTutorialText()
+    {
+        TM = GetComponentInParent<Tutorial_Manager>();
+        TM.HelloTrooper();
+        gameObject.SetActive(false);
+    }
 }

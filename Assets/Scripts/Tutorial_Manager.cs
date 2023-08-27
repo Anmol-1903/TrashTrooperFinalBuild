@@ -88,4 +88,8 @@ public class Tutorial_Manager : MonoBehaviour
         }
         _hello.SetActive(false);
     }
+
+
+    
+
 }

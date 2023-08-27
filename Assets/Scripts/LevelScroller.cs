@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class LevelScroller : MonoBehaviour
@@ -32,11 +33,13 @@ public class LevelScroller : MonoBehaviour
         for (int i = 0; i < pos.Length; i++)
         {
             transform.GetChild(i).localScale = new Vector2(1f, 1f);
+            transform.GetChild(i).gameObject.SetActive(true);
             for (int j = 0; j < pos.Length; j++)
             {
                 if (j != currentScroll)
                 {
                     transform.GetChild(j).localScale = new Vector2(0.75f, 0.75f);
+                    transform.GetChild(j).gameObject.SetActive(false);
                 }
             }
         }
@@ -49,11 +52,13 @@ public class LevelScroller : MonoBehaviour
         for (int i = 0; i < pos.Length; i++)
         {
             transform.GetChild(i).localScale = new Vector2(1f, 1f);
+            transform.GetChild(i).gameObject.SetActive(true);
             for (int j = 0; j < pos.Length; j++)
             {
                 if (j != currentScroll)
                 {
                     transform.GetChild(j).localScale = new Vector2(0.75f, 0.75f);
+                    transform.GetChild(j).gameObject.SetActive(false);
                 }
             }
         }
