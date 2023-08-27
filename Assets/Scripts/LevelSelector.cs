@@ -10,10 +10,13 @@ public class LevelSelector : MonoBehaviour
 
     private void Awake()
     {
+        _levelCompleteText = new TextMeshProUGUI[_levelButtons.Length];
         for (int i = 0; i < _levelButtons.Length; i++)
         {
+
             _levelCompleteText[i] = _levelButtons[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         }
+
     }
 
     private void OnEnable()
@@ -25,8 +28,11 @@ public class LevelSelector : MonoBehaviour
             {
                 if (_levelButtons[i] != null)
                     _levelButtons[i].interactable = true;
+                if(i < _levelCleared)
+                {
                 if (_levelCompleteText[i] != null)
                     _levelCompleteText[i].text = "Level " + (i + 1).ToString() + " Completed";
+                }
             }
             else
             {
