@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Trash : MonoBehaviour
@@ -11,6 +12,7 @@ public class Trash : MonoBehaviour
 
     [SerializeField] GameObject _player;
     [SerializeField] PlayerMove playerMove;
+    [SerializeField] GameObject wetWasteUI;
     private void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -22,6 +24,14 @@ public class Trash : MonoBehaviour
         if(rb != null)
         {
             rb.AddTorque(Random.Range(-100,100), Random.Range(-100, 100), Random.Range(-100, 100));
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("WetWasteTriggerUI"))
+        {
+            wetWasteUI.SetActive(true);
+            StartCoroutine(waiter());
         }
     }
     private void Update()
@@ -39,5 +49,11 @@ public class Trash : MonoBehaviour
             return;
         }
         transform.position += new Vector3(0f, -_speed * Time.deltaTime, 0f);
+    }
+    IEnumerator waiter()
+    {
+        Time.timeScale = 0.01f;
+        yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 1;
     }
 }

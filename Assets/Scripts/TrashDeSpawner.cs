@@ -29,7 +29,11 @@ public class TrashDeSpawner : MonoBehaviour
     {
         if (other.CompareTag("WetWaste") || other.CompareTag("DryWaste"))
         {
-            _cleanliness -= other.GetComponent<Trash>()._dirtiness;
+            if (other.GetComponent<Trash>())
+            {
+                _cleanliness -= other.GetComponent<Trash>()._dirtiness;
+
+            }
             AudioManager.Instance.TrashFallDown(_failClip);
             Destroy(other.gameObject);
         }

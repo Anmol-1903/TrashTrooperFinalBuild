@@ -8,13 +8,14 @@ public class Tutorial_Manager : MonoBehaviour
     [SerializeField] Transform _player, _dustbin1, _dustbin2;
     [SerializeField] GameObject canvas1, canvas2, canvas3;
     [SerializeField] GameObject tutorialEnd;
+    [SerializeField] PlayerMove playerMove;
     private void Start()
     {
         DeactivateAllObjects();
         _hello.SetActive(true);
         Trash1.GetComponent<Trash>().normalSpeed = 0f;
         Trash2.GetComponent<Trash>().normalSpeed = 0f;
-        Trash3.GetComponent<Trash>().normalSpeed = 0f;
+        Trash3.GetComponent<EggFallDown>()._speed = 0f;
     }
     private void Update()
     {
@@ -40,7 +41,7 @@ public class Tutorial_Manager : MonoBehaviour
         {
             Submitted2ndTrash();
         }
-        if(Trash3 == null && Vector3.Distance(_player.position, _dustbin2.position) < 2f)
+        if (Trash3 == null && Vector3.Distance(_player.position, _dustbin2.position) < 2f)
         {
             PlayerPrefs.SetInt("HitCountKey", 1);
             tutorialEnd.SetActive(true);
@@ -73,7 +74,7 @@ public class Tutorial_Manager : MonoBehaviour
     {
         if (Trash3 != null)
         {
-            Trash3.GetComponent<Trash>().normalSpeed = 5f;
+            Trash3.GetComponent<EggFallDown>()._speed = 10f;
         }
 
     }
@@ -87,4 +88,5 @@ public class Tutorial_Manager : MonoBehaviour
         }
         _hello.SetActive(false);
     }
+    
 }
