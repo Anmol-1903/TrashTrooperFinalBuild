@@ -1,7 +1,11 @@
 using UnityEngine;
 public class PowerUpSpawner : MonoBehaviour
 {
-    [SerializeField] float[] timer_For_PowerUps_To_Spawn;
+    [Header("Inclusive")]
+    [SerializeField] int min_Timer_For_PowerUps_To_Spawn;
+    [Header("Exclusive")]
+    [SerializeField] int max_Timer_For_PowerUps_To_Spawn;
+    [Header("Initial Time")]
     [SerializeField] float counter;
     [SerializeField] GameObject[] PowerUps;
     GameObject[] spawnPositions;
@@ -33,7 +37,7 @@ public class PowerUpSpawner : MonoBehaviour
             currentSpawmnPoint = spawnPositions[Random.Range(0, spawnPositions.Length)].transform;
             PowerUptoSpawn = PowerUps[Random.Range(0, PowerUps.Length)];
             Instantiate(PowerUptoSpawn, currentSpawmnPoint.position, Quaternion.identity);
-            counter = timer_For_PowerUps_To_Spawn[Random.Range(0, timer_For_PowerUps_To_Spawn.Length)];
+            counter = Random.Range(min_Timer_For_PowerUps_To_Spawn, max_Timer_For_PowerUps_To_Spawn);
         }
 
     }

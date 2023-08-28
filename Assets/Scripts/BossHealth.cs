@@ -5,14 +5,14 @@ public class BossHealth : MonoBehaviour
     [SerializeField] float _maxHealth = 100f;
     [SerializeField] float _damagePerShot = 10f;
     [SerializeField] Slider _bossBar;
-    float _currentHealth;
+    [SerializeField] float _currentHealth;
     float _apparentHealth;
     private void Start()
     {
+        _currentHealth = _maxHealth;
+        _apparentHealth = _maxHealth;
         if (_bossBar)
         {
-            _currentHealth = _maxHealth;
-            _apparentHealth = _maxHealth;
             _bossBar.maxValue = _maxHealth;
         }
     }
@@ -35,8 +35,10 @@ public class BossHealth : MonoBehaviour
     public void DealDamage(float _damage)
     {
         _currentHealth -= _damage;
+        Debug.Log("ouch");
         if(_currentHealth <= 0)
         {
+            Debug.Log("dead");
             //Boss Ded
         }
     }

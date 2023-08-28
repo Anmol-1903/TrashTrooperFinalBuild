@@ -24,7 +24,7 @@ public class TrashSpawner : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("SpawnTrash", 5f);
+        Invoke("SpawnTrash", 2f);
     }
     void SpawnTrash()
     {

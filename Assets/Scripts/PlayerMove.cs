@@ -9,7 +9,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
     [SerializeField] float TimeSlowertimer = 10f;
-    [SerializeField] Vector3 offset;
     [SerializeField] Slider controller;
     [SerializeField] Slider _capTimer;
     [SerializeField] Slider _gloveTimer;
@@ -188,6 +187,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("glove_powerup"))
         {
+            StopCoroutine(gloveTimer());
             StartCoroutine(gloveTimer());
             Gloves.SetActive(true);
             AudioManager.Instance.PowerupCollect(powerup_collected);
@@ -195,6 +195,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (other.gameObject.CompareTag("cap_powerup"))
         {
+            StopCoroutine(TimeSlowerTimer());
             StartCoroutine(TimeSlowerTimer());
             Hat.SetActive(true);
             AudioManager.Instance.PowerupCollect(powerup_collected);

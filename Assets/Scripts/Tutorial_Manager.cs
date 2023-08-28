@@ -15,7 +15,6 @@ public class Tutorial_Manager : MonoBehaviour
         Trash1.GetComponent<Trash>().normalSpeed = 0f;
         Trash2.GetComponent<Trash>().normalSpeed = 0f;
         Trash3.GetComponent<Trash>().normalSpeed = 0f;
-
     }
     private void Update()
     {
@@ -88,8 +87,4 @@ public class Tutorial_Manager : MonoBehaviour
         }
         _hello.SetActive(false);
     }
-
-
-    
-
 }

@@ -3016,7 +3016,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840748983}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659496238
 GameObject:
@@ -4127,8 +4127,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1304741386}
   - {fileID: 654250788}
+  - {fileID: 1304741386}
   - {fileID: 1063595894}
   - {fileID: 1066560835}
   - {fileID: 2090050667}
@@ -4182,12 +4182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61734d426a9ae84eaa5e4e12452beac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer_For_PowerUps_To_Spawn:
-  - 7
-  - 10
-  - 13
-  counter: 15
-  PowerUps: []
+  min_Timer_For_PowerUps_To_Spawn: 20
+  max_Timer_For_PowerUps_To_Spawn: 30
+  counter: 20
+  PowerUps:
+  - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
 --- !u!1 &884046937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,7 +6082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 840748983}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337455863
 GameObject:
@@ -8778,15 +8777,15 @@ PrefabInstance:
       objectReference: {fileID: 1113819444}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: TimeSlowertimer
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: glovePower_timer
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: _sliderMoveDistance
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
