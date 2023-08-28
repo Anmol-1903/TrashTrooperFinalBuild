@@ -9,14 +9,20 @@ public class BossHealth : MonoBehaviour
     float _apparentHealth;
     private void Start()
     {
-        _currentHealth = _maxHealth;
-        _apparentHealth = _maxHealth;
-        _bossBar.maxValue = _maxHealth;
+        if (_bossBar)
+        {
+            _currentHealth = _maxHealth;
+            _apparentHealth = _maxHealth;
+            _bossBar.maxValue = _maxHealth;
+        }
     }
     private void Update()
     {
-        _apparentHealth = Mathf.Lerp(_apparentHealth, _currentHealth, Time.deltaTime * 2);
-        _bossBar.value = _apparentHealth;
+        if (_bossBar)
+        {
+            _apparentHealth = Mathf.Lerp(_apparentHealth, _currentHealth, Time.deltaTime * 2);
+            _bossBar.value = _apparentHealth;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
