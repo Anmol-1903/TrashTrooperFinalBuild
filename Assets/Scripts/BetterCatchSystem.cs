@@ -3,6 +3,9 @@ using UnityEngine;
 using System.Collections;
 public class BetterCatchSystem : MonoBehaviour
 {
+    [SerializeField] Cannon _wet_Cannon;
+    [SerializeField] Cannon _dry_Cannon;
+
     [SerializeField] AudioClip _wet_Trash_Dispose;
     [SerializeField] AudioClip _dry_Trash_Dispose;
 
@@ -75,6 +78,10 @@ public class BetterCatchSystem : MonoBehaviour
                 {
                     _wet_Waste_In_Inventory = false;
                     AudioManager.Instance.TrashDispose(_wet_Trash_Dispose);
+                    if(_wet_Cannon != null)
+                    {
+                        _wet_Cannon.CollectTrash(_max_Wet_capacity - _wet_capacity);
+                    }
                     floor.HealNature(_max_Wet_capacity - _wet_capacity);
                     _wet_capacity = _max_Wet_capacity * _capacity_upgrade;
                 }
@@ -95,6 +102,10 @@ public class BetterCatchSystem : MonoBehaviour
                 {
                     _dry_Waste_In_Inventory = false;
                     AudioManager.Instance.TrashDispose(_dry_Trash_Dispose);
+                    if(_dry_Cannon != null)
+                    {
+                        _dry_Cannon.CollectTrash(_max_Dry_capacity - _dry_capacity);
+                    }
                     floor.HealNature(_max_Dry_capacity - _dry_capacity);
                     _dry_capacity = _max_Dry_capacity * _capacity_upgrade;
                 }
@@ -154,7 +165,7 @@ public class BetterCatchSystem : MonoBehaviour
             {
                 _trash_Animation_Duration = Vector3.Distance(_trash_In_Inventory.transform.position, _wet_Dustbin.transform.position)/15;
                 _trash_Animation_Height = Vector3.Distance(_trash_In_Inventory.transform.position, _wet_Dustbin.transform.position)/5;
-                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _wet_Dustbin.transform, _trash_In_Inventory, _wet_Trash_Dispose));
+                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _wet_Dustbin.transform, _trash_In_Inventory, _wet_Trash_Dispose, true));
             }
             else
             {
@@ -171,7 +182,7 @@ public class BetterCatchSystem : MonoBehaviour
             {
                 _trash_Animation_Duration = Vector3.Distance(_trash_In_Inventory.transform.position, _dry_Dustbin.transform.position)/15;
                 _trash_Animation_Height = Vector3.Distance(_trash_In_Inventory.transform.position, _dry_Dustbin.transform.position)/5;
-                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _dry_Dustbin.transform, _trash_In_Inventory, _dry_Trash_Dispose));
+                StartCoroutine(StartTrashAnimation(_trash_In_Inventory.transform.position, _dry_Dustbin.transform, _trash_In_Inventory, _dry_Trash_Dispose, false));
             }
             else
             {
@@ -183,7 +194,7 @@ public class BetterCatchSystem : MonoBehaviour
             }
         }
     }
-    IEnumerator StartTrashAnimation(Vector3 startPosition, Transform targetPosition, GameObject _trash, AudioClip _trash_Dispose_Clip)
+    IEnumerator StartTrashAnimation(Vector3 startPosition, Transform targetPosition, GameObject _trash, AudioClip _trash_Dispose_Clip, bool isWet)
     {
         float timePassed = 0f;
         Vector3 throwDirection = (targetPosition.position - startPosition).normalized;
@@ -208,6 +219,20 @@ public class BetterCatchSystem : MonoBehaviour
                         targetPosition.GetComponentInParent<Animator>().SetBool("Open", false);
                     }
                     Destroy(_trash);
+                    if (isWet)
+                    {
+                        if (_wet_Cannon != null)
+                        {
+                            _wet_Cannon.CollectTrash(1);
+                        }
+                    }
+                    else
+                    {
+                        if (_dry_Cannon != null)
+                        {
+                            _dry_Cannon.CollectTrash(1);
+                        }
+                    }
                 }
             }
             yield return null;
