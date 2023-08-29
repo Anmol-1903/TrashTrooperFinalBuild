@@ -123,7 +123,7 @@ public class BetterCatchSystem : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DryWaste") || other.CompareTag("Trashes"))
+        if (other.CompareTag("DryWaste") || other.CompareTag("Dry"))
         {
             if (_dry_capacity > 0)
             {
@@ -131,7 +131,7 @@ public class BetterCatchSystem : MonoBehaviour
                 _trash_In_Inventory = other.gameObject;
             }
         }
-        else if (other.CompareTag("WetWaste") || other.CompareTag("Trashes"))
+        else if (other.CompareTag("WetWaste") || other.CompareTag("Wet"))
         {
             if (_wet_capacity > 0)
             {
@@ -142,14 +142,14 @@ public class BetterCatchSystem : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("DryWaste") || other.CompareTag("Trashes"))
+        if (other.CompareTag("DryWaste") || other.CompareTag("Dry"))
         {
             if (_dry_capacity > 0)
             {
                 _dry_Waste_In_Trigger = false;
             }
         }
-        else if (other.CompareTag("WetWaste") || other.CompareTag("Trashes"))
+        else if (other.CompareTag("WetWaste") || other.CompareTag("Wet"))
         {
             if (_wet_capacity > 0)
             {

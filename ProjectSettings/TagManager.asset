@@ -22,6 +22,8 @@ TagManager:
   - Egg_Collider
   - WetWasteTriggerUI
   - Trashes
+  - Dry
+  - Wet
   layers:
   - Default
   - TransparentFX

@@ -2697,7 +2697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130638514126643399, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_TagString
-      value: Trashes
+      value: Dry
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2857727495806497813, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
@@ -6345,7 +6345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: m_TagString
-      value: Trashes
+      value: Wet
       objectReference: {fileID: 0}
     - target: {fileID: 5906596305344990062, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
       propertyPath: wetWasteUI
@@ -7969,7 +7969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6130638514126643399, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_TagString
-      value: Trashes
+      value: Dry
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2857727495806497813, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
@@ -11703,7 +11703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_TagString
-      value: Trashes
+      value: Wet
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_RootOrder

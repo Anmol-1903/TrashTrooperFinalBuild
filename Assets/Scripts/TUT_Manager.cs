@@ -102,11 +102,18 @@ public class TUT_Manager : MonoBehaviour
         Trash2.GetComponent<Trash>().normalSpeed = 1.5f;
         yield return new WaitForSeconds(1f);
         Trash2.GetComponent<Trash>().normalSpeed = 0;
-        wetWaste_UI.SetActive(true);
+        if (wetWaste_UI != null)
+        {
+            wetWaste_UI.SetActive(true);
+
+        }
 
         yield return new WaitForSeconds(2f);
-        wetWaste_UI.SetActive(false);
-        Trash2.GetComponent<Trash>().normalSpeed = wetWaste_speed;
+        Destroy(wetWaste_UI);
+        if (Trash2 != null)
+        {
+            Trash2.GetComponent<Trash>().normalSpeed = wetWaste_speed;
+        }
     }
     void WetWasteUI()
     {
