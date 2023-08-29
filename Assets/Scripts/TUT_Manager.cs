@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class TUT_Manager : MonoBehaviour
 {
     [SerializeField] GameObject Trash1, Trash2, Trash3;
@@ -13,10 +10,24 @@ public class TUT_Manager : MonoBehaviour
     [SerializeField] GameObject wetWaste_UI;
     [SerializeField] GameObject cleanlinessMeter_UI, taskUI;
     [SerializeField] Transform player, wetdustbin_Trans, drydustbin_Trans;
-    [SerializeField] float wetWaste_speed, drywaste_speed;
     [SerializeField] BetterCatchSystem catch_system;
     [SerializeField] GameObject banana, egg, chips, chips2;
-    [SerializeField] GameObject TutorialStarts, TutorialEnd, Inventory;
+    [SerializeField] GameObject TutorialStarts, TutorialEnd, Inventory, _restartPanel;
+    TrashDeSpawner TDS;
+    [SerializeField] float wetWaste_speed, drywaste_speed;
+
+    private void Awake()
+    {
+        TDS = FindObjectOfType<TrashDeSpawner>();
+        Trash1.GetComponent<Trash>().normalSpeed = 0;
+        Trash2.GetComponent<Trash>().normalSpeed = 0;
+        Trash3.GetComponent<EggFallDown>()._speed = 0;
+
+        banana.GetComponent<EggFallDown>()._speed = 0;
+        egg.GetComponent<EggFallDown>()._speed = 0;
+        chips.GetComponent<EggFallDown>()._speed = 0;
+        chips2.GetComponent<EggFallDown>()._speed = 0;
+    }
     void Start()
     {
         Inventory.SetActive(false);
@@ -28,14 +39,6 @@ public class TUT_Manager : MonoBehaviour
         drywasteDeposite_UI.SetActive(false);
         wetwasteDeposite_UI.SetActive(false);
         taskUI.SetActive(false);
-        Trash1.GetComponent<Trash>().normalSpeed = 0;
-        Trash2.GetComponent<Trash>().normalSpeed = 0;
-        Trash3.GetComponent<EggFallDown>()._speed = 0;
-
-        banana.GetComponent<EggFallDown>()._speed = 0;
-        egg.GetComponent<EggFallDown>()._speed = 0;
-        chips.GetComponent<EggFallDown>()._speed = 0;
-        chips2.GetComponent<EggFallDown>()._speed = 0;
     }
     void Update()
     {
@@ -68,6 +71,18 @@ public class TUT_Manager : MonoBehaviour
             taskUI.SetActive(false);
             Inventory.SetActive(false);
             TutorialEnd.SetActive(true);
+        }
+        if (TDS._cleanliness < 0)
+        {
+            if (Time.timeScale > 0.25f)
+            {
+                Time.timeScale -= Time.deltaTime;
+            }
+            else
+            {
+                _restartPanel.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
     }
 
@@ -160,5 +175,11 @@ public class TUT_Manager : MonoBehaviour
         {
             chips2.GetComponent<EggFallDown>()._speed = 5f;
         }
+    }
+
+    public void Restart()
+    {
+        Debug.Log("restart");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -1,14 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Tut_trashRespawner : MonoBehaviour
 {
+    TrashDeSpawner _trashDespawner;
+    [SerializeField] float _damage;
+
+
+    private void Awake()
+    {
+        _trashDespawner = FindObjectOfType<TrashDeSpawner>();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Trashes"))
+        if (other.CompareTag("Dry") || other.CompareTag("Wet"))
         {
-            other.gameObject.transform.position = new Vector3(Random.Range(-8.5f,9.3f) , Random.Range(16f,35f), 0);
+
+            _trashDespawner.SetCleanliness(_damage);
+            other.transform.position = new Vector3(Random.Range(-8.5f,9.3f) , Random.Range(16f,35f), 0);
         }
     }
 }

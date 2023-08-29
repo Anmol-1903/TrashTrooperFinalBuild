@@ -38,4 +38,9 @@ public class TrashDeSpawner : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void SetCleanliness(float amount)
+    {
+        _cleanliness -= amount;
+    }
 }

@@ -2430,7 +2430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537211770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10000001, y: 0.06666667, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.06666667, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4068,7 +4068,6 @@ MonoBehaviour:
   - 3.5
   - 4
   _dryTrashPrefabs:
-  - {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
   - {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
   - {fileID: 6130638514126643399, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
@@ -4080,8 +4079,7 @@ MonoBehaviour:
   - {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
   - {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
   - {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
-  - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
-  _drySpawnChance: 50
+  _drySpawnChance: 60
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4094,13 +4092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61734d426a9ae84eaa5e4e12452beac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer_For_PowerUps_To_Spawn:
-  - 7
-  - 10
-  - 13
+  min_Timer_For_PowerUps_To_Spawn: 2
+  max_Timer_For_PowerUps_To_Spawn: 35
   counter: 15
   PowerUps:
-  - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
 --- !u!1 &845416407
 GameObject:
@@ -5485,7 +5480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
-  _gameDuration: 240
+  _gameDuration: 241
   _counter: 0
   _minCleanlinessValue: 0
   _restartPanel: {fileID: 1647766732}
@@ -6122,6 +6117,7 @@ MonoBehaviour:
   trash_falldown: {fileID: 845416408}
   powerup_collect: {fileID: 747856959}
   trash_dispose: {fileID: 1362796982}
+  trash_collect: {fileID: 0}
 --- !u!4 &1402509031
 Transform:
   m_ObjectHideFlags: 0
@@ -8198,7 +8194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803611741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.100000024, y: 0.06666667, z: 0}
+  m_LocalPosition: {x: -0.05, y: 0.06666667, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10565,6 +10561,10 @@ PrefabInstance:
       propertyPath: _gloveTimer
       value: 
       objectReference: {fileID: 1796680740}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _sliderMoveDistance
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
 --- !u!114 &8959002453898073230 stripped
