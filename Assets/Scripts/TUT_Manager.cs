@@ -17,16 +17,6 @@ public class TUT_Manager : MonoBehaviour
     [SerializeField] BetterCatchSystem catch_system;
     [SerializeField] GameObject banana, egg, chips, chips2;
     [SerializeField] GameObject TutorialStarts, TutorialEnd, Inventory;
-    PlayerMove playermove;
-    // Start is called before the first frame update
-
-
-    private void Awake()
-    {
-        playermove = GameObject.FindObjectOfType<PlayerMove>();
-    }
-
-
     void Start()
     {
         Inventory.SetActive(false);
@@ -47,8 +37,6 @@ public class TUT_Manager : MonoBehaviour
         chips.GetComponent<EggFallDown>()._speed = 0;
         chips2.GetComponent<EggFallDown>()._speed = 0;
     }
-
-    // Update is called once per frame
     void Update()
     {
         PlayerMove();

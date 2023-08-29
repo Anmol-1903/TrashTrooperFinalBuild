@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 public class Tutorial_Manager : MonoBehaviour
 {
     [SerializeField] GameObject Trash1, Trash2, Trash3;
