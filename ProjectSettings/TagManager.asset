@@ -21,6 +21,7 @@ TagManager:
   - glove_powerup
   - Egg_Collider
   - WetWasteTriggerUI
+  - Trashes
   layers:
   - Default
   - TransparentFX
