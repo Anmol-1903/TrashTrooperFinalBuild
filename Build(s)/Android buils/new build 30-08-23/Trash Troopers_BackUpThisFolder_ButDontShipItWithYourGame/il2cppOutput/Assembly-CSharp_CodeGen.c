@@ -242,18 +242,18 @@ extern void PauseMenu_RestartLevel_m1B056281F401ECF0BDA769702A1C95C670172A45 (vo
 extern void PauseMenu_LoadLevel_mEA4FDAA9DA68DCD537A4367CA452437650316E16 (void);
 // 0x00000073 System.Void PauseMenu::.ctor()
 extern void PauseMenu__ctor_m81B0E020DC5008DA4D414200BAAF7122B430D826 (void);
-// 0x00000074 System.Void PauseMenu/<LoadLevel>d__9::.ctor(System.Int32)
-extern void U3CLoadLevelU3Ed__9__ctor_m0195EBF3F45FDBA8660BD6ADC333B2DA82149808 (void);
-// 0x00000075 System.Void PauseMenu/<LoadLevel>d__9::System.IDisposable.Dispose()
-extern void U3CLoadLevelU3Ed__9_System_IDisposable_Dispose_m7F4DAC290B8AE29A6AD34A9A3D6405046B442B83 (void);
-// 0x00000076 System.Boolean PauseMenu/<LoadLevel>d__9::MoveNext()
-extern void U3CLoadLevelU3Ed__9_MoveNext_m44B7E606DEECCE5097777612517C67883D885CAB (void);
-// 0x00000077 System.Object PauseMenu/<LoadLevel>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CLoadLevelU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1BE181E28CF7FB8B1AEE52EC4111453242C69A29 (void);
-// 0x00000078 System.Void PauseMenu/<LoadLevel>d__9::System.Collections.IEnumerator.Reset()
-extern void U3CLoadLevelU3Ed__9_System_Collections_IEnumerator_Reset_mBB752AEB469DE3C8B0DF4DBC251F140078A7FC81 (void);
-// 0x00000079 System.Object PauseMenu/<LoadLevel>d__9::System.Collections.IEnumerator.get_Current()
-extern void U3CLoadLevelU3Ed__9_System_Collections_IEnumerator_get_Current_mB3A5898E4323E5632615CDCE15348A9078804476 (void);
+// 0x00000074 System.Void PauseMenu/<LoadLevel>d__10::.ctor(System.Int32)
+extern void U3CLoadLevelU3Ed__10__ctor_m034BFBF5FDEF4AD2CB033792D697A1D43C24F56E (void);
+// 0x00000075 System.Void PauseMenu/<LoadLevel>d__10::System.IDisposable.Dispose()
+extern void U3CLoadLevelU3Ed__10_System_IDisposable_Dispose_mFCDE21D755C1B59840279367B25FE01B99A5FEE2 (void);
+// 0x00000076 System.Boolean PauseMenu/<LoadLevel>d__10::MoveNext()
+extern void U3CLoadLevelU3Ed__10_MoveNext_mF74B8B3C2B74A196C1838711A4536275D0F6BE03 (void);
+// 0x00000077 System.Object PauseMenu/<LoadLevel>d__10::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLoadLevelU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF528ECC41A5C7A25A3FE1CC11C9EB8E7E2561A3E (void);
+// 0x00000078 System.Void PauseMenu/<LoadLevel>d__10::System.Collections.IEnumerator.Reset()
+extern void U3CLoadLevelU3Ed__10_System_Collections_IEnumerator_Reset_mF2AD95F65F40BA3352B90151F95BF1007D0A1B01 (void);
+// 0x00000079 System.Object PauseMenu/<LoadLevel>d__10::System.Collections.IEnumerator.get_Current()
+extern void U3CLoadLevelU3Ed__10_System_Collections_IEnumerator_get_Current_m41414C84F593A2FB06D5704B38A69EF87A8DE5BB (void);
 // 0x0000007A System.Void PlayerHealth::Start()
 extern void PlayerHealth_Start_mB40232C538ABF2AAA435E94E0A697D0A0D25C6F5 (void);
 // 0x0000007B System.Void PlayerHealth::TakeDamage(System.Single)
@@ -625,12 +625,12 @@ static Il2CppMethodPointer s_methodPointers[248] =
 	PauseMenu_RestartLevel_m1B056281F401ECF0BDA769702A1C95C670172A45,
 	PauseMenu_LoadLevel_mEA4FDAA9DA68DCD537A4367CA452437650316E16,
 	PauseMenu__ctor_m81B0E020DC5008DA4D414200BAAF7122B430D826,
-	U3CLoadLevelU3Ed__9__ctor_m0195EBF3F45FDBA8660BD6ADC333B2DA82149808,
-	U3CLoadLevelU3Ed__9_System_IDisposable_Dispose_m7F4DAC290B8AE29A6AD34A9A3D6405046B442B83,
-	U3CLoadLevelU3Ed__9_MoveNext_m44B7E606DEECCE5097777612517C67883D885CAB,
-	U3CLoadLevelU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1BE181E28CF7FB8B1AEE52EC4111453242C69A29,
-	U3CLoadLevelU3Ed__9_System_Collections_IEnumerator_Reset_mBB752AEB469DE3C8B0DF4DBC251F140078A7FC81,
-	U3CLoadLevelU3Ed__9_System_Collections_IEnumerator_get_Current_mB3A5898E4323E5632615CDCE15348A9078804476,
+	U3CLoadLevelU3Ed__10__ctor_m034BFBF5FDEF4AD2CB033792D697A1D43C24F56E,
+	U3CLoadLevelU3Ed__10_System_IDisposable_Dispose_mFCDE21D755C1B59840279367B25FE01B99A5FEE2,
+	U3CLoadLevelU3Ed__10_MoveNext_mF74B8B3C2B74A196C1838711A4536275D0F6BE03,
+	U3CLoadLevelU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF528ECC41A5C7A25A3FE1CC11C9EB8E7E2561A3E,
+	U3CLoadLevelU3Ed__10_System_Collections_IEnumerator_Reset_mF2AD95F65F40BA3352B90151F95BF1007D0A1B01,
+	U3CLoadLevelU3Ed__10_System_Collections_IEnumerator_get_Current_m41414C84F593A2FB06D5704B38A69EF87A8DE5BB,
 	PlayerHealth_Start_mB40232C538ABF2AAA435E94E0A697D0A0D25C6F5,
 	PlayerHealth_TakeDamage_mA1FBE0DE4804A146E46EC719F202D298ADA07290,
 	PlayerHealth__ctor_m6A07958FCBF285AA65AB66D48C3EB198068F37BE,

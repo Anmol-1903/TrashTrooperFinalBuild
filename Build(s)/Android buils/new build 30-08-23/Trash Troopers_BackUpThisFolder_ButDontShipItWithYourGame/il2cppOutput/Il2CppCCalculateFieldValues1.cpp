@@ -5613,18 +5613,18 @@ struct U3CU3Ec_t90F8CB10B454B45A81BE65AA841DD85FE08EA21A  : public RuntimeObject
 {
 };
 
-// PauseMenu/<LoadLevel>d__9
-struct U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B  : public RuntimeObject
+// PauseMenu/<LoadLevel>d__10
+struct U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2  : public RuntimeObject
 {
-	// System.Int32 PauseMenu/<LoadLevel>d__9::<>1__state
+	// System.Int32 PauseMenu/<LoadLevel>d__10::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object PauseMenu/<LoadLevel>d__9::<>2__current
+	// System.Object PauseMenu/<LoadLevel>d__10::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// PauseMenu PauseMenu/<LoadLevel>d__9::<>4__this
+	// PauseMenu PauseMenu/<LoadLevel>d__10::<>4__this
 	PauseMenu_t36539DEACE8377BD498A235C80769301799E1985* ___U3CU3E4__this_2;
-	// System.Int32 PauseMenu/<LoadLevel>d__9::_levelNumber
+	// System.Int32 PauseMenu/<LoadLevel>d__10::_levelNumber
 	int32_t ____levelNumber_3;
-	// UnityEngine.AsyncOperation PauseMenu/<LoadLevel>d__9::<_operation>5__2
+	// UnityEngine.AsyncOperation PauseMenu/<LoadLevel>d__10::<_operation>5__2
 	AsyncOperation_tD2789250E4B098DEDA92B366A577E500A92D2D3C* ___U3C_operationU3E5__2_4;
 };
 
@@ -26187,6 +26187,8 @@ struct PauseMenu_t36539DEACE8377BD498A235C80769301799E1985  : public MonoBehavio
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____HUD_6;
 	// UnityEngine.UI.Slider PauseMenu::_progressBar
 	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____progressBar_7;
+	// UnityEngine.AudioSource PauseMenu::_pause
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ____pause_8;
 };
 
 // PlayerHealth
@@ -33092,9 +33094,9 @@ struct U3CU3Ec_t90F8CB10B454B45A81BE65AA841DD85FE08EA21A_StaticFields
 
 // Internal.Cryptography.OidLookup/<>c
 
-// PauseMenu/<LoadLevel>d__9
+// PauseMenu/<LoadLevel>d__10
 
-// PauseMenu/<LoadLevel>d__9
+// PauseMenu/<LoadLevel>d__10
 
 // UnityEngine.EventSystems.PhysicsRaycaster/RaycastHitComparer
 struct RaycastHitComparer_t8EF6567C19BE9FB575E01A10941FBF7DE3D3DDF1_StaticFields
@@ -42459,10 +42461,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5082[11] =
 	static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____progressBar_4)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____levelSelector_5)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____mainMenu_6)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____settings_7)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____resetGame_8)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____upgrades_9)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____credits_10)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____quit_11)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____asynLoader_12)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____musicMixer_13)),static_cast<int32_t>(offsetof(MainMenu_t5A8A8E4906FD2B24D16567A6BFFDAA6B91DD12DF, ____audioMixer_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5083[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B, ____levelNumber_3)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__9_t43CCF53191623E5128866C08F170CB497C36278B, ___U3C_operationU3E5__2_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5084[4] = 
+	static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2, ____levelNumber_3)),static_cast<int32_t>(offsetof(U3CLoadLevelU3Ed__10_tD880EC95486A18E970AE00C1FF1182E46F670AE2, ___U3C_operationU3E5__2_4)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5084[5] = 
 {
-	static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____pauseMenu_4)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____loadingScreen_5)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____HUD_6)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____progressBar_7)),};
+	static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____pauseMenu_4)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____loadingScreen_5)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____HUD_6)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____progressBar_7)),static_cast<int32_t>(offsetof(PauseMenu_t36539DEACE8377BD498A235C80769301799E1985, ____pause_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5085[3] = 
 {
 	static_cast<int32_t>(offsetof(PlayerHealth_tE7421738BA48E6A6C90760303B818641DDFAE263, ____maxHealth_4)),static_cast<int32_t>(offsetof(PlayerHealth_tE7421738BA48E6A6C90760303B818641DDFAE263, ____health_5)),static_cast<int32_t>(offsetof(PlayerHealth_tE7421738BA48E6A6C90760303B818641DDFAE263, ____healthbar_6)),};

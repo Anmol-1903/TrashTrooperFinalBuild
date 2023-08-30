@@ -1708,7 +1708,7 @@ Transform:
   - {fileID: 986907923}
   - {fileID: 1535302742}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &407407211
 PrefabInstance:
@@ -1986,56 +1986,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &426865617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 426865619}
-  - component: {fileID: 426865618}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &426865618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426865617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: f806d74ec3ea66f42902b78c9c554ab8, type: 2}
---- !u!4 &426865619
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426865617}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.125786, y: 12.709824, z: 36.424225}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477946568
 GameObject:
@@ -5853,6 +5804,7 @@ MonoBehaviour:
   _loadingScreen: {fileID: 182752967}
   _HUD: {fileID: 1455720719}
   _progressBar: {fileID: 659496240}
+  _pause: {fileID: 1379177155}
 --- !u!1 &1063595893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6664,7 +6616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
-  _gameDuration: 121
+  _gameDuration: 90
   _counter: 0
   _minCleanlinessValue: 0
   _restartPanel: {fileID: 341932944}
@@ -9940,7 +9892,7 @@ PrefabInstance:
       objectReference: {fileID: 1113819444}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: TimeSlowertimer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: glovePower_timer

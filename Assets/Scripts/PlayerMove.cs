@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField] AudioClip powerup_collected;
     [SerializeField] float speed;
-    [SerializeField] float fastSpeed;
+    [SerializeField] public float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
     [SerializeField] float TimeSlowertimer = 10f;
     [SerializeField] Slider controller;

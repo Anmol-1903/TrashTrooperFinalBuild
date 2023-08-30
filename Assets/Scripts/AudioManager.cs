@@ -54,6 +54,10 @@ public class AudioManager : MonoBehaviour
     }
     public void TrashCollect()
     {
+        if(trash_collect != null)
+        {
         trash_collect.Play();
+
+        }
     }
 }

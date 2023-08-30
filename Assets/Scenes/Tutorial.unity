@@ -3077,7 +3077,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts: {fileID: 580382522}
   lines:
-  - 
   - ' Hello Trooper, Welcome to trash.'
   - Literally.
   - The environment is getting dirty day by day but, people are so irresponsible
@@ -4092,7 +4091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
   m_sharedMaterial: {fileID: 1998009110519147682, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
@@ -4119,7 +4118,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
+  m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8888,7 +8887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 11.51
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.y

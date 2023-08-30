@@ -1,8 +1,10 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 public class BetterCatchSystem : MonoBehaviour
 {
+
     [SerializeField] Cannon _wet_Cannon;
     [SerializeField] Cannon _dry_Cannon;
 
@@ -37,8 +39,8 @@ public class BetterCatchSystem : MonoBehaviour
 
     [SerializeField] GameObject _trash_In_Inventory;
 
-    [SerializeField] int _max_Dry_capacity = 3;
-    [SerializeField] int _max_Wet_capacity = 3;
+    [SerializeField] public int _max_Dry_capacity = 3;
+    [SerializeField] public int _max_Wet_capacity = 3;
     
     [HideInInspector] public int _dry_capacity = 3;
     [HideInInspector] public int _wet_capacity = 3;
@@ -49,6 +51,7 @@ public class BetterCatchSystem : MonoBehaviour
 
     private void Awake()
     {
+
         _wet_Dustbin_Trans = GameObject.FindGameObjectWithTag("WetClamp").transform;
         _dry_Dustbin_Trans = GameObject.FindGameObjectWithTag("DryClamp").transform;
         floor = FindObjectOfType<TrashDeSpawner>();
@@ -116,10 +119,23 @@ public class BetterCatchSystem : MonoBehaviour
             if (_dry_Dustbin_Lid != null)
                 _dry_Dustbin_Lid.SetBool("Open", false);
         }
-        if (_wet_Text != null)
+        if (_wet_Text != null) {
             _wet_Text.text = (_max_Wet_capacity - _wet_capacity).ToString() + "/" + (_max_Wet_capacity).ToString();
+            if (_wet_capacity <= 0)
+            {
+                _wet_capacity = 0;
+            }
+        }
         if (_dry_Text != null)
+        {
             _dry_Text.text = (_max_Dry_capacity - _dry_capacity).ToString() + "/" + (_max_Dry_capacity).ToString();
+            if(_dry_capacity <= 0)
+            {
+                _dry_capacity = 0;
+            }
+        }
+
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -172,8 +188,8 @@ public class BetterCatchSystem : MonoBehaviour
                 _wet_capacity--;
                 _wet_Waste_In_Trigger = false;
                 _wet_Waste_In_Inventory = true;
-                AudioManager.Instance.TrashCollect();
                 Destroy(_trash_In_Inventory);
+                AudioManager.Instance.TrashCollect();
             }
         }
         else if (_dry_Waste_In_Trigger)
@@ -189,8 +205,8 @@ public class BetterCatchSystem : MonoBehaviour
                 _dry_capacity--;
                 _dry_Waste_In_Trigger = false;
                 _dry_Waste_In_Inventory = true;
-                AudioManager.Instance.TrashCollect();
                 Destroy(_trash_In_Inventory);
+                AudioManager.Instance.TrashCollect();
             }
         }
     }
@@ -215,7 +231,7 @@ public class BetterCatchSystem : MonoBehaviour
                     yield return new WaitForSecondsRealtime(0.5f);
                     if (Vector3.Distance(transform.position, targetPosition.position) > 5f)
                     {
-                        Debug.Log("NIKAL LAWDE");
+                        Debug.Log("NIKAL LOVE DAY");
                         targetPosition.GetComponentInParent<Animator>().SetBool("Open", false);
                     }
                     Destroy(_trash);

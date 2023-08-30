@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] GameObject _HUD;
     [SerializeField] Slider _progressBar;
+
+    [SerializeField] private AudioSource _pause;
     private void Start()
     {
         _pauseMenu.SetActive(false);
@@ -16,12 +18,17 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        _pause.Play();
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         _HUD.SetActive(true);
     }
     public void Pause()
     {
+        if( _pause != null)
+        {
+            _pause.Stop();
+        }
         Time.timeScale = 0;
         _pauseMenu.SetActive(true);
         _HUD.SetActive(false);

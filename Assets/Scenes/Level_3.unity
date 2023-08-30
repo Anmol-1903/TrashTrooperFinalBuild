@@ -3456,7 +3456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &607377913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3581,7 +3581,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607377912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba15cdb152bc84545be7532a4570db31, type: 3}
   m_Name: 
@@ -3922,6 +3922,14 @@ PrefabInstance:
       propertyPath: _gloveTimer
       value: 
       objectReference: {fileID: 708568919}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: TimeSlowertimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: glovePower_timer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: _sliderMoveDistance
       value: 0.15
@@ -4444,11 +4452,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
+  - 1
+  - 1.5
   - 2
   - 2.5
   - 3
-  - 3.5
-  - 4
   _dryTrashPrefabs:
   - {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
@@ -5180,6 +5188,7 @@ MonoBehaviour:
   _loadingScreen: {fileID: 2075591095}
   _HUD: {fileID: 1113972990}
   _progressBar: {fileID: 1099279115}
+  _pause: {fileID: 1564534238}
 --- !u!1 &1063595893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6159,7 +6168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelComplete: {fileID: 0}
-  _gameDuration: 301
+  _gameDuration: 181
   _counter: 0
   _minCleanlinessValue: 0
   _restartPanel: {fileID: 996199250}
@@ -8630,7 +8639,7 @@ MonoBehaviour:
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 440365763}
   _maximumValue: 100
-  _healPerAmount: 0
+  _healPerAmount: 10
   _cleanliness: 0
 --- !u!65 &1818454223
 BoxCollider:

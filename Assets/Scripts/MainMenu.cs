@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
+
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] Slider _progressBar;
@@ -15,9 +17,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject _quit;
     [SerializeField] GameObject _asynLoader;
 
+   
 
     [SerializeField] AudioMixer _musicMixer;
     [SerializeField] AudioMixer _audioMixer;
+
+
     private void Start()
     {
         if (_musicMixer != null)
