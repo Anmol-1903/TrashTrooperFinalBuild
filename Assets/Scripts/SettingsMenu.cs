@@ -28,24 +28,30 @@ public class SettingsMenu : MonoBehaviour
     }
     public void GetController()
     {
-        if (PlayerPrefs.GetInt("controllerType") == 1)
+        if (controller)
         {
-            controller.isOn = true;
-        }
-        else if (PlayerPrefs.GetInt("controllerType") == 0)
-        {
-            controller.isOn = false;
+            if (PlayerPrefs.GetInt("controllerType") == 1)
+            {
+                controller.isOn = true;
+            }
+            else if (PlayerPrefs.GetInt("controllerType") == 0)
+            {
+                controller.isOn = false;
+            }
         }
     }
     public void SetController()
     {
-        if (controller.isOn)
+        if (controller)
         {
-            PlayerPrefs.SetInt("controllerType", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("controllerType", 0);
+            if (controller.isOn)
+            {
+                PlayerPrefs.SetInt("controllerType", 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("controllerType", 0);
+            }
         }
     }
     public void GetMusic()
