@@ -42,8 +42,8 @@ public class BetterCatchSystem : MonoBehaviour
     [SerializeField] public int _max_Dry_capacity = 3;
     [SerializeField] public int _max_Wet_capacity = 3;
     
-    [HideInInspector] public int _dry_capacity = 3;
-    [HideInInspector] public int _wet_capacity = 3;
+    [HideInInspector] public int _dry_capacity;
+    [HideInInspector] public int _wet_capacity;
     int _capacity_upgrade;
 
     TrashDeSpawner floor;
@@ -67,6 +67,24 @@ public class BetterCatchSystem : MonoBehaviour
         {
             _capacity_upgrade = 1;
         }
+        _wet_capacity = _max_Wet_capacity * _capacity_upgrade;
+        _dry_capacity = _max_Dry_capacity * _capacity_upgrade;
+        if (_wet_Text != null)
+        {
+            _wet_Text.text = ((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity).ToString() + "/" + (_max_Wet_capacity * _capacity_upgrade).ToString();
+            if (_wet_capacity <= 0)
+            {
+                _wet_capacity = 0;
+            }
+        }
+        if (_dry_Text != null)
+        {
+            _dry_Text.text = ((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity).ToString() + "/" + (_max_Dry_capacity * _capacity_upgrade).ToString();
+            if (_dry_capacity <= 0)
+            {
+                _dry_capacity = 0;
+            }
+        }
     }
     private void Update()
     {
@@ -81,7 +99,7 @@ public class BetterCatchSystem : MonoBehaviour
                 {
                     _wet_Waste_In_Inventory = false;
                     AudioManager.Instance.TrashDispose(_wet_Trash_Dispose);
-                    if(_wet_Cannon != null)
+                    if (_wet_Cannon != null)
                     {
                         _wet_Cannon.CollectTrash(_max_Wet_capacity - _wet_capacity);
                     }
@@ -105,7 +123,7 @@ public class BetterCatchSystem : MonoBehaviour
                 {
                     _dry_Waste_In_Inventory = false;
                     AudioManager.Instance.TrashDispose(_dry_Trash_Dispose);
-                    if(_dry_Cannon != null)
+                    if (_dry_Cannon != null)
                     {
                         _dry_Cannon.CollectTrash(_max_Dry_capacity - _dry_capacity);
                     }
@@ -119,8 +137,9 @@ public class BetterCatchSystem : MonoBehaviour
             if (_dry_Dustbin_Lid != null)
                 _dry_Dustbin_Lid.SetBool("Open", false);
         }
-        if (_wet_Text != null) {
-            _wet_Text.text = (_max_Wet_capacity - _wet_capacity).ToString() + "/" + (_max_Wet_capacity).ToString();
+        if (_wet_Text != null)
+        {
+            _wet_Text.text = ((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity).ToString() + "/" + (_max_Wet_capacity * _capacity_upgrade).ToString();
             if (_wet_capacity <= 0)
             {
                 _wet_capacity = 0;
@@ -128,14 +147,12 @@ public class BetterCatchSystem : MonoBehaviour
         }
         if (_dry_Text != null)
         {
-            _dry_Text.text = (_max_Dry_capacity - _dry_capacity).ToString() + "/" + (_max_Dry_capacity).ToString();
-            if(_dry_capacity <= 0)
+            _dry_Text.text = ((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity).ToString() + "/" + (_max_Dry_capacity * _capacity_upgrade).ToString();
+            if (_dry_capacity <= 0)
             {
                 _dry_capacity = 0;
             }
         }
-
-        
     }
     private void OnTriggerEnter(Collider other)
     {
