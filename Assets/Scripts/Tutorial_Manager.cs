@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Tutorial_Manager : MonoBehaviour
+/*public class TUT_Manager : MonoBehaviour
 {
     [SerializeField] GameObject Trash1, Trash2, Trash3;
     [SerializeField] GameObject _hello;
@@ -87,4 +87,4 @@ public class Tutorial_Manager : MonoBehaviour
         _hello.SetActive(false);
     }
     
-}
+}*/

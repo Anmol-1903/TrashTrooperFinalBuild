@@ -7,15 +7,29 @@ public class TutorialText : MonoBehaviour
     [TextArea(10, 10)]
     [SerializeField] string[] lines;
     [SerializeField] float text_speed;
-    [SerializeField] Tutorial_Manager TM;
+    [SerializeField] TUT_Manager TM;
+    [SerializeField] GameObject _controlsUI, _trash1;
+    [SerializeField] GameObject UIManager, MechanicsCanvas, _hello;
+    Trash _trash;
 
     private int index;
 
+    private void Awake()
+    {
+        _trash = FindFirstObjectByType<Trash>();
+    }
+
     private void Start()
     {
+        _hello.SetActive(true);
+        UIManager.SetActive(false);
+        MechanicsCanvas.SetActive(false);
         texts.text = string.Empty;
         index = 0;
         StartText();
+
+        _controlsUI.SetActive(false);
+        _trash1.SetActive(false);
     }
 
     void StartText()
@@ -40,8 +54,10 @@ public class TutorialText : MonoBehaviour
         }
         else
         {
-            TM = GetComponentInParent<Tutorial_Manager>();
-            TM.HelloTrooper();
+            _hello.SetActive(false);
+            UIManager.SetActive(true);
+            MechanicsCanvas.SetActive(true);
+            _trash1.SetActive(true);
         }
     }
     public void NextDialouge()
@@ -58,8 +74,9 @@ public class TutorialText : MonoBehaviour
     }
     public void SkipTutorialText()
     {
-        TM = GetComponentInParent<Tutorial_Manager>();
-        TM.HelloTrooper();
-        gameObject.SetActive(false);
+        _hello.SetActive(false);
+        UIManager.SetActive(true);
+        MechanicsCanvas.SetActive(true);
+        _trash1.SetActive(true);
     }
 }

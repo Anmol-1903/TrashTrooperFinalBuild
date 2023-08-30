@@ -2747,7 +2747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3064285823516153314, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.35
+      value: 24.79
       objectReference: {fileID: 0}
     - target: {fileID: 3064285823516153314, guid: 135c7b66c5f00434bb45c594a0e49fd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3091,6 +3091,11 @@ MonoBehaviour:
   - Again.
   text_speed: 0.025
   TM: {fileID: 0}
+  _controlsUI: {fileID: 1583513481}
+  _trash1: {fileID: 72356671}
+  UIManager: {fileID: 1054284975}
+  MechanicsCanvas: {fileID: 1729127188}
+  _hello: {fileID: 559773127}
 --- !u!114 &494022338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11334,7 +11339,7 @@ GameObject:
   - component: {fileID: 1729127191}
   - component: {fileID: 1729127190}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: MechanicsCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11784,7 +11789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.74
+      value: 30.82
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.z

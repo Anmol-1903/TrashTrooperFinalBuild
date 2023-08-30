@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TUT_Manager : MonoBehaviour
@@ -13,6 +14,7 @@ public class TUT_Manager : MonoBehaviour
     [SerializeField] BetterCatchSystem catch_system;
     [SerializeField] GameObject banana, egg, chips, chips2;
     [SerializeField] GameObject TutorialStarts, TutorialEnd, Inventory, _restartPanel;
+
     TrashDeSpawner TDS;
     [SerializeField] float wetWaste_speed, drywaste_speed;
 
@@ -30,6 +32,7 @@ public class TUT_Manager : MonoBehaviour
     }
     void Start()
     {
+
         Inventory.SetActive(false);
         TutorialEnd.SetActive(false);   
         move_UI.SetActive(true);
@@ -39,6 +42,7 @@ public class TUT_Manager : MonoBehaviour
         drywasteDeposite_UI.SetActive(false);
         wetwasteDeposite_UI.SetActive(false);
         taskUI.SetActive(false);
+
     }
     void Update()
     {
@@ -68,6 +72,7 @@ public class TUT_Manager : MonoBehaviour
 
         if(banana == null && egg == null && chips == null && chips2 == null)
         {
+            PlayerPrefs.SetInt("HitCountKey", 1);
             taskUI.SetActive(false);
             Inventory.SetActive(false);
             TutorialEnd.SetActive(true);
@@ -182,4 +187,5 @@ public class TUT_Manager : MonoBehaviour
         Debug.Log("restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+   
 }
