@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _progressBar;
-
     [SerializeField] private TextMeshProUGUI _gameTimer;
     bool _adRunning = false;
     //[SerializeField] AudioClip _ingamebgclip;

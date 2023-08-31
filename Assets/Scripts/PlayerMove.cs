@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
     [SerializeField] float TimeSlowertimer = 10f;
+    [SerializeField] float TimeFastertimer = 5f;
     [SerializeField] Slider controller;
     [SerializeField] Slider _capTimer;
     [SerializeField] Slider _gloveTimer;
@@ -17,7 +19,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] GameObject Gloves;
     [SerializeField] GameObject Hat;
 
-    [SerializeField] GameObject ButtonInput;
+    public GameObject ButtonInput , catchButton;
     [SerializeField] GameObject SliderInput;
     [Header("Higher = Harder press")]
     [Range(0, 1)]
@@ -31,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     Transform dryClamp;
     [HideInInspector] public bool glovePower;
     [HideInInspector] public bool timeSlowerPower;
+    public bool timefaster;
 
     public bool isRighrunning;
     public bool isLeftrunning;
@@ -201,6 +204,11 @@ public class PlayerMove : MonoBehaviour
             AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("Time_slower"))
+        {
+            StartCoroutine(TimeFasterTimer());
+            Destroy(other.gameObject);
+        }
     }
     IEnumerator gloveTimer()
     {
@@ -229,6 +237,12 @@ public class PlayerMove : MonoBehaviour
         if (_capTimer != null)
         _capTimer.gameObject.SetActive(false);
             Hat.SetActive(false);
+    }
+    IEnumerator TimeFasterTimer()
+    {
+        timefaster = true;
+        yield return new WaitForSeconds(TimeFastertimer);
+        timefaster = false;
     }
     public void SliderPointerUp()
     {
