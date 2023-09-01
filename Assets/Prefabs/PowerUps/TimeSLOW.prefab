@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8823074201346660919}
   - component: {fileID: -3614153117884978681}
   m_Layer: 0
-  m_Name: cap_tt
+  m_Name: TimeSLOW
   m_TagString: cap_powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dirtiness: 0
+  IsCollected: 0
   slowSpeed: 4
   normalSpeed: 4
+  fastSpeed: 4
+  attractionForce: 0
   _player: {fileID: 0}
   playerMove: {fileID: 0}

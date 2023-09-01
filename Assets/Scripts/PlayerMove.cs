@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using Unity.VisualScripting;
+using System;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public float fastSpeed;
     [SerializeField] float glovePower_timer = 5f;
     [SerializeField] float TimeSlowertimer = 10f;
-    [SerializeField] float TimeFastertimer = 5f;
+    [SerializeField] float Magnettimer = 10f;
+    [SerializeField] float TimeFastertimer = 10f;
     [SerializeField] Slider controller;
     [SerializeField] Slider _capTimer;
     [SerializeField] Slider _gloveTimer;
@@ -33,7 +35,8 @@ public class PlayerMove : MonoBehaviour
     Transform dryClamp;
     [HideInInspector] public bool glovePower;
     [HideInInspector] public bool timeSlowerPower;
-    public bool timefaster;
+    [HideInInspector] public bool timefaster;
+    public bool magnetPowerupActive;
 
     public bool isRighrunning;
     public bool isLeftrunning;
@@ -209,7 +212,20 @@ public class PlayerMove : MonoBehaviour
             StartCoroutine(TimeFasterTimer());
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("magnet_powerup"))
+        {
+            StartCoroutine(MagnetTimer());
+            Destroy(other.gameObject);
+        }
     }
+
+    IEnumerator MagnetTimer()
+    {
+        magnetPowerupActive = true;
+        yield return new WaitForSeconds(Magnettimer);
+        magnetPowerupActive = false;
+    }
+
     IEnumerator gloveTimer()
     {
         if (_gloveTimer != null)

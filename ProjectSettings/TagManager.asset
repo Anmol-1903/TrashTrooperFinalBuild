@@ -26,6 +26,7 @@ TagManager:
   - Wet
   - Time_slower
   - Pot
+  - magnet_powerup
   layers:
   - Default
   - TransparentFX

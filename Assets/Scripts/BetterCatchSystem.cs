@@ -32,8 +32,8 @@ public class BetterCatchSystem : MonoBehaviour
 
     bool _glove_enabled;
 
-    bool _dry_Waste_In_Trigger;
-    bool _wet_Waste_In_Trigger;
+    [SerializeField] bool _dry_Waste_In_Trigger;
+    [SerializeField] bool _wet_Waste_In_Trigger;
     bool _dry_Waste_In_Inventory;
     bool _wet_Waste_In_Inventory;
 
@@ -101,9 +101,9 @@ public class BetterCatchSystem : MonoBehaviour
                     AudioManager.Instance.TrashDispose(_wet_Trash_Dispose);
                     if (_wet_Cannon != null)
                     {
-                        _wet_Cannon.CollectTrash(_max_Wet_capacity - _wet_capacity);
+                        _wet_Cannon.CollectTrash(_wet_capacity - _wet_capacity);
                     }
-                    floor.HealNature(_max_Wet_capacity - _wet_capacity);
+                    floor.HealNature((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity);
                     _wet_capacity = _max_Wet_capacity * _capacity_upgrade;
                 }
             }
@@ -125,9 +125,9 @@ public class BetterCatchSystem : MonoBehaviour
                     AudioManager.Instance.TrashDispose(_dry_Trash_Dispose);
                     if (_dry_Cannon != null)
                     {
-                        _dry_Cannon.CollectTrash(_max_Dry_capacity - _dry_capacity);
+                        _dry_Cannon.CollectTrash(_dry_capacity - _dry_capacity);
                     }
-                    floor.HealNature(_max_Dry_capacity - _dry_capacity);
+                    floor.HealNature((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity);
                     _dry_capacity = _max_Dry_capacity * _capacity_upgrade;
                 }
             }
@@ -172,6 +172,10 @@ public class BetterCatchSystem : MonoBehaviour
                 _trash_In_Inventory = other.gameObject;
             }
         }
+        if (playerMovement.magnetPowerupActive)
+        {
+            CatchTrash();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -192,6 +196,7 @@ public class BetterCatchSystem : MonoBehaviour
     }
     public void CatchTrash()
     {
+                Debug.Log("Catching");
         if (_wet_Waste_In_Trigger)
         {
             if (_glove_enabled)
