@@ -14,8 +14,13 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float Magnettimer = 10f;
     [SerializeField] float TimeFastertimer = 10f;
     [SerializeField] Slider controller;
+
     [SerializeField] Slider _capTimer;
     [SerializeField] Slider _gloveTimer;
+    [SerializeField] Slider _magnetTimer;
+    float glove_counter;
+    float cap_counter;
+    float magnet_counter;
 
 
     [SerializeField] GameObject Gloves;
@@ -29,14 +34,12 @@ public class PlayerMove : MonoBehaviour
 
     Animator _uncleController;
     float current_speed;
-    float glove_counter;
-    float cap_counter;
     Transform wetClamp;
     Transform dryClamp;
     [HideInInspector] public bool glovePower;
     [HideInInspector] public bool timeSlowerPower;
     [HideInInspector] public bool timefaster;
-    public bool magnetPowerupActive;
+    [HideInInspector] public bool magnetPowerupActive;
 
     public bool isRighrunning;
     public bool isLeftrunning;
@@ -54,6 +57,8 @@ public class PlayerMove : MonoBehaviour
             _capTimer.gameObject.SetActive(false);
         if (_gloveTimer != null)
             _gloveTimer.gameObject.SetActive(false);
+        if (_magnetTimer != null)
+            _magnetTimer.gameObject.SetActive(false);
     }
     private void OnEnable()
     {
@@ -146,6 +151,12 @@ public class PlayerMove : MonoBehaviour
                 _capTimer.value = cap_counter;
             cap_counter -= Time.deltaTime;
         }
+        if (magnetPowerupActive)
+        {
+            if (_magnetTimer != null)
+                _magnetTimer.value = magnet_counter;
+            magnet_counter -= Time.deltaTime;
+        }
         Clamper();
     }
     void PlayerMovement()
@@ -225,9 +236,16 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator MagnetTimer()
     {
+        if (_magnetTimer != null)
+            _magnetTimer.gameObject.SetActive(true);
+        magnet_counter = Magnettimer;
+        if (_magnetTimer != null)
+            _magnetTimer.maxValue = Magnettimer;
         magnetPowerupActive = true;
         yield return new WaitForSeconds(Magnettimer);
         magnetPowerupActive = false;
+        if (_magnetTimer != null)
+            _magnetTimer.gameObject.SetActive(false);
     }
 
     IEnumerator gloveTimer()
