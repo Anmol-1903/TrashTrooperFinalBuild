@@ -50,6 +50,10 @@ public class PlayerMove : MonoBehaviour
         Gloves.SetActive(false);
         Hat.SetActive(false);
         Time.timeScale = 1f;
+        if (_capTimer != null)
+            _capTimer.gameObject.SetActive(false);
+        if (_gloveTimer != null)
+            _gloveTimer.gameObject.SetActive(false);
     }
     private void OnEnable()
     {
