@@ -196,7 +196,6 @@ public class BetterCatchSystem : MonoBehaviour
     }
     public void CatchTrash()
     {
-                Debug.Log("Catching");
         if (_wet_Waste_In_Trigger)
         {
             if (_glove_enabled)

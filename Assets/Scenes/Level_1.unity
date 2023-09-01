@@ -4738,6 +4738,11 @@ MonoBehaviour:
   - {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
   - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
   _drySpawnChance: 40
+  _flowerPotPrefabs:
+  - {fileID: 6238155972340555826, guid: 2c06093821ef33846928c5eb26fd99cb, type: 3}
+  _potGracePeriod: 2
+  _potSpawnInterval: 1
+  _potSpawnChance: 50
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0

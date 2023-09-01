@@ -11,9 +11,9 @@ public class PlayerStunned : MonoBehaviour
         playerStunning = GetComponent<PlayerMove>();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pot"))
+        if (other.CompareTag("Pot"))
         {
             Destroy(other.gameObject);
             playerStunning.ButtonInput.SetActive(false);

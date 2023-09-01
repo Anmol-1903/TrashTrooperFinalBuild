@@ -35,8 +35,10 @@ public class Trash : MonoBehaviour
         else
         {
             force = 0;
-        }
-        Rigidbody rb = GetComponent<Rigidbody>();
+        }/*
+        if (gameObject.CompareTag("Pot"))
+            return;*/
+        Rigidbody rb = GetComponent<Rigidbody>();                               
         if (rb != null)
         {
             rb.AddTorque(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
