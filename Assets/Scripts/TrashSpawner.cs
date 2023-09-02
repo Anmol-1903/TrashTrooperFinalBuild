@@ -54,7 +54,6 @@ public class TrashSpawner : MonoBehaviour
     void SpawnFlowerPot()
     {
         int rand = Random.Range(1, 101);
-        Debug.Log(rand);
         if (rand <= _potSpawnChance)
         {
             _selectedSpawnPosition = _spawnPositions[Random.Range(0, _spawnPositions.Length)].transform;

@@ -1,10 +1,39 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using TMPro;
 public class GameManager : MonoBehaviour
 {
+    public enum Objective
+    {
+        None,
+        Cleanliness,
+        SurviveTime,
+        TrashCount
+    }
+    #region Ranking
+
+    public Objective objective;
+
+    [SerializeField] float _cleanlinessForStar1;
+    [SerializeField] float _cleanlinessForStar2;
+    [SerializeField] float _cleanlinessForStar3;
+    [SerializeField] float _gameEndTimer;
+
+    [SerializeField] float _surviveTimeForStar1;
+    [SerializeField] float _surviveTimeForStar2;
+    [SerializeField] float _surviveTimeForStar3;
+    [SerializeField] float _minCleanlinessValue;
+
+    [SerializeField] int _trashCountForStar1;
+    [SerializeField] int _trashCountForStar2;
+    [SerializeField] int _trashCountForStar3;
+    [SerializeField] BetterCatchSystem BCS;
+    #endregion
+    float _gameEndCounter;
+    int stars;
+
     TrashDeSpawner TDS;
     IntestitialAd _ia;
     
@@ -12,8 +41,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float _gameDuration;
     [SerializeField] float _counter;
-    [Range(0,100)]
-    [SerializeField] float _minCleanlinessValue;
 
     [SerializeField] GameObject _restartPanel;
     [SerializeField] GameObject _pauseMenu;
@@ -21,7 +48,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _progressBar;
-    [SerializeField] private TextMeshProUGUI _gameTimer;
+    [SerializeField] TextMeshProUGUI _gameTimer;
     bool _adRunning = false;
 
 
@@ -32,51 +59,206 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        _counter = _gameDuration;
-        Application.targetFrameRate = -1;
+        if (objective == Objective.Cleanliness)
+            _gameEndCounter = _gameEndTimer;
+        else if (objective == Objective.SurviveTime)
+            _gameEndCounter = 0;
+        else if (objective == Objective.TrashCount)
+        {
+            _gameEndCounter = 0;
+            BCS = FindObjectOfType<BetterCatchSystem>();
+        }
+        
     }
     private void Update()
     {
-        _gameTimer.text = (((int)_counter)/60).ToString("D2") + " : " + (((int)_counter) % 60).ToString("D2");
-        if (_counter <= 0)
+        if (objective == Objective.Cleanliness)
         {
-            if (Time.timeScale > 0.25f)
+            _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
+            if (_gameEndCounter <= 0 || TDS._cleanliness <= 0)
             {
-                Time.timeScale -= Time.deltaTime;
+                if (Time.timeScale > 0.2f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    if (!_adRunning)
+                    {
+                        _ia.ShowAd();
+                        _adRunning = true;
+                    }
+                    _nextLevelPanel.SetActive(true);
+                    AudioManager.Instance.BG_Music(_levelComplete);
+                    if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                    {
+                        PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                    }
+                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0) < stars)
+                    {
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, stars);
+                    }
+                    Time.timeScale = 0;
+                }
             }
             else
             {
-                if (!_adRunning)
+                _gameEndCounter -= Time.deltaTime;
+            }
+            if (TDS._cleanliness >= _cleanlinessForStar3)
+            {
+                stars = 3;
+            }
+            else if (TDS._cleanliness >= _cleanlinessForStar2)
+            {
+                stars = 2;
+            }
+            else if (TDS._cleanliness >= _cleanlinessForStar1)
+            {
+                stars = 1;
+            }
+            else if (TDS._cleanliness < _cleanlinessForStar1)
+            {
+                stars = 0;
+                if (Time.timeScale > 0.25f)
                 {
-                    _ia.ShowAd();
-                    _adRunning = true;
+                    Time.timeScale -= Time.deltaTime;
                 }
-                _nextLevelPanel.SetActive(true);
-                AudioManager.Instance.BG_Music(_levelComplete);
-                if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                else
                 {
-                    PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                    _restartPanel.SetActive(true);
+                    Time.timeScale = 0;
                 }
-                Time.timeScale = 0;
             }
         }
-        else
+        else if (objective == Objective.SurviveTime)
         {
-            _counter -= Time.deltaTime;
-        }
-        if (TDS._cleanliness < _minCleanlinessValue)
-        {
-            if (Time.timeScale > 0.25f)
+            _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
+            if (TDS._cleanliness >= _minCleanlinessValue && _gameEndCounter < _surviveTimeForStar3)
             {
-                Time.timeScale -= Time.deltaTime;
+                _gameEndCounter += Time.deltaTime;
+                if (_gameEndCounter >= _surviveTimeForStar3)
+                {
+                    stars = 3;
+                }
+                else if (_gameEndCounter >= _surviveTimeForStar2)
+                {
+                    stars = 2;
+                }
+                else if (_gameEndCounter >= _surviveTimeForStar1)
+                {
+                    stars = 1;
+                }
+                else
+                {
+                    stars = 0;
+                }
+            }
+            else if (TDS._cleanliness >= _minCleanlinessValue && _gameEndCounter >= _surviveTimeForStar3)
+            {
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    if (!_adRunning)
+                    {
+                        _ia.ShowAd();
+                        _adRunning = true;
+                    }
+                    _nextLevelPanel.SetActive(true);
+                    AudioManager.Instance.BG_Music(_levelComplete);
+                    if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                    {
+                        PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                    }
+                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0) < stars)
+                    {
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, stars);
+                    }
+                    Time.timeScale = 0;
+                }
             }
             else
             {
-                _restartPanel.SetActive(true);
-                Time.timeScale = 0;
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    _restartPanel.SetActive(true);
+                    Time.timeScale = 0;
+                }
             }
         }
-    }
+        else if (objective == Objective.TrashCount)
+        {
+            _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
+            if (TDS._cleanliness > 0)
+            {
+                Debug.Log(stars);
+                _gameEndCounter += Time.deltaTime;
+                if(BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
+                {
+                    stars = 3;
+                    Debug.Log("win");
+                    if (_counter <= 0)
+                    {
+                        if (Time.timeScale > 0.25f)
+                        {
+                            Time.timeScale -= Time.deltaTime;
+                        }
+                        else
+                        {
+                            if (!_adRunning)
+                            {
+                                _ia.ShowAd();
+                                _adRunning = true;
+                            }
+                            _nextLevelPanel.SetActive(true);
+                            AudioManager.Instance.BG_Music(_levelComplete);
+                            if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                            {
+                                PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                            }
+                            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0) < stars)
+                            {
+                                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, stars);
+                            }
+                            Time.timeScale = 0;
+                        }
+                    }
+                }
+                else if (BCS._dry_Trashcan >= _trashCountForStar2 && BCS._wet_Trashcan >= _trashCountForStar2)
+                {
+                    stars = 2;
+                }
+                else if (BCS._dry_Trashcan >= _trashCountForStar1 && BCS._wet_Trashcan >= _trashCountForStar1)
+                {
+                    stars = 1;
+                }
+                else
+                {
+                    stars = 0;
+                }
+            }
+            else if(TDS._cleanliness <= 0)
+            {
+                Debug.Log("lose");
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    _restartPanel.SetActive(true);
+                    Time.timeScale = 0;
+                }
+            }
+        }
+        }
 
     public void RestartLevel()
     {

@@ -4738,11 +4738,10 @@ MonoBehaviour:
   - {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
   - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
   _drySpawnChance: 40
-  _flowerPotPrefabs:
-  - {fileID: 6238155972340555826, guid: 2c06093821ef33846928c5eb26fd99cb, type: 3}
+  _flowerPotPrefabs: []
   _potGracePeriod: 2
   _potSpawnInterval: 1
-  _potSpawnChance: 50
+  _potSpawnChance: 0
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,10 +6897,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objective: 0
+  _cleanlinessForStar1: 0
+  _cleanlinessForStar2: 0
+  _cleanlinessForStar3: 0
+  _gameEndTimer: 0
+  _surviveTimeForStar1: 30
+  _surviveTimeForStar2: 60
+  _surviveTimeForStar3: 90
+  _minCleanlinessValue: 25
+  _trashCountForStar1: 2
+  _trashCountForStar2: 4
+  _trashCountForStar3: 6
+  BCS: {fileID: 0}
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
   _gameDuration: 90
   _counter: 0
-  _minCleanlinessValue: 0
   _restartPanel: {fileID: 341932944}
   _pauseMenu: {fileID: 762809032}
   _HUD: {fileID: 1455720719}

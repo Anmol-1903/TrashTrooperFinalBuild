@@ -39,6 +39,9 @@ public class BetterCatchSystem : MonoBehaviour
 
     [SerializeField] GameObject _trash_In_Inventory;
 
+    [SerializeField] public int _dry_Trashcan = 0;
+    [SerializeField] public int _wet_Trashcan = 0;
+
     [SerializeField] public int _max_Dry_capacity = 3;
     [SerializeField] public int _max_Wet_capacity = 3;
     
@@ -104,6 +107,7 @@ public class BetterCatchSystem : MonoBehaviour
                         _wet_Cannon.CollectTrash(_wet_capacity - _wet_capacity);
                     }
                     floor.HealNature((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity);
+                    _wet_Trashcan += (_max_Wet_capacity * _capacity_upgrade) - _wet_capacity;
                     _wet_capacity = _max_Wet_capacity * _capacity_upgrade;
                 }
             }
@@ -128,6 +132,7 @@ public class BetterCatchSystem : MonoBehaviour
                         _dry_Cannon.CollectTrash(_dry_capacity - _dry_capacity);
                     }
                     floor.HealNature((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity);
+                    _dry_Trashcan += (_max_Dry_capacity * _capacity_upgrade) - _dry_capacity;
                     _dry_capacity = _max_Dry_capacity * _capacity_upgrade;
                 }
             }
@@ -258,6 +263,8 @@ public class BetterCatchSystem : MonoBehaviour
                     Destroy(_trash);
                     if (isWet)
                     {
+
+                        _wet_Trashcan += 1;
                         if (_wet_Cannon != null)
                         {
                             _wet_Cannon.CollectTrash(1);
@@ -265,6 +272,7 @@ public class BetterCatchSystem : MonoBehaviour
                     }
                     else
                     {
+                        _dry_Trashcan += 1;
                         if (_dry_Cannon != null)
                         {
                             _dry_Cannon.CollectTrash(1);

@@ -4594,6 +4594,10 @@ MonoBehaviour:
   - {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
   - {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
   _drySpawnChance: 60
+  _flowerPotPrefabs: []
+  _potGracePeriod: 0
+  _potSpawnInterval: 0
+  _potSpawnChance: 50
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6126,10 +6130,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objective: 0
+  _cleanlinessForStar1: 0
+  _cleanlinessForStar2: 0
+  _cleanlinessForStar3: 0
+  _gameEndTimer: 0
+  _surviveTimeForStar1: 0
+  _surviveTimeForStar2: 0
+  _surviveTimeForStar3: 0
+  _minCleanlinessValue: 0
+  _trashCountForStar1: 0
+  _trashCountForStar2: 0
+  _trashCountForStar3: 0
+  BCS: {fileID: 0}
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
   _gameDuration: 151
   _counter: 0
-  _minCleanlinessValue: 0
   _restartPanel: {fileID: 1647766732}
   _pauseMenu: {fileID: 344581241}
   _HUD: {fileID: 1493892951}
