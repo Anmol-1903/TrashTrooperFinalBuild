@@ -6897,11 +6897,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: 0
-  _cleanlinessForStar1: 0
-  _cleanlinessForStar2: 0
-  _cleanlinessForStar3: 0
-  _gameEndTimer: 0
+  objective: 1
+  _cleanlinessForStar1: 30
+  _cleanlinessForStar2: 50
+  _cleanlinessForStar3: 80
+  _gameEndTimer: 30
   _surviveTimeForStar1: 30
   _surviveTimeForStar2: 60
   _surviveTimeForStar3: 90

@@ -156,9 +156,6 @@ public class MainMenu : MonoBehaviour
     }
     public void openurl(string url)
     {
-
         Application.OpenURL(url);
     }
-
-
 }

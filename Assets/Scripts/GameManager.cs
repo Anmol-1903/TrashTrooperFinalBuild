@@ -94,9 +94,9 @@ public class GameManager : MonoBehaviour
                     {
                         PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
                     }
-                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0) < stars)
+                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 0) < stars)
                     {
-                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, stars);
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), stars);
                     }
                     Time.timeScale = 0;
                 }
