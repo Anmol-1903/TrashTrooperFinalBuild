@@ -206,7 +206,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("glove_powerup"))
+        if (other.CompareTag("glove_powerup"))
         {
             StopCoroutine(gloveTimer());
             StartCoroutine(gloveTimer());
@@ -214,7 +214,7 @@ public class PlayerMove : MonoBehaviour
             AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("cap_powerup"))
+        if (other.CompareTag("cap_powerup"))
         {
             StopCoroutine(TimeSlowerTimer());
             StartCoroutine(TimeSlowerTimer());
@@ -222,14 +222,18 @@ public class PlayerMove : MonoBehaviour
             AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Time_slower"))
+        if (other.CompareTag("Time_slower"))
         {
+            StopCoroutine(TimeFasterTimer());
             StartCoroutine(TimeFasterTimer());
+            AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("magnet_powerup"))
+        if (other.CompareTag("magnet_powerup"))
         {
+            StopCoroutine(MagnetTimer());
             StartCoroutine(MagnetTimer());
+            AudioManager.Instance.PowerupCollect(powerup_collected);
             Destroy(other.gameObject);
         }
     }

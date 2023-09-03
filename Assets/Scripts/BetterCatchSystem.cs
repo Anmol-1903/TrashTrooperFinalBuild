@@ -104,7 +104,7 @@ public class BetterCatchSystem : MonoBehaviour
                     AudioManager.Instance.TrashDispose(_wet_Trash_Dispose);
                     if (_wet_Cannon != null)
                     {
-                        _wet_Cannon.CollectTrash(_wet_capacity - _wet_capacity);
+                        _wet_Cannon.CollectTrash((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity);
                     }
                     floor.HealNature((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity);
                     _wet_Trashcan += (_max_Wet_capacity * _capacity_upgrade) - _wet_capacity;
@@ -129,7 +129,7 @@ public class BetterCatchSystem : MonoBehaviour
                     AudioManager.Instance.TrashDispose(_dry_Trash_Dispose);
                     if (_dry_Cannon != null)
                     {
-                        _dry_Cannon.CollectTrash(_dry_capacity - _dry_capacity);
+                        _dry_Cannon.CollectTrash((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity);
                     }
                     floor.HealNature((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity);
                     _dry_Trashcan += (_max_Dry_capacity * _capacity_upgrade) - _dry_capacity;
@@ -257,7 +257,6 @@ public class BetterCatchSystem : MonoBehaviour
                     yield return new WaitForSecondsRealtime(0.5f);
                     if (Vector3.Distance(transform.position, targetPosition.position) > 5f)
                     {
-                        Debug.Log("NIKAL LOVE DAY");
                         targetPosition.GetComponentInParent<Animator>().SetBool("Open", false);
                     }
                     Destroy(_trash);

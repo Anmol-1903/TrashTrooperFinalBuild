@@ -18,7 +18,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        _pause.Play();
+        if(_pause)
+            _pause.Play();
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         _HUD.SetActive(true);

@@ -35,10 +35,8 @@ public class BossHealth : MonoBehaviour
     public void DealDamage(float _damage)
     {
         _currentHealth -= _damage;
-        Debug.Log("ouch");
         if(_currentHealth <= 0)
         {
-            Debug.Log("dead");
             //Boss Ded
         }
     }

@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
             _gameEndCounter = 0;
             BCS = FindObjectOfType<BetterCatchSystem>();
         }
-        
     }
     private void Update()
     {
@@ -196,14 +195,12 @@ public class GameManager : MonoBehaviour
         else if (objective == Objective.TrashCount)
         {
             _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
-            if (TDS._cleanliness > 0)
+            if (TDS._cleanliness > 0 && _gameEndCounter > 0)
             {
-                Debug.Log(stars);
-                _gameEndCounter += Time.deltaTime;
+                _gameEndCounter -= Time.deltaTime;
                 if(BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
                 {
                     stars = 3;
-                    Debug.Log("win");
                     if (_counter <= 0)
                     {
                         if (Time.timeScale > 0.25f)
@@ -223,9 +220,9 @@ public class GameManager : MonoBehaviour
                             {
                                 PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
                             }
-                            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0) < stars)
+                            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 0) < stars)
                             {
-                                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, stars);
+                                PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), stars);
                             }
                             Time.timeScale = 0;
                         }
@@ -246,7 +243,6 @@ public class GameManager : MonoBehaviour
             }
             else if(TDS._cleanliness <= 0)
             {
-                Debug.Log("lose");
                 if (Time.timeScale > 0.25f)
                 {
                     Time.timeScale -= Time.deltaTime;

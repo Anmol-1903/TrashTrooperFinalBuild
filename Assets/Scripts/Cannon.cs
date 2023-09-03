@@ -19,11 +19,13 @@ public class Cannon : MonoBehaviour
     void ShootTrashAtAunty()
     {
         GameObject temp = Instantiate(_trashBall[Random.Range(0, _trashBall.Length)], _spawnPos.transform.position, Quaternion.identity);
-        Debug.Log("Instantiated");
+        temp.tag = "Bullet";
+        temp.AddComponent<Rigidbody>().useGravity = false;
+        temp.AddComponent<SphereCollider>().isTrigger = true;
         Rigidbody rb = temp.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            Debug.Log("moved"); 
+            rb.AddTorque(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
             Vector3 direction = (_target.transform.position - transform.position).normalized;
             rb.velocity = direction * _shootForce;
         }
