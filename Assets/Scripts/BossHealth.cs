@@ -37,7 +37,8 @@ public class BossHealth : MonoBehaviour
         _currentHealth -= _damage;
         if(_currentHealth <= 0)
         {
-            //Boss Ded
+            GameManager GM = FindObjectOfType<GameManager>();
+            GM.BossKilled();
         }
     }
 }

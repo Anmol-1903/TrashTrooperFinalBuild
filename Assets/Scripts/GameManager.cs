@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
         None,
         Cleanliness,
         SurviveTime,
-        TrashCount
+        TrashCount,
+        Boss,
     }
     #region Ranking
 
@@ -30,6 +31,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] int _trashCountForStar2;
     [SerializeField] int _trashCountForStar3;
     [SerializeField] BetterCatchSystem BCS;
+
+    [SerializeField] bool _bossDead;
+
     #endregion
     float _gameEndCounter;
     int stars;
@@ -68,13 +72,18 @@ public class GameManager : MonoBehaviour
             _gameEndCounter = 0;
             BCS = FindObjectOfType<BetterCatchSystem>();
         }
+        else if(objective == Objective.Boss)
+        {
+            _gameEndCounter = _gameEndTimer;
+            _bossDead = false;
+        }
     }
     private void Update()
     {
         if (objective == Objective.Cleanliness)
         {
             _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
-            if (_gameEndCounter <= 0 || TDS._cleanliness <= 0)
+            if (_gameEndCounter <= 0 && TDS._cleanliness > 0)
             {
                 if (Time.timeScale > 0.2f)
                 {
@@ -198,7 +207,7 @@ public class GameManager : MonoBehaviour
             if (TDS._cleanliness > 0 && _gameEndCounter > 0)
             {
                 _gameEndCounter -= Time.deltaTime;
-                if(BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
+                if (BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
                 {
                     stars = 3;
                     if (_counter <= 0)
@@ -241,7 +250,7 @@ public class GameManager : MonoBehaviour
                     stars = 0;
                 }
             }
-            else if(TDS._cleanliness <= 0)
+            else if (TDS._cleanliness <= 0)
             {
                 if (Time.timeScale > 0.25f)
                 {
@@ -254,7 +263,55 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        else if (objective == Objective.Boss)
+        {
+            _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
+            if(_gameEndCounter <= 0 || TDS._cleanliness < _minCleanlinessValue)
+            {
+                stars = 0;
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    _restartPanel.SetActive(true);
+                    Time.timeScale = 0;
+                }
+            }
+            else if(_bossDead && _gameEndCounter > 0 && TDS._cleanliness >= _minCleanlinessValue)
+            {
+                if (Time.timeScale > 0.2f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    if (!_adRunning)
+                    {
+                        _ia.ShowAd();
+                        _adRunning = true;
+                    }
+                    _nextLevelPanel.SetActive(true);
+                    stars = 3;
+                    AudioManager.Instance.BG_Music(_levelComplete);
+                    if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                    {
+                        PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                    }
+                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 0) < stars)
+                    {
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), stars);
+                    }
+                    Time.timeScale = 0;
+                }
+            }
+            else
+            {
+                _gameEndCounter -= Time.deltaTime;
+            }
         }
+    }
 
     public void RestartLevel()
     {
@@ -297,5 +354,9 @@ public class GameManager : MonoBehaviour
             yield return null;
             //AudioManager.Instance.BG_Music(_ingamebgclip);
         }
+    }
+    public void BossKilled()
+    {
+        _bossDead = true;
     }
 }

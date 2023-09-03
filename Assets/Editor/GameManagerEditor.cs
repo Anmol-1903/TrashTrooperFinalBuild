@@ -21,6 +21,8 @@ public class GameManagerEditor : Editor
     SerializedProperty _trashCountForStar3;
     SerializedProperty BCS;
 
+    SerializedProperty _bossDead;
+
     SerializedProperty _levelComplete;
     SerializedProperty _restartPanel;
     SerializedProperty _pauseMenu;
@@ -52,6 +54,8 @@ public class GameManagerEditor : Editor
         _trashCountForStar2 = serializedObject.FindProperty("_trashCountForStar2");
         _trashCountForStar3 = serializedObject.FindProperty("_trashCountForStar3");
         BCS = serializedObject.FindProperty("BCS");
+        
+        _bossDead = serializedObject.FindProperty("_bossDead");
 
         _levelComplete = serializedObject.FindProperty("_levelComplete");
         _nextLevelPanel = serializedObject.FindProperty("_nextLevelPanel");
@@ -107,6 +111,14 @@ public class GameManagerEditor : Editor
         EditorGUILayout.EndFoldoutHeaderGroup();
         EditorGUILayout.Space(5);
 
+        if (_gameManager.objective == GameManager.Objective.Boss)
+        {
+            EditorGUILayout.PropertyField(_bossDead);
+            EditorGUILayout.PropertyField(_gameEndTimer);
+            EditorGUILayout.PropertyField(_minCleanlinessValue);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+        EditorGUILayout.Space(5);
 
         panelsGroup = EditorGUILayout.BeginFoldoutHeaderGroup(panelsGroup, "Panels");
         if (panelsGroup)

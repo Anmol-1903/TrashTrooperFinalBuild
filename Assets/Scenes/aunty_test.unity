@@ -3373,7 +3373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b5b73010da4b8944ba4b37a7e14c6def, type: 3}
+  m_Sprite: {fileID: -718180556, guid: b5b73010da4b8944ba4b37a7e14c6def, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6262,13 +6262,13 @@ RectTransform:
   - {fileID: 1508128320}
   - {fileID: 506260011}
   - {fileID: 938635092}
-  m_Father: {fileID: 1251544247}
-  m_RootOrder: 0
+  m_Father: {fileID: 1054284979}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: -414.14374}
-  m_SizeDelta: {x: 1921.6228, y: 930.2874}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &996199252
 MonoBehaviour:
@@ -6495,6 +6495,7 @@ RectTransform:
   - {fileID: 607377913}
   - {fileID: 1251544247}
   - {fileID: 602051103}
+  - {fileID: 996199251}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7476,8 +7477,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 996199251}
+  m_Children: []
   m_Father: {fileID: 1054284979}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7809,20 +7809,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: 0
+  objective: 4
   _cleanlinessForStar1: 0
   _cleanlinessForStar2: 0
   _cleanlinessForStar3: 0
-  _gameEndTimer: 0
+  _gameEndTimer: 300
   _surviveTimeForStar1: 0
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
-  _minCleanlinessValue: 0
+  _minCleanlinessValue: 25
   _trashCountForStar1: 0
   _trashCountForStar2: 0
   _trashCountForStar3: 0
   BCS: {fileID: 0}
-  _levelComplete: {fileID: 0}
+  _bossDead: 0
+  _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
   _gameDuration: 300
   _counter: 0
   _restartPanel: {fileID: 996199250}
