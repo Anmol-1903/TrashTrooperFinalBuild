@@ -51,9 +51,13 @@ public class TUT_Manager : MonoBehaviour
         if (Vector3.Distance(player.position, drydustbin_Trans.position) < 1f)
         {
             Destroy(drywasteDeposite_UI);
-            if (Trash2 != null)
+            if (Trash1 == null)
             {
-                StartCoroutine(TimerForWetWasteUI());
+                if (Trash2 != null)
+                {
+                    StartCoroutine(TimerForWetWasteUI());
+                }
+
             }
         }
         WetWasteUI();
