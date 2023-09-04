@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2997,7 +2997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5978854, y: 0.39800003}
   m_AnchorMax: {x: 0.5978854, y: 0.39800003}
-  m_AnchoredPosition: {x: 93, y: 0}
+  m_AnchoredPosition: {x: 117.32, y: 4.9893}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &518385869
@@ -3053,7 +3053,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: End
+          m_StringArgument: BOSS_level
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &518385870
@@ -3129,8 +3129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 230}
-  m_SizeDelta: {x: 650, y: 410}
+  m_AnchoredPosition: {x: 0, y: 247.57004}
+  m_SizeDelta: {x: 650, y: 485.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533509020
 MonoBehaviour:
@@ -4760,6 +4760,10 @@ MonoBehaviour:
   - {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
   - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
   _drySpawnChance: 50
+  _flowerPotPrefabs: []
+  _potGracePeriod: 0
+  _potSpawnInterval: 0
+  _potSpawnChance: 50
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,8 +5053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchoredPosition: {x: 0, y: 245.02}
+  m_SizeDelta: {x: 600, y: 490.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938635093
 MonoBehaviour:
@@ -5066,15 +5070,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b0f34a516fbb9d545b009fa8e4251150, type: 3}
+  m_Sprite: {fileID: 1564421482, guid: b0f34a516fbb9d545b009fa8e4251150, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6551,10 +6555,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objective: 0
+  _cleanlinessForStar1: 0
+  _cleanlinessForStar2: 0
+  _cleanlinessForStar3: 0
+  _gameEndTimer: 0
+  _surviveTimeForStar1: 0
+  _surviveTimeForStar2: 0
+  _surviveTimeForStar3: 0
+  _minCleanlinessValue: 0
+  _trashCountForStar1: 0
+  _trashCountForStar2: 0
+  _trashCountForStar3: 0
+  BCS: {fileID: 0}
+  _bossDead: 0
   _levelComplete: {fileID: 0}
   _gameDuration: 181
   _counter: 0
-  _minCleanlinessValue: 0
   _restartPanel: {fileID: 996199250}
   _pauseMenu: {fileID: 1257532756}
   _HUD: {fileID: 1113972990}
@@ -8452,7 +8469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39958602, y: 0.39800003}
   m_AnchorMax: {x: 0.39958602, y: 0.39800003}
-  m_AnchoredPosition: {x: -88, y: -1}
+  m_AnchoredPosition: {x: -111.96, y: 4.9893}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1716025333

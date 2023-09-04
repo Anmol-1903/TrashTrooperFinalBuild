@@ -7,16 +7,24 @@ public class Cannon : MonoBehaviour
     [SerializeField] GameObject[] _trashBall;
     [SerializeField] GameObject _spawnPos;
     [SerializeField] GameObject _target;
+
+    Animator _anim;
+
+    private void Awake()
+    {
+        _anim = GetComponent<Animator>();
+    }
+
     public void CollectTrash(int amt)
     {
         _currentFillAmount += amt;
         if (_currentFillAmount >= _fillAmount)
         {
-            ShootTrashAtAunty();
+            _anim.SetTrigger("Shoot");
             _currentFillAmount = 0;
         }
     }
-    void ShootTrashAtAunty()
+    public void ShootTrashAtAunty()
     {
         GameObject temp = Instantiate(_trashBall[Random.Range(0, _trashBall.Length)], _spawnPos.transform.position, Quaternion.identity);
         temp.tag = "Bullet";
