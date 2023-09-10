@@ -12,7 +12,7 @@ public class Cannon : MonoBehaviour
 
     private void Awake()
     {
-        _anim = GetComponent<Animator>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     public void CollectTrash(int amt)
