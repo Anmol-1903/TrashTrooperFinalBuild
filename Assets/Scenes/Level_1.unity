@@ -6901,7 +6901,7 @@ MonoBehaviour:
   _cleanlinessForStar1: 30
   _cleanlinessForStar2: 50
   _cleanlinessForStar3: 80
-  _gameEndTimer: 30
+  _gameEndTimer: 181
   _surviveTimeForStar1: 30
   _surviveTimeForStar2: 60
   _surviveTimeForStar3: 90

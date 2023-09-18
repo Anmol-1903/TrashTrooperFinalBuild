@@ -8222,7 +8222,7 @@ MonoBehaviour:
   _surviveTimeForStar1: 0
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
-  _minCleanlinessValue: 15
+  _minCleanlinessValue: 20
   _trashCountForStar1: 0
   _trashCountForStar2: 0
   _trashCountForStar3: 0

@@ -6555,7 +6555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: 0
+  objective: 3
   _cleanlinessForStar1: 0
   _cleanlinessForStar2: 0
   _cleanlinessForStar3: 0
@@ -6564,9 +6564,9 @@ MonoBehaviour:
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
   _minCleanlinessValue: 0
-  _trashCountForStar1: 0
-  _trashCountForStar2: 0
-  _trashCountForStar3: 0
+  _trashCountForStar1: 15
+  _trashCountForStar2: 30
+  _trashCountForStar3: 50
   BCS: {fileID: 0}
   _bossDead: 0
   _levelComplete: {fileID: 0}

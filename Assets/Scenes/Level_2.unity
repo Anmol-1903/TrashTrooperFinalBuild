@@ -5978,15 +5978,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04bac586d73cd84380a6eb933ef299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: 0
+  objective: 2
   _cleanlinessForStar1: 0
   _cleanlinessForStar2: 0
   _cleanlinessForStar3: 0
   _gameEndTimer: 0
-  _surviveTimeForStar1: 0
-  _surviveTimeForStar2: 0
-  _surviveTimeForStar3: 0
-  _minCleanlinessValue: 0
+  _surviveTimeForStar1: 40
+  _surviveTimeForStar2: 120
+  _surviveTimeForStar3: 180
+  _minCleanlinessValue: 30
   _trashCountForStar1: 0
   _trashCountForStar2: 0
   _trashCountForStar3: 0
