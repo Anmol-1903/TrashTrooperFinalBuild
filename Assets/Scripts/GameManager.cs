@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _progressBar;
+    [SerializeField] Slider _stars;
     [SerializeField] TextMeshProUGUI _gameTimer;
     bool _adRunning = false;
 
@@ -311,6 +312,7 @@ public class GameManager : MonoBehaviour
                 _gameEndCounter -= Time.deltaTime;
             }
         }
+        _stars.value = stars;
     }
 
     public void RestartLevel()

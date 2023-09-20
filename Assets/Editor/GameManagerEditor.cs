@@ -30,6 +30,7 @@ public class GameManagerEditor : Editor
     SerializedProperty _nextLevelPanel;
     SerializedProperty _loadingScreen;
     SerializedProperty _progressBar;
+    SerializedProperty _stars;
     SerializedProperty _gameTimer;
 
     private bool panelsGroup = false;
@@ -62,6 +63,7 @@ public class GameManagerEditor : Editor
         _loadingScreen = serializedObject.FindProperty("_loadingScreen");
         _restartPanel = serializedObject.FindProperty("_restartPanel");
         _progressBar = serializedObject.FindProperty("_progressBar");
+        _stars = serializedObject.FindProperty("_stars");
         _gameTimer = serializedObject.FindProperty("_gameTimer");
         _pauseMenu = serializedObject.FindProperty("_pauseMenu");
         _HUD = serializedObject.FindProperty("_HUD");
@@ -130,6 +132,7 @@ public class GameManagerEditor : Editor
             EditorGUILayout.PropertyField(_pauseMenu);
             EditorGUILayout.PropertyField(_HUD);
             EditorGUILayout.PropertyField(_progressBar);
+            EditorGUILayout.PropertyField(_stars);
             EditorGUILayout.PropertyField(_gameTimer);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
