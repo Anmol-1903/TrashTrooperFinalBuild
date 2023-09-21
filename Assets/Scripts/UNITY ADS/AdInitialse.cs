@@ -5,11 +5,12 @@ public class AdInitialse : MonoBehaviour,IUnityAdsInitializationListener
 {
     public string AndroidAdId;
     public string IOSAdId;
-    public bool isTestingMode = false;
+    private bool isTestingMode = false;
     private string gameId;
 
     private void Start()
     {
+        isTestingMode = false;
         PlayAd();
     }
     private void PlayAd()
