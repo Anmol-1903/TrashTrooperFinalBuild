@@ -1490,7 +1490,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 92
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &8959002453306659508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.592555, y: 3.0089502, z: 2.5925546}
+  m_Size: {x: 3.06108, y: 3.0089502, z: 2.5925546}
   m_Center: {x: -0.10034621, y: 1.4729295, z: -0.7613448}
 --- !u!114 &8959002453306659519
 MonoBehaviour:
@@ -1526,6 +1526,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   _capTimer: {fileID: 0}
   _gloveTimer: {fileID: 0}
+  _magnetTimer: {fileID: 0}
   Gloves: {fileID: 8623931545004122794}
   Hat: {fileID: 8635855172678201165}
   ButtonInput: {fileID: 0}
@@ -1585,7 +1586,11 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _distance: 1
+  _dry_Waste_In_Trigger: 0
+  _wet_Waste_In_Trigger: 0
   _trash_In_Inventory: {fileID: 0}
+  _dry_Trashcan: 0
+  _wet_Trashcan: 0
   _max_Dry_capacity: 3
   _max_Wet_capacity: 3
   _dry_capacity: 3

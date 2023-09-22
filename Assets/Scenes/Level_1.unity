@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2048,7 +2048,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AndroidAdId: 5391505
   IOSAdId: 5391504
-  isTestingMode: 1
 --- !u!4 &424467950
 Transform:
   m_ObjectHideFlags: 0
@@ -4827,7 +4826,7 @@ MonoBehaviour:
   - {fileID: 889145340236931661, guid: fc4343eac1d49c44383079b6df9cc673, type: 3}
   - {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
   - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
-  _drySpawnChance: 40
+  _drySpawnChance: 50
   _flowerPotPrefabs: []
   _potGracePeriod: 2
   _potSpawnInterval: 1
@@ -4849,6 +4848,8 @@ MonoBehaviour:
   counter: 20
   PowerUps:
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
+  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
+  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
 --- !u!1 &883869832
 GameObject:
   m_ObjectHideFlags: 0
@@ -7143,7 +7144,7 @@ MonoBehaviour:
   _cleanlinessForStar1: 30
   _cleanlinessForStar2: 50
   _cleanlinessForStar3: 80
-  _gameEndTimer: 10
+  _gameEndTimer: 121
   _surviveTimeForStar1: 30
   _surviveTimeForStar2: 60
   _surviveTimeForStar3: 90
@@ -10519,10 +10520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8959002453306659513, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10579,6 +10576,10 @@ PrefabInstance:
       propertyPath: ButtonInput
       value: 
       objectReference: {fileID: 1023236694}
+    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: Magnettimer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: SliderInput
       value: 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1204,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.151051
+      value: -16.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1661,6 +1661,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_Name
       value: Aunty
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 994802594291815182, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5682,7 +5686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: glovePower_timer
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
@@ -6063,11 +6067,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
+  - 0.5
+  - 0.9
+  - 1.4
   - 2
   - 2.5
-  - 3
-  - 3.5
-  - 4
   _dryTrashPrefabs:
   - {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
@@ -6085,7 +6089,7 @@ MonoBehaviour:
   _drySpawnChance: 50
   _flowerPotPrefabs:
   - {fileID: 6238155972340555826, guid: 2c06093821ef33846928c5eb26fd99cb, type: 3}
-  _potGracePeriod: 25
+  _potGracePeriod: 30
   _potSpawnInterval: 5
   _potSpawnChance: 65
 --- !u!114 &840748985
@@ -6106,8 +6110,10 @@ MonoBehaviour:
   PowerUps:
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
-  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
   - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
+  - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
+  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
+  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
 --- !u!1 &841697023
 GameObject:
   m_ObjectHideFlags: 0
@@ -9132,7 +9138,7 @@ MonoBehaviour:
   _cleanlinessForStar1: 0
   _cleanlinessForStar2: 0
   _cleanlinessForStar3: 0
-  _gameEndTimer: 300
+  _gameEndTimer: 301
   _surviveTimeForStar1: 0
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
@@ -9257,7 +9263,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301480914}
   m_LocalRotation: {x: -0.09663905, y: 0.000000020489097, z: -0.0000000013969839, w: 0.99531955}
-  m_LocalPosition: {x: 0, y: 0, z: 9.296663}
+  m_LocalPosition: {x: 0, y: 0, z: 16.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9267,7 +9273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 33.672882}
+  m_AnchoredPosition: {x: -0, y: 26.83}
   m_SizeDelta: {x: 3021.2, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1301480916
@@ -9320,7 +9326,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1229667679}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

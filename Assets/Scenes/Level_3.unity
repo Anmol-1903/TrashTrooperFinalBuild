@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17043376, g: 0.16537091, b: 0.15989889, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4816,11 +4816,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
+  - 0.8
   - 1
   - 1.5
   - 2
-  - 2.5
-  - 3
+  - 2.4
   _dryTrashPrefabs:
   - {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
@@ -4856,8 +4856,12 @@ MonoBehaviour:
   max_Timer_For_PowerUps_To_Spawn: 50
   counter: 30
   PowerUps:
+  - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
+  - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
+  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
+  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
 --- !u!1 &855157605
 GameObject:
   m_ObjectHideFlags: 0
@@ -10005,7 +10009,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AndroidAdId: 5391505
   IOSAdId: 5391504
-  isTestingMode: 1
 --- !u!4 &1950170218
 Transform:
   m_ObjectHideFlags: 0
