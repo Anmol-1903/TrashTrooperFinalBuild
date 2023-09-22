@@ -658,7 +658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5978854, y: 0.39800003}
   m_AnchorMax: {x: 0.5978854, y: 0.39800003}
-  m_AnchoredPosition: {x: 128.32, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 128.32, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &93116866
@@ -4513,11 +4513,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
+  - 0.5
   - 1
   - 1.5
-  - 2
+  - 2.1
   - 2.5
-  - 3
   _dryTrashPrefabs:
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
   - {fileID: 360527395518723083, guid: 5c09e983f30801d489dfe05b4af39323, type: 3}
@@ -4530,11 +4530,11 @@ MonoBehaviour:
   - {fileID: 3776504023511912869, guid: c2748d6926a95e148893d423b80289e8, type: 3}
   - {fileID: 3910171299554032466, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
   - {fileID: 1046177354170297221, guid: f2c98bbd0daf1044a933c34c26dc5a74, type: 3}
-  _drySpawnChance: 60
+  _drySpawnChance: 55
   _flowerPotPrefabs: []
   _potGracePeriod: 0
   _potSpawnInterval: 0
-  _potSpawnChance: 50
+  _potSpawnChance: 0
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5810,7 +5810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39958602, y: 0.39800003}
   m_AnchorMax: {x: 0.39958602, y: 0.39800003}
-  m_AnchoredPosition: {x: -100, y: 0.0000076293945}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1289389857

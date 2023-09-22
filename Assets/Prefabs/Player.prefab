@@ -1502,8 +1502,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.06108, y: 3.0089502, z: 2.5925546}
-  m_Center: {x: -0.10034621, y: 1.4729295, z: -0.7613448}
+  m_Size: {x: 3.2, y: 3.0460503, z: 3.2}
+  m_Center: {x: -0.10034621, y: 1.4543794, z: -0.66657126}
 --- !u!114 &8959002453306659519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   fastSpeed: 20
   glovePower_timer: 15
   TimeSlowertimer: 10
-  Magnettimer: 10
+  Magnettimer: 12
   TimeFastertimer: 10
   controller: {fileID: 0}
   _capTimer: {fileID: 0}

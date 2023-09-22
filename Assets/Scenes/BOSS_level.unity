@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.1705444, g: 0.16543193, b: 0.16007017, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6069,10 +6069,10 @@ MonoBehaviour:
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
   - 0.5
-  - 0.9
-  - 1.4
+  - 0.8
+  - 1.2
+  - 1.5
   - 2
-  - 2.5
   _dryTrashPrefabs:
   - {fileID: 1592105751511551778, guid: b83efb8f077602640b13ed9bfe892d98, type: 3}
   - {fileID: 6122937155436353099, guid: a84b3a7bbf0f8574aa944b0cadbbba2c, type: 3}
