@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
+  m_IndirectSpecularColor: {r: 0.1705444, g: 0.16543193, b: 0.16007017, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1664,7 +1664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 994802594291815182, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5535,6 +5535,11 @@ RectTransform:
   m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &719153415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6639021465870561501, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+  m_PrefabInstance: {fileID: 727546544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &726868277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e80363fb2bef55844916ffd0eaa36ca2, type: 3}
@@ -5593,13 +5598,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 919132147851413939}
     - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: _dry_Dustbin_Lid
+      propertyPath: _trashBags.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 719153415}
     - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: _wet_Dustbin_Lid
+      propertyPath: _trashBags.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1261631395}
+    - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _trashBags.Array.data[2]
+      value: 
+      objectReference: {fileID: 1130975331}
+    - target: {fileID: 2143893884, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+      propertyPath: _trashBags.Array.data[3]
+      value: 
+      objectReference: {fileID: 1826634121}
     - target: {fileID: 8959002453306659490, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5676,18 +5689,6 @@ PrefabInstance:
       propertyPath: _magnetTimer
       value: 
       objectReference: {fileID: 621141639}
-    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: TimeFastertimer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: TimeSlowertimer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: glovePower_timer
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
 --- !u!114 &727546545 stripped
@@ -8147,6 +8148,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113972990}
   m_CullTransparentMesh: 1
+--- !u!1 &1130975331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7840481147665405058, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+  m_PrefabInstance: {fileID: 727546544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1140926746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,6 +8936,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257517056}
   m_CullTransparentMesh: 1
+--- !u!1 &1261631395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2520999792623677893, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+  m_PrefabInstance: {fileID: 727546544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266506131
 GameObject:
   m_ObjectHideFlags: 0
@@ -12895,6 +12906,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 0, y: -1, z: 0}
+--- !u!1 &1826634121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2243960739213256933, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
+  m_PrefabInstance: {fileID: 727546544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1841324521
 GameObject:
   m_ObjectHideFlags: 0

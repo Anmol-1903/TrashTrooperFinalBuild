@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 public class BetterCatchSystem : MonoBehaviour
 {
 
@@ -38,6 +37,7 @@ public class BetterCatchSystem : MonoBehaviour
     bool _wet_Waste_In_Inventory;
 
     [SerializeField] GameObject _trash_In_Inventory;
+    [SerializeField] GameObject[] _trashBags;
 
     [SerializeField] public int _dry_Trashcan = 0;
     [SerializeField] public int _wet_Trashcan = 0;
@@ -54,11 +54,15 @@ public class BetterCatchSystem : MonoBehaviour
 
     private void Awake()
     {
-
         _wet_Dustbin_Trans = GameObject.FindGameObjectWithTag("WetClamp").transform;
         _dry_Dustbin_Trans = GameObject.FindGameObjectWithTag("DryClamp").transform;
         floor = FindObjectOfType<TrashDeSpawner>();
         playerMovement = GetComponent<PlayerMove>();
+        for(int i = 0; i < 4; i++)
+        {
+            _trashBags[i].SetActive(false);
+        }
+        _trashBags[0].SetActive(true);
     }
     private void OnEnable()
     {
@@ -233,6 +237,44 @@ public class BetterCatchSystem : MonoBehaviour
                 _dry_Waste_In_Inventory = true;
                 Destroy(_trash_In_Inventory);
                 AudioManager.Instance.TrashCollect();
+            }
+        }
+        if((_max_Dry_capacity - _dry_capacity) > (_max_Wet_capacity - _wet_capacity))
+        {
+            if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
+            {
+                for(int i = 0; i < 4; i++)
+                {
+                    _trashBags[i].SetActive(false);
+                }
+                _trashBags[(_max_Dry_capacity * _capacity_upgrade - _dry_capacity)/2].SetActive(true);
+            }
+            else
+            {
+                for(int i = 0; i < 4; i++)
+                {
+                    _trashBags[i].SetActive(false);
+                }
+                _trashBags[(_max_Dry_capacity - _dry_capacity)].SetActive(true);
+            }
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("SelectedPowerUp") == 1)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    _trashBags[i].SetActive(false);
+                }
+                _trashBags[(_max_Wet_capacity * _capacity_upgrade - _wet_capacity) / 2].SetActive(true);
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    _trashBags[i].SetActive(false);
+                }
+                _trashBags[(_max_Wet_capacity - _wet_capacity)].SetActive(true);
             }
         }
     }
