@@ -4811,9 +4811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
+  - 0.8
+  - 1.2
   - 2
-  - 2.5
-  - 3
   - 3.5
   - 4
   _dryTrashPrefabs:
@@ -4828,8 +4828,8 @@ MonoBehaviour:
   - {fileID: 5501325426281718109, guid: c297e48d0a990df4e838bd74664da205, type: 3}
   _drySpawnChance: 50
   _flowerPotPrefabs: []
-  _potGracePeriod: 2
-  _potSpawnInterval: 1
+  _potGracePeriod: 0
+  _potSpawnInterval: 0
   _potSpawnChance: 0
 --- !u!114 &840748985
 MonoBehaviour:
@@ -10576,10 +10576,6 @@ PrefabInstance:
       propertyPath: ButtonInput
       value: 
       objectReference: {fileID: 1023236694}
-    - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
-      propertyPath: Magnettimer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659519, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: SliderInput
       value: 
