@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 470503320439964584}
   m_Layer: 0
   m_Name: MagnetPowerupNEW
-  m_TagString: Untagged
+  m_TagString: magnet_powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
   slowSpeed: 4
   normalSpeed: 4
   fastSpeed: 4
-  attractionForce: 10
-  attractionRange: 10
+  attractionForce: 0
+  attractionRange: 0
   _player: {fileID: 0}
   _target: {fileID: 0}
   playerMove: {fileID: 0}
@@ -116,7 +116,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587774624910656343}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.12191811, y: 0.07987835, z: 0.01989014}

@@ -77,7 +77,7 @@ public class Trash : MonoBehaviour
 
                 // Apply an attraction force towards the player
                 Rigidbody rb = GetComponent<Rigidbody>();
-                rb.AddForce(directionToPlayer * force, ForceMode.Acceleration);
+                rb.AddForce(directionToPlayer * force, ForceMode.Force);
             }
         }
 

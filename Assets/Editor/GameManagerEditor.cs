@@ -29,6 +29,7 @@ public class GameManagerEditor : Editor
     SerializedProperty _HUD;
     SerializedProperty _nextLevelPanel;
     SerializedProperty _loadingScreen;
+    SerializedProperty _realtimeProgressBar;
     SerializedProperty _progressBar;
     SerializedProperty _stars;
     SerializedProperty _gameTimer;
@@ -62,6 +63,7 @@ public class GameManagerEditor : Editor
         _nextLevelPanel = serializedObject.FindProperty("_nextLevelPanel");
         _loadingScreen = serializedObject.FindProperty("_loadingScreen");
         _restartPanel = serializedObject.FindProperty("_restartPanel");
+        _realtimeProgressBar = serializedObject.FindProperty("_realtimeProgressBar");
         _progressBar = serializedObject.FindProperty("_progressBar");
         _stars = serializedObject.FindProperty("_stars");
         _gameTimer = serializedObject.FindProperty("_gameTimer");
@@ -131,6 +133,7 @@ public class GameManagerEditor : Editor
             EditorGUILayout.PropertyField(_restartPanel);
             EditorGUILayout.PropertyField(_pauseMenu);
             EditorGUILayout.PropertyField(_HUD);
+            EditorGUILayout.PropertyField(_realtimeProgressBar);
             EditorGUILayout.PropertyField(_progressBar);
             EditorGUILayout.PropertyField(_stars);
             EditorGUILayout.PropertyField(_gameTimer);

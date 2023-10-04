@@ -51,10 +51,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _HUD;
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
+    [SerializeField] Slider _realtimeProgressBar;
     [SerializeField] Slider _progressBar;
     [SerializeField] Slider _stars;
     [SerializeField] TextMeshProUGUI _gameTimer;
     bool _adRunning = false;
+
 
 
     private void Awake()
@@ -313,6 +315,7 @@ public class GameManager : MonoBehaviour
             }
         }
         _stars.value = stars;
+        _realtimeProgressBar.value = stars;
     }
 
     public void RestartLevel()

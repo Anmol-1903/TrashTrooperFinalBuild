@@ -16,6 +16,9 @@ public class BetterCatchSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI _wet_Text;
     [SerializeField] TextMeshProUGUI _dry_Text;
 
+    [SerializeField] TextMeshProUGUI _wet_Collected;
+    [SerializeField] TextMeshProUGUI _dry_Collected;
+
     [SerializeField] Animator _wet_Dustbin_Lid;
     [SerializeField] Animator _dry_Dustbin_Lid;
 
@@ -92,6 +95,7 @@ public class BetterCatchSystem : MonoBehaviour
                 _dry_capacity = 0;
             }
         }
+        UpdateTrashText();
     }
     private void Update()
     {
@@ -113,6 +117,7 @@ public class BetterCatchSystem : MonoBehaviour
                     floor.HealNature((_max_Wet_capacity * _capacity_upgrade) - _wet_capacity);
                     _wet_Trashcan += (_max_Wet_capacity * _capacity_upgrade) - _wet_capacity;
                     _wet_capacity = _max_Wet_capacity * _capacity_upgrade;
+                    UpdateTrashText();
                 }
             }
         }
@@ -138,6 +143,7 @@ public class BetterCatchSystem : MonoBehaviour
                     floor.HealNature((_max_Dry_capacity * _capacity_upgrade) - _dry_capacity);
                     _dry_Trashcan += (_max_Dry_capacity * _capacity_upgrade) - _dry_capacity;
                     _dry_capacity = _max_Dry_capacity * _capacity_upgrade;
+                    UpdateTrashText();
                 }
             }
         }
@@ -161,6 +167,17 @@ public class BetterCatchSystem : MonoBehaviour
             {
                 _dry_capacity = 0;
             }
+        }
+    }
+    void UpdateTrashText()
+    {
+        if(_wet_Collected != null)
+        {
+            _wet_Collected.text = _wet_Trashcan.ToString();
+        }
+        if(_dry_Collected != null)
+        {
+            _dry_Collected.text = _dry_Trashcan.ToString();
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -319,6 +336,7 @@ public class BetterCatchSystem : MonoBehaviour
                             _dry_Cannon.CollectTrash(1);
                         }
                     }
+                    UpdateTrashText();
                 }
             }
             yield return null;
