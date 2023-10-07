@@ -7,6 +7,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] GameObject[] _trashBall;
     [SerializeField] GameObject _spawnPos;
     [SerializeField] GameObject _target;
+    [SerializeField] AudioSource _fire_sfx;
 
     Animator _anim;
 
@@ -21,6 +22,7 @@ public class Cannon : MonoBehaviour
         if (_currentFillAmount >= _fillAmount)
         {
             _anim.SetTrigger("Shoot");
+            _fire_sfx.Play();
             _currentFillAmount = 0;
         }
     }
@@ -35,7 +37,7 @@ public class Cannon : MonoBehaviour
         {
             rb.AddTorque(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
             Vector3 direction = (_target.transform.position - transform.position).normalized;
-            rb.velocity = direction * _shootForce;
+            rb.velocity = direction * _shootForce * Time.deltaTime;
         }
     }
 }
