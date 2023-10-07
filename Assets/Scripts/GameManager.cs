@@ -315,7 +315,10 @@ public class GameManager : MonoBehaviour
             }
         }
         _stars.value = stars;
+        if(_realtimeProgressBar != null)
+        {
         _realtimeProgressBar.value = stars;
+        }
     }
 
     public void RestartLevel()
