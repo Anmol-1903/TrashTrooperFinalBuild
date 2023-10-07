@@ -1,21 +1,26 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-
+using UnityEngine.UI;
 public class ObjectiveUI : MonoBehaviour
 {
     [SerializeField] Animator _objectiveUI;
-    [SerializeField] GameObject _objectiveCanvas, _trashSpawner , UI_manager;
+    [SerializeField] GameObject _objectiveCanvas, UI_manager;
     [SerializeField] TextMeshProUGUI _Objectivetext;
     [TextArea(5,5)]
     [SerializeField] string[] _line;
     [SerializeField] float _typingspeed;
-
+    TrashSpawner _trashSpawner;
+    [SerializeField] Button _objective_btn;
     private int index;
-
+    private bool _iscomplete;
+    private void Awake()
+    {
+        _trashSpawner = FindObjectOfType<TrashSpawner>();
+    }
     void Start()
     {
-        _trashSpawner.SetActive(false);
+        _objective_btn.interactable = false;
         UI_manager.SetActive(false);
         _Objectivetext.text = string.Empty;
         index = 0;
@@ -32,7 +37,7 @@ public class ObjectiveUI : MonoBehaviour
     void Delay()
     {
         UI_manager.SetActive(true);
-        _trashSpawner.SetActive(true);
+        _trashSpawner.enabled = true;
     }
     void TextCalling()
     {
@@ -42,7 +47,12 @@ public class ObjectiveUI : MonoBehaviour
     {
         foreach (char c in _line[index].ToString().ToCharArray())
         {
+
             _Objectivetext.text += c;
+            if (_Objectivetext.text.Length == _line[index].Length)
+            {
+                _objective_btn.interactable = true;
+            }
             yield return new WaitForSeconds(_typingspeed);
         }
     }
