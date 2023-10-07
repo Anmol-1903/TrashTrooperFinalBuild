@@ -15205,8 +15205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d285b14e95c7344bf4310692d53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillAmount: 10
-  _currentFillAmount: 9
+  _fillAmount: 1
+  _currentFillAmount: 0
   _shootForce: 800
   _trashBall:
   - {fileID: 919132149155446097, guid: 279d2f4d5cd96434499bbb0c536782bf, type: 3}
@@ -15847,8 +15847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d285b14e95c7344bf4310692d53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillAmount: 10
-  _currentFillAmount: 9
+  _fillAmount: 1
+  _currentFillAmount: 0
   _shootForce: 800
   _trashBall:
   - {fileID: 919132149155446097, guid: c811b54b68303a442afb302db4e9410a, type: 3}
