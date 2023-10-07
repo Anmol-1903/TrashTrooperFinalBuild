@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17042695, g: 0.16536415, b: 0.1598921, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6140,7 +6140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &840748983
 Transform:
   m_ObjectHideFlags: 0
@@ -6219,10 +6219,9 @@ MonoBehaviour:
   PowerUps:
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
-  - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
-  - {fileID: 4464010251649017467, guid: 1612cdba73004cc46a4ecf7e2cdcff59, type: 3}
-  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
-  - {fileID: 1567110112275527436, guid: 23f7b8fe47eb53742bc6594f4bd0c403, type: 3}
+  - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
+  - {fileID: 6080173766361078799, guid: 0b15387c97f9544499b7e58bfa123c1a, type: 3}
+  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
 --- !u!1 &841697023
 GameObject:
   m_ObjectHideFlags: 0
@@ -9144,7 +9143,7 @@ MonoBehaviour:
   _surviveTimeForStar1: 0
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
-  _minCleanlinessValue: 20
+  _minCleanlinessValue: 10
   _trashCountForStar1: 0
   _trashCountForStar2: 0
   _trashCountForStar3: 0
@@ -9158,6 +9157,7 @@ MonoBehaviour:
   _HUD: {fileID: 1113972990}
   _nextLevelPanel: {fileID: 602051102}
   _loadingScreen: {fileID: 2075591095}
+  _realtimeProgressBar: {fileID: 0}
   _progressBar: {fileID: 1099279115}
   _stars: {fileID: 488256614}
   _gameTimer: {fileID: 1251544248}
