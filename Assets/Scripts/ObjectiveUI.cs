@@ -12,11 +12,14 @@ public class ObjectiveUI : MonoBehaviour
     [SerializeField] float _typingspeed;
     TrashSpawner _trashSpawner;
     [SerializeField] Button _objective_btn;
+    [SerializeField] int _gameEndTimer;
+    GameManager _gameManager;
     private int index;
     private bool _iscomplete;
     private void Awake()
     {
         _trashSpawner = FindObjectOfType<TrashSpawner>();
+        _gameManager = FindObjectOfType<GameManager>(); 
     }
     void Start()
     {
@@ -38,6 +41,7 @@ public class ObjectiveUI : MonoBehaviour
     {
         UI_manager.SetActive(true);
         _trashSpawner.enabled = true;
+        _gameManager._gameEndCounter = _gameEndTimer;
     }
     void TextCalling()
     {

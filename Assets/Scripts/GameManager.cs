@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool _bossDead;
 
     #endregion
-    float _gameEndCounter;
+    public float _gameEndCounter;
     int stars;
 
     TrashDeSpawner TDS;
@@ -206,13 +206,16 @@ public class GameManager : MonoBehaviour
         }
         else if (objective == Objective.TrashCount)
         {
+            
             _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
             if (TDS._cleanliness > 0 && _gameEndCounter > 0)
             {
+                Debug.Log("Hello");
                 _gameEndCounter -= Time.deltaTime;
                 if (BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
                 {
                     stars = 3;
+                    Debug.Log(stars);
                     if (_counter <= 0)
                     {
                         if (Time.timeScale > 0.25f)
@@ -315,9 +318,9 @@ public class GameManager : MonoBehaviour
             }
         }
         _stars.value = stars;
-        if(_realtimeProgressBar != null)
+        if (_realtimeProgressBar != null)
         {
-        _realtimeProgressBar.value = stars;
+            _realtimeProgressBar.value = stars;
         }
     }
 
