@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
             _gameEndCounter = 0;
         else if (objective == Objective.TrashCount)
         {
-            _gameEndCounter = 0;
+            _gameEndCounter = 5;
             BCS = FindObjectOfType<BetterCatchSystem>();
         }
         else if(objective == Objective.Boss)
@@ -210,38 +210,12 @@ public class GameManager : MonoBehaviour
             _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
             if (TDS._cleanliness > 0 && _gameEndCounter > 0)
             {
-                Debug.Log("Hello");
                 _gameEndCounter -= Time.deltaTime;
+               /* if (BCS._wet_Trashcan >= _trashCountForStar3)*/
                 if (BCS._dry_Trashcan >= _trashCountForStar3 && BCS._wet_Trashcan >= _trashCountForStar3)
                 {
                     stars = 3;
-                    Debug.Log(stars);
-                    if (_counter <= 0)
-                    {
-                        if (Time.timeScale > 0.25f)
-                        {
-                            Time.timeScale -= Time.deltaTime;
-                        }
-                        else
-                        {
-                            if (!_adRunning)
-                            {
-                                _ia.ShowAd();
-                                _adRunning = true;
-                            }
-                            _nextLevelPanel.SetActive(true);
-                            AudioManager.Instance.BG_Music(_levelComplete);
-                            if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
-                            {
-                                PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
-                            }
-                            if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 0) < stars)
-                            {
-                                PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), stars);
-                            }
-                            Time.timeScale = 0;
-                        }
-                    }
+                    
                 }
                 else if (BCS._dry_Trashcan >= _trashCountForStar2 && BCS._wet_Trashcan >= _trashCountForStar2)
                 {
@@ -264,6 +238,52 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    _restartPanel.SetActive(true);
+                    Time.timeScale = 0;
+                }
+            }
+            if (_gameEndCounter <= 0 && stars > 0)
+            {
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    if (!_adRunning)
+                    {
+                        _ia.ShowAd();
+                        _adRunning = true;
+                    }
+
+
+                    _nextLevelPanel.SetActive(true);
+
+                    AudioManager.Instance.BG_Music(_levelComplete);
+                    if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
+                    {
+                        PlayerPrefs.SetInt("LevelsPassed", SceneManager.GetActiveScene().buildIndex);
+                    }
+                    if (PlayerPrefs.GetInt(SceneManager.GetActiveScene().buildIndex.ToString(), 0) < stars)
+                    {
+                        PlayerPrefs.SetInt(SceneManager.GetActiveScene().buildIndex.ToString(), stars);
+                    }
+                    Time.timeScale = 0;
+                }
+            }
+            else if (_gameEndCounter <= 0 && stars == 0)
+            {
+                if (Time.timeScale > 0.25f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
+                else
+                {
+                    if (!_adRunning)
+                    {
+                        _ia.ShowAd();
+                        _adRunning = true;
+                    }
                     _restartPanel.SetActive(true);
                     Time.timeScale = 0;
                 }

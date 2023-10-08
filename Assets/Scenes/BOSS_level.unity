@@ -660,7 +660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67804767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.711231, y: 1.5108677, z: -0.16311836}
+  m_LocalPosition: {x: 17.021, y: 1.5108677, z: -0.16311836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5984,7 +5984,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 98
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -9405,6 +9405,7 @@ MonoBehaviour:
   _trashCountForStar3: 0
   BCS: {fileID: 0}
   _bossDead: 0
+  _gameEndCounter: 0
   _levelComplete: {fileID: 8300000, guid: 4a9d7634da168364fa0821f72b5ec176, type: 3}
   _gameDuration: 300
   _counter: 0

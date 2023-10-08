@@ -42,8 +42,8 @@ public class BetterCatchSystem : MonoBehaviour
     [SerializeField] GameObject _trash_In_Inventory;
     [SerializeField] GameObject[] _trashBags;
 
-    [SerializeField] public int _dry_Trashcan = 0;
-    [SerializeField] public int _wet_Trashcan = 0;
+     public int _dry_Trashcan = 0;
+     public int _wet_Trashcan = 0;
 
     [SerializeField] public int _max_Dry_capacity = 3;
     [SerializeField] public int _max_Wet_capacity = 3;

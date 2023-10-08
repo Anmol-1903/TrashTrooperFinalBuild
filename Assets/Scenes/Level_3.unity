@@ -7815,9 +7815,9 @@ MonoBehaviour:
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
   _minCleanlinessValue: 0
-  _trashCountForStar1: 15
-  _trashCountForStar2: 35
-  _trashCountForStar3: 50
+  _trashCountForStar1: 1
+  _trashCountForStar2: 2
+  _trashCountForStar3: 3
   BCS: {fileID: 0}
   _bossDead: 0
   _gameEndCounter: 0
