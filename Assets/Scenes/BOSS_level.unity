@@ -3310,14 +3310,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323069105}
-  m_LocalRotation: {x: 6.096747e-10, y: -1, z: -6.963318e-12, w: 0.00000090897527}
-  m_LocalPosition: {x: -0.27, y: -12.24, z: 18.69}
+  m_LocalRotation: {x: -0.009703304, y: -0.7613821, z: -0.64810634, w: 0.0127016585}
+  m_LocalPosition: {x: -0.3, y: -31.28, z: 10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004278187}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: -80.808, y: -177.573, z: -0.606}
 --- !u!114 &323069107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,10 +3350,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 6.138524
-  m_SpotAngle: 137.73413
-  m_InnerSpotAngle: 90.27385
+  m_Intensity: 10
+  m_Range: 8.570986
+  m_SpotAngle: 173.43558
+  m_InnerSpotAngle: 93.909935
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -4902,7 +4902,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536199072}
   m_LocalRotation: {x: -0.000000043711385, y: -1, z: -6.963318e-12, w: 4.348064e-12}
-  m_LocalPosition: {x: 3.32, y: -11.3, z: 7.89}
+  m_LocalPosition: {x: 3.32, y: -11.16, z: 10.32}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4942,8 +4942,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 10000
-  m_Range: 3
-  m_SpotAngle: 10
+  m_Range: 5
+  m_SpotAngle: 6
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -10949,7 +10949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482876384}
   m_LocalRotation: {x: -0.000000043711385, y: -1, z: -6.963318e-12, w: 4.348064e-12}
-  m_LocalPosition: {x: -3.49, y: -11.34, z: 7.86}
+  m_LocalPosition: {x: -3.411, y: -11.12, z: 8}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10989,8 +10989,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 10000
-  m_Range: 3
-  m_SpotAngle: 10
+  m_Range: 5
+  m_SpotAngle: 6
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
