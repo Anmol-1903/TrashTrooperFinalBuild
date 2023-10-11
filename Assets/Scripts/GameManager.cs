@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     int stars;
 
     TrashDeSpawner TDS;
-    IntestitialAd _ia;
+    
     
     [SerializeField] AudioClip _levelComplete;
 
@@ -51,23 +51,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _HUD;
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
-    [SerializeField] GameObject _lvlcomplete;
     [SerializeField] Slider _realtimeProgressBar;
     [SerializeField] Slider _progressBar;
     [SerializeField] Slider _stars;
     [SerializeField] TextMeshProUGUI _gameTimer;
-    bool _adRunning = false;
 
 
 
     private void Awake()
     {
         TDS = FindObjectOfType<TrashDeSpawner>();
-        _ia = FindObjectOfType<IntestitialAd>();
     }
     private void Start()
     {
-        _lvlcomplete.SetActive(false);
         if (objective == Objective.Cleanliness)
             _gameEndCounter = _gameEndTimer;
         else if (objective == Objective.SurviveTime)
@@ -96,13 +92,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!_adRunning)
-                    {
-                        _ia.ShowAd();
-                        _adRunning = true;
-                    }
-
-                    StartCoroutine(lvlComelete());
+                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+                    
+                    //_nextLevelPanel.SetActive(true);
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
                     {
@@ -176,12 +168,10 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!_adRunning)
-                    {
-                        _ia.ShowAd();
-                        _adRunning = true;
-                    }
-                    _nextLevelPanel.SetActive(true);
+                    
+                    //_nextLevelPanel.SetActive(true);
+                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
                     {
@@ -253,14 +243,10 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!_adRunning)
-                    {
-                        _ia.ShowAd();
-                        _adRunning = true;
-                    }
 
 
-                    _nextLevelPanel.SetActive(true);
+                    //_nextLevelPanel.SetActive(true);
+                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
 
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
@@ -282,11 +268,6 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!_adRunning)
-                    {
-                        _ia.ShowAd();
-                        _adRunning = true;
-                    }
                     _restartPanel.SetActive(true);
                     Time.timeScale = 0;
                 }
@@ -316,12 +297,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    if (!_adRunning)
-                    {
-                        _ia.ShowAd();
-                        _adRunning = true;
-                    }
-                    _nextLevelPanel.SetActive(true);
+                    //_nextLevelPanel.SetActive(true);
+                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+
                     stars = 3;
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
@@ -345,13 +323,6 @@ public class GameManager : MonoBehaviour
         {
             _realtimeProgressBar.value = stars;
         }
-    }
-    IEnumerator lvlComelete()
-    {
-        _HUD.SetActive(false);
-        _lvlcomplete.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        _nextLevelPanel.SetActive(true);
     }
     public void RestartLevel()
     {

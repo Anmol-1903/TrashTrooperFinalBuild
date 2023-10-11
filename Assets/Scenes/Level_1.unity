@@ -6460,7 +6460,10 @@ MonoBehaviour:
   _pauseMenu: {fileID: 762809032}
   _loadingScreen: {fileID: 182752967}
   _HUD: {fileID: 1455720719}
+  _lvlComplete: {fileID: 1763512411}
+  _nextlvlPanel: {fileID: 1587836589}
   _progressBar: {fileID: 659496240}
+  _timer: 0
   _pause: {fileID: 1379177155}
 --- !u!1 &1063595893
 GameObject:
@@ -7461,7 +7464,6 @@ MonoBehaviour:
   _HUD: {fileID: 1455720719}
   _nextLevelPanel: {fileID: 1587836589}
   _loadingScreen: {fileID: 182752967}
-  _lvlcomplete: {fileID: 0}
   _realtimeProgressBar: {fileID: 327613337}
   _progressBar: {fileID: 659496240}
   _stars: {fileID: 532710748}
@@ -8208,7 +8210,6 @@ GameObject:
   - component: {fileID: 1433784622}
   - component: {fileID: 1433784625}
   - component: {fileID: 1433784624}
-  - component: {fileID: 1433784623}
   m_Layer: 5
   m_Name: lvlImage
   m_TagString: Untagged
@@ -8237,27 +8238,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 804}
   m_SizeDelta: {x: 2249.7266, y: 310.03}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1433784623
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433784621}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 18982bbcee7551344999dc92e67afd79, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1433784624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10058,7 +10038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1763512412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10080,21 +10060,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1763512413
-MonoBehaviour:
+--- !u!95 &1763512413
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763512411}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e01367e403cdfa4fa85cbbd9b93605c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nextlvlPanel: {fileID: 1587836589}
-  _hud: {fileID: 1455720719}
-  _lvlcomplete: {fileID: 1433784621}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18982bbcee7551344999dc92e67afd79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1783523259
 GameObject:
   m_ObjectHideFlags: 0
