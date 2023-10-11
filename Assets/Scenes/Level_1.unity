@@ -7461,6 +7461,7 @@ MonoBehaviour:
   _HUD: {fileID: 1455720719}
   _nextLevelPanel: {fileID: 1587836589}
   _loadingScreen: {fileID: 182752967}
+  _lvlcomplete: {fileID: 0}
   _realtimeProgressBar: {fileID: 327613337}
   _progressBar: {fileID: 659496240}
   _stars: {fileID: 532710748}
@@ -10263,7 +10264,7 @@ MonoBehaviour:
     50 = 2 bag(s). above 80 = 3 bag(s)'
   _typingspeed: 0.01
   _objective_btn: {fileID: 1757782855}
-  _gameEndTimer: 0
+  _gameEndTimer: 121
 --- !u!4 &1816730327
 Transform:
   m_ObjectHideFlags: 0

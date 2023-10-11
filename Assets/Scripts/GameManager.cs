@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _HUD;
     [SerializeField] GameObject _nextLevelPanel;
     [SerializeField] GameObject _loadingScreen;
+    [SerializeField] GameObject _lvlcomplete;
     [SerializeField] Slider _realtimeProgressBar;
     [SerializeField] Slider _progressBar;
     [SerializeField] Slider _stars;
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        _lvlcomplete.SetActive(false);
         if (objective == Objective.Cleanliness)
             _gameEndCounter = _gameEndTimer;
         else if (objective == Objective.SurviveTime)
@@ -99,7 +101,8 @@ public class GameManager : MonoBehaviour
                         _ia.ShowAd();
                         _adRunning = true;
                     }
-                    _nextLevelPanel.SetActive(true);
+
+                    StartCoroutine(lvlComelete());
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
                     {
@@ -343,7 +346,13 @@ public class GameManager : MonoBehaviour
             _realtimeProgressBar.value = stars;
         }
     }
-
+    IEnumerator lvlComelete()
+    {
+        _HUD.SetActive(false);
+        _lvlcomplete.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        _nextLevelPanel.SetActive(true);
+    }
     public void RestartLevel()
     {
         TurnOffAllGameObjects();
