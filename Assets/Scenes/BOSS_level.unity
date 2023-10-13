@@ -2353,7 +2353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5aa0e6429b17da14ebc74a14195d63e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5aa0e6429b17da14ebc74a14195d63e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8032,7 +8032,10 @@ MonoBehaviour:
   _pauseMenu: {fileID: 1803787880}
   _loadingScreen: {fileID: 2075591095}
   _HUD: {fileID: 1113972990}
+  _lvlComplete: {fileID: 0}
+  _nextlvlPanel: {fileID: 0}
   _progressBar: {fileID: 1099279115}
+  _timer: 0
   _pause: {fileID: 0}
 --- !u!1 &1063595893
 GameObject:
