@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.17053077, g: 0.16543087, b: 0.15994406, a: 1}
+  m_IndirectSpecularColor: {r: 0.17065378, g: 0.16550459, b: 0.16013075, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7380,9 +7380,9 @@ MonoBehaviour:
   m_FillRect: {fileID: 196963394}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 5
-  m_WholeNumbers: 1
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8151,7 +8151,7 @@ MonoBehaviour:
   _nextlvlPanel: {fileID: 0}
   _progressBar: {fileID: 1099279115}
   _timer: 0
-  _pause: {fileID: 0}
+  _sm: {fileID: 1803787882}
 --- !u!1 &1063595893
 GameObject:
   m_ObjectHideFlags: 0
@@ -12859,9 +12859,9 @@ MonoBehaviour:
   m_FillRect: {fileID: 537115801}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 5
-  m_WholeNumbers: 1
+  m_MinValue: 0.0001
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:

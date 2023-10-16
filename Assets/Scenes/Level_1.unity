@@ -6900,7 +6900,7 @@ MonoBehaviour:
   _nextlvlPanel: {fileID: 1587836589}
   _progressBar: {fileID: 659496240}
   _timer: 0
-  _pause: {fileID: 1379177155}
+  _sm: {fileID: 762809036}
 --- !u!1 &1063595893
 GameObject:
   m_ObjectHideFlags: 0
