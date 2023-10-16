@@ -24,18 +24,20 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject _lvlComplete, _nextlvlPanel;
     [SerializeField] Slider _progressBar;
     [SerializeField] float _timer;
-    [SerializeField] private AudioSource _pause;
+    [SerializeField] SettingsMenu _sm;
     private void Awake()
     {
         _ia = FindObjectOfType<IntestitialAd>();
         _instance = this;
     }
-
     private void Start()
     {
         _pauseMenu.SetActive(false);
         _loadingScreen.SetActive(false);
         _HUD.SetActive(true);
+        _sm.GetController();
+        _sm.GetMusic();
+        _sm.GetAudio();
     }
     private void Update()
     {
@@ -48,18 +50,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        if(_pause)
-            _pause.Play();
         Time.timeScale = 1;
         _pauseMenu.SetActive(false);
         _HUD.SetActive(true);
     }
     public void Pause()
     {
-        if( _pause != null)
-        {
-            _pause.Pause();
-        }
         Time.timeScale = 0;
         _pauseMenu.SetActive(true);
         _HUD.SetActive(false);
