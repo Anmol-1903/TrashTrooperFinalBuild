@@ -35,9 +35,12 @@ public class PauseMenu : MonoBehaviour
         _pauseMenu.SetActive(false);
         _loadingScreen.SetActive(false);
         _HUD.SetActive(true);
+        if(_sm != null)
+        {
         _sm.GetController();
         _sm.GetMusic();
         _sm.GetAudio();
+        }
     }
     private void Update()
     {
