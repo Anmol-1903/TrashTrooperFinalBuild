@@ -28,6 +28,7 @@ public class BossHealth : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
+            FindObjectOfType<BossAI>().GetComponent<Animator>().SetTrigger("Hurt");
             Destroy(other.gameObject);
             DealDamage(_damagePerShot);
         }
