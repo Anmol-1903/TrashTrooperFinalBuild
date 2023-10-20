@@ -29,7 +29,6 @@ public class Cannon : MonoBehaviour
     public void ShootTrashAtAunty()
     {
         GameObject temp = Instantiate(_trashBall[Random.Range(0, _trashBall.Length)], _spawnPos.transform.position, Quaternion.identity);
-        temp.tag = "Bullet";
         temp.AddComponent<Rigidbody>().useGravity = false;
         temp.AddComponent<SphereCollider>().isTrigger = true;
         Rigidbody rb = temp.GetComponent<Rigidbody>();

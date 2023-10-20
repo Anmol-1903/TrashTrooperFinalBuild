@@ -26,14 +26,18 @@ public class BossHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("BulletL"))
         {
-            FindObjectOfType<BossAI>().GetComponent<Animator>().SetTrigger("Hurt");
+            DealDamage(_damagePerShot, true);
             Destroy(other.gameObject);
-            DealDamage(_damagePerShot);
+        }
+        else if (other.CompareTag("BulletR"))
+        {
+            DealDamage(_damagePerShot, false);
+            Destroy(other.gameObject);
         }
     }
-    public void DealDamage(float _damage)
+    public void DealDamage(float _damage, bool left)
     {
         _currentHealth -= _damage;
         if(_currentHealth <= 0)
@@ -41,5 +45,6 @@ public class BossHealth : MonoBehaviour
             GameManager GM = FindObjectOfType<GameManager>();
             GM.BossKilled();
         }
+        FindObjectOfType<BossAI>().AuntyDamage(left, _currentHealth <= 0);
     }
 }

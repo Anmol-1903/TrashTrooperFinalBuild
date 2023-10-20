@@ -9,7 +9,6 @@ TagManager:
   - CamLeft
   - CamRight
   - SpawnLocation
-  - Bullet
   - WetWaste
   - DryWaste
   - Cap
@@ -27,6 +26,8 @@ TagManager:
   - Time_slower
   - Pot
   - magnet_powerup
+  - BulletL
+  - BulletR
   layers:
   - Default
   - TransparentFX

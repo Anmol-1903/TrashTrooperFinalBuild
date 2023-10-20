@@ -25,7 +25,6 @@ public class SettingsMenu : MonoBehaviour
     }
     public void GetController()
     {
-        Debug.Log("Hi");
         if (controller)
         {
             if (PlayerPrefs.GetInt("controllerType") == 1)
