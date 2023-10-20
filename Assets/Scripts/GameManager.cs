@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+                    PauseMenu.Instance.CallLvlComplete();
                     
                     //_nextLevelPanel.SetActive(true);
                     AudioManager.Instance.BG_Music(_levelComplete);
@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviour
                 {
                     
                     //_nextLevelPanel.SetActive(true);
-                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+                    PauseMenu.Instance.CallLvlComplete();
 
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
@@ -246,7 +246,7 @@ public class GameManager : MonoBehaviour
 
 
                     //_nextLevelPanel.SetActive(true);
-                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
+                    PauseMenu.Instance.CallLvlComplete();
 
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)
@@ -297,9 +297,6 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    //_nextLevelPanel.SetActive(true);
-                    PauseMenu.Instance.CallLvlComplete(_nextLevelPanel);
-
                     stars = 3;
                     AudioManager.Instance.BG_Music(_levelComplete);
                     if (PlayerPrefs.GetInt("LevelsPassed") < SceneManager.GetActiveScene().buildIndex)

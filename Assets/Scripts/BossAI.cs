@@ -29,4 +29,8 @@ public class BossAI : MonoBehaviour
         }
         _anim.SetBool("Dead", dead);
     }
+    public void NextLevelPanelAnimation()
+    {
+        PauseMenu.Instance.CallLvlComplete();
+    }
 }

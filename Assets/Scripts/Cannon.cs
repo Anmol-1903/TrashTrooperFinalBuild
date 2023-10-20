@@ -36,7 +36,7 @@ public class Cannon : MonoBehaviour
         {
             rb.AddTorque(Random.Range(-100, 100), Random.Range(-100, 100), Random.Range(-100, 100));
             Vector3 direction = (_target.transform.position - transform.position).normalized;
-            rb.velocity = direction * _shootForce * Time.deltaTime;
+            rb.velocity = direction * _shootForce;
         }
     }
 }

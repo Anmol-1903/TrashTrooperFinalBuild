@@ -85,7 +85,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
     
-    public void CallLvlComplete(GameObject nextlvlPanel)
+    public void CallLvlComplete()
     {
         if (_HUD.activeInHierarchy)
         {
@@ -103,7 +103,6 @@ public class PauseMenu : MonoBehaviour
         }
         _playAd = true;
         yield return new WaitForEndOfFrame();
-        Debug.Log("Hello");
         NextLevelPanel();
 
     }

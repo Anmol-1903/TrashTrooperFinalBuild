@@ -29,18 +29,17 @@ public class BossHealth : MonoBehaviour
         if (other.CompareTag("BulletL"))
         {
             DealDamage(_damagePerShot, true);
-            Destroy(other.gameObject);
         }
         else if (other.CompareTag("BulletR"))
         {
             DealDamage(_damagePerShot, false);
-            Destroy(other.gameObject);
         }
+        Destroy(other.gameObject);
     }
     public void DealDamage(float _damage, bool left)
     {
-        _currentHealth -= _damage;
-        if(_currentHealth <= 0)
+        _currentHealth -= 10;
+        if (_currentHealth <= 0)
         {
             GameManager GM = FindObjectOfType<GameManager>();
             GM.BossKilled();
