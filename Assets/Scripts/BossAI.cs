@@ -33,4 +33,17 @@ public class BossAI : MonoBehaviour
     {
         PauseMenu.Instance.CallLvlComplete();
     }
+    public void AuntyLaugh()
+    {
+        _anim.SetTrigger("PlayerHurt");
+    }
+    public void AuntyVictory()
+    {
+        _anim.SetTrigger("AuntyWin");
+    }
+    public void RestartPanel()
+    {
+        GameManager _gm = FindObjectOfType<GameManager>();
+        _gm.RestartPanelActive();
+    }
 }

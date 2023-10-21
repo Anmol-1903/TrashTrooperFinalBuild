@@ -32,7 +32,6 @@ public class TrashDeSpawner : MonoBehaviour
             if (other.GetComponent<Trash>())
             {
                 _cleanliness -= other.GetComponent<Trash>()._dirtiness;
-
             }
             AudioManager.Instance.TrashFallDown(_failClip);
             Destroy(other.gameObject);

@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] BetterCatchSystem BCS;
 
     [SerializeField] bool _bossDead;
+    bool ending = false;
 
     #endregion
     public float _gameEndCounter;
@@ -78,6 +79,10 @@ public class GameManager : MonoBehaviour
             _gameEndCounter = _gameEndTimer;
             _bossDead = false;
         }
+    }
+    public void RestartPanelActive()
+    {
+        _restartPanel.SetActive(true);
     }
     private void Update()
     {
@@ -273,7 +278,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        else if (objective == Objective.Boss)
+        else if (objective == Objective.Boss && !ending)
         {
             _gameTimer.text = (((int)_gameEndCounter) / 60).ToString("D2") + " : " + (((int)_gameEndCounter) % 60).ToString("D2");
             if(_gameEndCounter <= 0 || TDS._cleanliness < _minCleanlinessValue)
@@ -285,7 +290,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _restartPanel.SetActive(true);
+                    BossAI _aunty = FindObjectOfType<BossAI>();
+                    _aunty.AuntyVictory();
+                    ending = true;
                     Time.timeScale = 0;
                 }
             }
