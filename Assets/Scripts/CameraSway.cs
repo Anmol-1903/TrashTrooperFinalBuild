@@ -9,6 +9,8 @@ public class CameraSway : MonoBehaviour
     [SerializeField] Transform _dryClamp;
     [SerializeField] Transform _wetClamp;
 
+    CameraShake _cs;
+
     float _percentage = 0.5f;
     float _cameraPercentage = 0.5f;
 
@@ -17,6 +19,7 @@ public class CameraSway : MonoBehaviour
     Transform _player;
     private void Awake()
     {
+        _cs = GetComponentInParent<CameraShake>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _wetClamp = GameObject.FindGameObjectWithTag("WetClamp").transform;
         _dryClamp = GameObject.FindGameObjectWithTag("DryClamp").transform;
@@ -28,8 +31,9 @@ public class CameraSway : MonoBehaviour
         _percentage = CalculateLerpTime(_wetClamp.position, _dryClamp.position, _player.position);
         _cameraPercentage = Mathf.Lerp(_cameraPercentage, _percentage, Time.deltaTime * _followSpeed);
         transform.position = Vector3.Lerp(_cameraClampLeft.position, _cameraClampRight.position, _cameraPercentage);
-        if(_cameraTarget != null)
+        if(_cameraTarget != null && !_cs.IsShaking())
         {
+            Debug.Log("Target Locked");
             transform.LookAt(_cameraTarget);
         }
     }

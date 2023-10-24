@@ -6,18 +6,22 @@ public class CameraShake : MonoBehaviour
     [SerializeField] float _duration;
     [SerializeField] AnimationCurve _curve;
     [SerializeField] bool _showShake;
-
-    private void Update()
+    private void Start()
     {
-        if( _showShake)
-        {
-            _showShake = false;
-            StartCoroutine(Shake());
-        }
+        _showShake = false;
     }
-
+    public void ShakeCamera()
+    {
+        if(!_showShake)
+            StartCoroutine(Shake());
+    }
+    public bool IsShaking()
+    {
+        return _showShake;
+    }
     IEnumerator Shake()
     {
+        _showShake = true;
         Vector3 startPos = transform.position;
         float elapsedTime = 0f;
 
@@ -28,6 +32,7 @@ public class CameraShake : MonoBehaviour
             transform.position = startPos + Random.insideUnitSphere * strength;
             yield return null;
         }
-        transform.position = startPos;  
+        transform.position = startPos;
+        _showShake = false;
     }
 }

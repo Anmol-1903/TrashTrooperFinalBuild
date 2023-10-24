@@ -5,7 +5,7 @@ public class BossHealth : MonoBehaviour
     [SerializeField] float _maxHealth = 100f;
     [SerializeField] float _damagePerShot = 10f;
     [SerializeField] Slider _bossBar;
-    [SerializeField] float _currentHealth;
+    float _currentHealth;
     float _apparentHealth;
     private void Start()
     {
@@ -45,5 +45,9 @@ public class BossHealth : MonoBehaviour
             GM.BossKilled();
         }
         FindObjectOfType<BossAI>().AuntyDamage(left, _currentHealth <= 0);
+    }
+    public float GetCurrentHealth()
+    {
+        return _currentHealth;
     }
 }

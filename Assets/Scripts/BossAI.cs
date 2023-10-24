@@ -4,6 +4,7 @@ public class BossAI : MonoBehaviour
     Animator _anim;
     [SerializeField] Transform _spawnPoint;
     [SerializeField] GameObject[] _trashPrefabs;
+    [SerializeField] float _lowHealth = 30f;
     GameObject _selectedTrashPrefab;
     private void Awake()
     {
@@ -45,5 +46,20 @@ public class BossAI : MonoBehaviour
     {
         GameManager _gm = FindObjectOfType<GameManager>();
         _gm.RestartPanelActive();
+    }
+    public void AuntyLow()
+    {
+        _anim.SetBool("AuntyLow", true);
+    }
+    public void AuntySmashBuilding()
+    {
+        FindObjectOfType<CameraShake>().ShakeCamera();
+    }
+    public void AuntyMad()
+    {
+        if(FindObjectOfType<BossHealth>().GetCurrentHealth() <= _lowHealth)
+        {
+            AuntyLow();
+        }
     }
 }
