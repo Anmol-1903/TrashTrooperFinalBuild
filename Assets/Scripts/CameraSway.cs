@@ -31,10 +31,14 @@ public class CameraSway : MonoBehaviour
         _percentage = CalculateLerpTime(_wetClamp.position, _dryClamp.position, _player.position);
         _cameraPercentage = Mathf.Lerp(_cameraPercentage, _percentage, Time.deltaTime * _followSpeed);
         transform.position = Vector3.Lerp(_cameraClampLeft.position, _cameraClampRight.position, _cameraPercentage);
-        if(_cameraTarget != null && !_cs.IsShaking())
+        if (_cameraTarget != null && _cs != null)
         {
-            Debug.Log("Target Locked");
-            transform.LookAt(_cameraTarget);
+
+            if (!_cs.IsShaking())
+            {
+                Debug.Log("Target Locked");
+                transform.LookAt(_cameraTarget);
+            }
         }
     }
     public float CalculateLerpTime(Vector3 start, Vector3 end, Vector3 target)

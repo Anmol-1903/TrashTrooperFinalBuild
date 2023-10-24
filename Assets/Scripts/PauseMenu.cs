@@ -65,7 +65,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
-        _levelFailedScreen.SetActive(false); //faizal
+        //_levelFailedScreen.SetActive(false); //faizal
         StartCoroutine(LoadLevel(0));
     }
     public void RestartLevel()
@@ -114,8 +114,8 @@ public class PauseMenu : MonoBehaviour
     }
     private void TurnEveryPanelOFF() //faizal
     {
-        _pauseMenu.SetActive(false);
-        _loadingScreen.SetActive(false);
-        _levelFailedScreen.SetActive(false);
+        if(_pauseMenu) _pauseMenu.SetActive(false);
+        if(_loadingScreen) _loadingScreen.SetActive(false);
+        if(_levelFailedScreen) _levelFailedScreen.SetActive(false);
     }
 }
