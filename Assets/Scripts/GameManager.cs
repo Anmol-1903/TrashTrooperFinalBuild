@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
     public void RestartPanelActive()
     {
         _restartPanel.SetActive(true);
+        AudioManager.Instance.STOP_BG_Music();
     }
     private void Update()
     {
@@ -137,7 +138,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _restartPanel.SetActive(true);
+                    //_restartPanel.SetActive(true);
+                    RestartPanelActive();
                     Time.timeScale = 0;
                 }
             }
@@ -197,7 +199,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _restartPanel.SetActive(true);
+                    //_restartPanel.SetActive(true);
+                    RestartPanelActive();
                     Time.timeScale = 0;
                 }
             }
@@ -236,7 +239,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _restartPanel.SetActive(true);
+                    //_restartPanel.SetActive(true);
+                    RestartPanelActive();
                     Time.timeScale = 0;
                 }
             }
@@ -273,7 +277,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _restartPanel.SetActive(true);
+                    //_restartPanel.SetActive(true);
+                    RestartPanelActive();
                     Time.timeScale = 0;
                 }
             }
