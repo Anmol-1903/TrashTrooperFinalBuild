@@ -600,7 +600,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2324,7 +2324,7 @@ RectTransform:
   - {fileID: 1879424761}
   - {fileID: 1743134525}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   - 'Survive.
 
     above 40s = 1 bag(s). above 120s = 2 bag(s). above 180s = 3 bag(s)'
-  _typingspeed: 0.01
+  _typingspeed: 0
   _objective_btn: {fileID: 1341137445}
   _gameEndTimer: 0
 --- !u!4 &737074987
@@ -6034,12 +6034,12 @@ RectTransform:
   - {fileID: 1493892952}
   - {fileID: 1944657171}
   - {fileID: 607377913}
-  - {fileID: 1583049199}
   - {fileID: 1351157042}
   - {fileID: 1647766733}
   - {fileID: 344581245}
   - {fileID: 66991331}
   - {fileID: 1511619802}
+  - {fileID: 1583049199}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6812,18 +6812,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 344581242}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1262450844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7456,18 +7444,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 344581242}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1329701705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7697,7 +7673,7 @@ RectTransform:
   - {fileID: 1402827123}
   - {fileID: 548607459}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8957,7 +8933,7 @@ RectTransform:
   m_Children:
   - {fileID: 1610740046}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9252,7 +9228,7 @@ RectTransform:
   m_Children:
   - {fileID: 597178722}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10028,7 +10004,7 @@ RectTransform:
   - {fileID: 1887298731}
   - {fileID: 428147684}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11200,7 +11176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 1785402960}
-  _maximumValue: 100
+  _maximumValue: 110
   _healPerAmount: 5
   _cleanliness: 0
 --- !u!65 &1818454223
@@ -11307,18 +11283,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 344581242}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 477946569}
-  m_IndirectSpecularColor: {r: 0.1705444, g: 0.16543193, b: 0.16007017, a: 1}
+  m_IndirectSpecularColor: {r: 0.1704371, g: 0.16537382, b: 0.15990177, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1544,14 +1544,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274357680}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 17, y: -1.58, z: 0}
+  m_LocalPosition: {x: 17, y: -0.58000004, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 867474962}
   - {fileID: 679711791}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 1655848480}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &286455104
 GameObject:
@@ -3475,18 +3475,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 762809036}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &579744324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,7 +3599,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6615,18 +6603,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 762809036}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1037044252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6895,6 +6871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 762809032}
   _loadingScreen: {fileID: 182752967}
+  _levelFailedScreen: {fileID: 0}
   _HUD: {fileID: 1455720719}
   _lvlComplete: {fileID: 1763512411}
   _nextlvlPanel: {fileID: 1587836589}
@@ -9917,6 +9894,9 @@ Transform:
   - {fileID: 2050219724397174122}
   - {fileID: 946985672}
   - {fileID: 271080421}
+  - {fileID: 1999912570}
+  - {fileID: 1777259864}
+  - {fileID: 274357681}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10626,13 +10606,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777259863}
   m_LocalRotation: {x: 0.009294708, y: -0.7070453, z: 0.009294718, w: 0.7070461}
-  m_LocalPosition: {x: 16.888327, y: -1.1827881, z: 3.8}
+  m_LocalPosition: {x: 16.888327, y: -0.18278813, z: 0.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 130201371}
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1655848480}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 1.506, y: -90, z: 0}
 --- !u!1 &1783523259
 GameObject:
@@ -10801,7 +10781,7 @@ MonoBehaviour:
 
     above 30 = 1 bag(s). above
     50 = 2 bag(s). above 80 = 3 bag(s)'
-  _typingspeed: 0.01
+  _typingspeed: 0
   _objective_btn: {fileID: 1757782855}
   _gameEndTimer: 121
 --- !u!4 &1816730327
@@ -10918,7 +10898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 1366860400}
-  _maximumValue: 100
+  _maximumValue: 120
   _healPerAmount: 5
   _cleanliness: 0
 --- !u!65 &1818454223
@@ -11897,7 +11877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999912569}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -16.932, y: -1.58, z: 0}
+  m_LocalPosition: {x: -16.932, y: -0.58000004, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11907,8 +11887,8 @@ Transform:
   - {fileID: 2101151143}
   - {fileID: 1545087338}
   - {fileID: 1085900877}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 1655848480}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2064302473
 GameObject:

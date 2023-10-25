@@ -1266,18 +1266,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1257532758}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &196241815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,18 +1395,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1257532758}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4402,7 +4378,7 @@ RectTransform:
   - {fileID: 533509019}
   - {fileID: 875176102}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4479,7 +4455,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -6334,7 +6310,7 @@ RectTransform:
   - {fileID: 506260011}
   - {fileID: 938635092}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6481,12 +6457,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040326398}
   m_LocalRotation: {x: -0, y: 0.00000008940697, z: -0, w: 1}
-  m_LocalPosition: {x: 16.200003, y: -1, z: 5.55}
+  m_LocalPosition: {x: 16.200003, y: 0, z: 2.0500002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1655848480}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &1040326400
 MeshRenderer:
@@ -6574,10 +6550,10 @@ MonoBehaviour:
   _line:
   - 'Collect trash.
 
-    above 15 = 1 bag(s). above 30 = 2 bag(s). above 50 = 3 bag(s)'
-  _typingspeed: 0.01
+    above 15 = 1 bag. above 30 = 2 bags. above 50 = 3 bags'
+  _typingspeed: 0
   _objective_btn: {fileID: 29637105}
-  _gameEndTimer: 30
+  _gameEndTimer: 181
 --- !u!4 &1046919760
 Transform:
   m_ObjectHideFlags: 0
@@ -6687,13 +6663,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1113972991}
-  - {fileID: 2075591096}
   - {fileID: 607377913}
   - {fileID: 1251544247}
   - {fileID: 602051103}
   - {fileID: 996199251}
   - {fileID: 1257532757}
   - {fileID: 1913063107}
+  - {fileID: 2075591096}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7717,7 +7693,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -7891,7 +7867,7 @@ RectTransform:
   - {fileID: 148257383}
   - {fileID: 1569358491}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8115,9 +8091,9 @@ MonoBehaviour:
   _surviveTimeForStar2: 0
   _surviveTimeForStar3: 0
   _minCleanlinessValue: 0
-  _trashCountForStar1: 1
-  _trashCountForStar2: 2
-  _trashCountForStar3: 3
+  _trashCountForStar1: 15
+  _trashCountForStar2: 30
+  _trashCountForStar3: 50
   BCS: {fileID: 0}
   _bossDead: 0
   _gameEndCounter: 0
@@ -10299,6 +10275,7 @@ Transform:
   - {fileID: 8893601290964469450}
   - {fileID: 2778782178878891858}
   - {fileID: 1591805330}
+  - {fileID: 1040326399}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11096,7 +11073,7 @@ MonoBehaviour:
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 440365763}
   _maximumValue: 100
-  _healPerAmount: 10
+  _healPerAmount: 6
   _cleanliness: 0
 --- !u!65 &1818454223
 BoxCollider:
@@ -11197,18 +11174,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1054284980}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1257532758}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11666,7 +11631,7 @@ RectTransform:
   m_Children:
   - {fileID: 477178179}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12502,7 +12467,7 @@ RectTransform:
   m_Children:
   - {fileID: 1099279116}
   m_Father: {fileID: 1054284979}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -12807,10 +12772,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
+  m_fontSize: 72
   m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
