@@ -5274,7 +5274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8959002453306659517, guid: 5ab68d319ad0a994caf3df6b56fe13e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6071,14 +6071,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min_Timer_For_PowerUps_To_Spawn: 15
-  max_Timer_For_PowerUps_To_Spawn: 30
+  max_Timer_For_PowerUps_To_Spawn: 25
   counter: 20
   PowerUps:
-  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
-  - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
   - {fileID: 6080173766361078799, guid: 0b15387c97f9544499b7e58bfa123c1a, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
+  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
+  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
+  - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
+  - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
 --- !u!1 &841697023
 GameObject:
   m_ObjectHideFlags: 0
