@@ -53,7 +53,7 @@ public class SettingsMenu : MonoBehaviour
     }
     public void GetMusic()
     {
-        if (PlayerPrefs.GetFloat("MUSIC", _musicSlider.minValue) == _musicSlider.minValue)
+        if (PlayerPrefs.GetFloat("MUSIC", 0.6f) == _musicSlider.minValue)
         {
             _musicButton.isOn = true;
             _musicSlider.value = 0;
@@ -61,13 +61,13 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             _musicButton.isOn = false;
-            _musicSlider.value = PlayerPrefs.GetFloat("MUSIC", 0);
+            _musicSlider.value = PlayerPrefs.GetFloat("MUSIC", 0.6f);
         }
         _musicMixer.SetFloat("Music", Mathf.Log10(_musicSlider.value) * 20);
     }
     public void GetAudio()
     {
-        if (PlayerPrefs.GetFloat("AUDIO", _audioSlider.minValue) == _audioSlider.minValue)
+        if (PlayerPrefs.GetFloat("AUDIO", 0.6f) == _audioSlider.minValue)
         {
             _audioButton.isOn = true;
             _audioSlider.value = 0;
@@ -75,9 +75,9 @@ public class SettingsMenu : MonoBehaviour
         else
         {
             _audioButton.isOn = false;
-            _audioSlider.value = PlayerPrefs.GetFloat("AUDIO", 0);
+            _audioSlider.value = PlayerPrefs.GetFloat("AUDIO", 0.6f);
         }
-        _audioMixer.SetFloat("Audio", Mathf.Log10(_audioSlider.value * 20));
+        _audioMixer.SetFloat("Audio", Mathf.Log10(_audioSlider.value) * 20);
     }
     public void SetMusic(float volume)
     {

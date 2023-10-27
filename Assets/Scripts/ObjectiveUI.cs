@@ -13,6 +13,7 @@ public class ObjectiveUI : MonoBehaviour
     TrashSpawner _trashSpawner;
     [SerializeField] Button _objective_btn;
     [SerializeField] int _gameEndTimer;
+    [SerializeField] GameObject[] _gameAssets;
     GameManager _gameManager;
     private int index;
     private bool _iscomplete;
@@ -23,14 +24,16 @@ public class ObjectiveUI : MonoBehaviour
     }
     void Start()
     {
+        foreach(GameObject asset in _gameAssets)
+        {
+            asset.SetActive(false);
+        }
         _objective_btn.interactable = false;
         UI_manager.SetActive(false);
         _Objectivetext.text = string.Empty;
         index = 0;
         Invoke("TextCalling", 0.5f);
     }
-
-    // Update is called once per frame
     public void Objective()
     {
         _objectiveUI.SetBool("isReturn", true);
@@ -41,6 +44,10 @@ public class ObjectiveUI : MonoBehaviour
     {
         UI_manager.SetActive(true);
         _trashSpawner.enabled = true;
+        foreach (GameObject asset in _gameAssets)
+        {
+            asset.SetActive(true);
+        }
         _gameManager._gameEndCounter = _gameEndTimer;
     }
     void TextCalling()
@@ -51,7 +58,6 @@ public class ObjectiveUI : MonoBehaviour
     {
         foreach (char c in _line[index].ToString().ToCharArray())
         {
-
             _Objectivetext.text += c;
             if (_Objectivetext.text.Length == _line[index].Length)
             {
