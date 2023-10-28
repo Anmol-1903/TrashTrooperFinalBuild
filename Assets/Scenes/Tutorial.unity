@@ -7077,9 +7077,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 762809032}
   _loadingScreen: {fileID: 582515316}
+  _levelFailedScreen: {fileID: 0}
   _HUD: {fileID: 1172792646}
+  _lvlComplete: {fileID: 0}
+  _nextlvlPanel: {fileID: 0}
   _progressBar: {fileID: 1455372585}
-  _pause: {fileID: 0}
+  _timer: 0
+  _sm: {fileID: 0}
 --- !u!1001 &1065305826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8908,7 +8912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.07
+      value: 16.26
       objectReference: {fileID: 0}
     - target: {fileID: 5967265282126651468, guid: 7e58c7d98b1c7fd4497b4a5c73dd9758, type: 3}
       propertyPath: m_LocalPosition.z

@@ -4721,6 +4721,7 @@ MonoBehaviour:
   _typingspeed: 0
   _objective_btn: {fileID: 1341137445}
   _gameEndTimer: 0
+  _gameAssets: []
 --- !u!4 &737074987
 Transform:
   m_ObjectHideFlags: 0
@@ -7183,10 +7184,10 @@ MonoBehaviour:
   _cleanlinessForStar2: 0
   _cleanlinessForStar3: 0
   _gameEndTimer: 0
-  _surviveTimeForStar1: 40
-  _surviveTimeForStar2: 120
-  _surviveTimeForStar3: 180
-  _minCleanlinessValue: 30
+  _surviveTimeForStar1: 30
+  _surviveTimeForStar2: 100
+  _surviveTimeForStar3: 150
+  _minCleanlinessValue: 20
   _trashCountForStar1: 0
   _trashCountForStar2: 0
   _trashCountForStar3: 0

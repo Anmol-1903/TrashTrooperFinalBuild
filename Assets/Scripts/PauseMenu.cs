@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     private static PauseMenu _instance;
     [SerializeField] GameObject _pauseMenu;
     [SerializeField] GameObject _loadingScreen;
-    [SerializeField] GameObject _levelFailedScreen; //faizal
+    //[SerializeField] GameObject _levelFailedScreen; //faizal
     [SerializeField] GameObject _HUD;
     [SerializeField] GameObject _lvlComplete, _nextlvlPanel;
     [SerializeField] Slider _progressBar;
@@ -65,7 +65,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void GoToMainMenu()
     {
-        //_levelFailedScreen.SetActive(false); //faizal
         StartCoroutine(LoadLevel(0));
     }
     public void RestartLevel()
@@ -116,6 +115,6 @@ public class PauseMenu : MonoBehaviour
     {
         if(_pauseMenu) _pauseMenu.SetActive(false);
         if(_loadingScreen) _loadingScreen.SetActive(false);
-        if(_levelFailedScreen) _levelFailedScreen.SetActive(false);
+        //if(_levelFailedScreen) _levelFailedScreen.SetActive(false);
     }
 }

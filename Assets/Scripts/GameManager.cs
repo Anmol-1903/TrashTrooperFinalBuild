@@ -342,8 +342,9 @@ public class GameManager : MonoBehaviour
     public void NextLevel(string level)
     {
         _loadingScreen.SetActive(true);
-        StartCoroutine(LoadLevel(level));
         TurnOffAllGameObjects();
+        _loadingScreen.SetActive(true);
+        StartCoroutine(LoadLevel(level));
     }
     void TurnOffAllGameObjects()
     {
