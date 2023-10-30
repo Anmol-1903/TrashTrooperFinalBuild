@@ -902,7 +902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/10
+  m_text: 0/5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
   m_sharedMaterial: {fileID: 1998009110519147682, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.7
+  m_fontSize: 0.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6158,8 +6158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 654250788}
   _timeBetweenTrashSpawn:
-  - 0.8
-  - 1.2
+  - 1
+  - 1.4
   - 2
   - 3.5
   - 4
@@ -6182,7 +6182,7 @@ MonoBehaviour:
   - {fileID: 6238155972340555826, guid: 2c06093821ef33846928c5eb26fd99cb, type: 3}
   _potGracePeriod: 30
   _potSpawnInterval: 5
-  _potSpawnChance: 65
+  _potSpawnChance: 70
 --- !u!114 &840748985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,13 +6197,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min_Timer_For_PowerUps_To_Spawn: 15
   max_Timer_For_PowerUps_To_Spawn: 25
-  counter: 20
+  counter: 15
   PowerUps:
   - {fileID: 7636197462659703653, guid: 130827d7c223a7f469bcb731f13b7244, type: 3}
   - {fileID: 6080173766361078799, guid: 0b15387c97f9544499b7e58bfa123c1a, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
   - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
+  - {fileID: 1321242924327758793, guid: dc5646ffcfa24d84992d5375776bdd1f, type: 3}
+  - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
   - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
   - {fileID: 587774624910656343, guid: cbb6658e8a96d604caa43e90014c14cb, type: 3}
 --- !u!1 &841697023
@@ -8012,7 +8014,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 1803787880}
   _loadingScreen: {fileID: 2075591095}
-  _levelFailedScreen: {fileID: 996199250}
   _HUD: {fileID: 1113972990}
   _lvlComplete: {fileID: 994625773}
   _nextlvlPanel: {fileID: 602051102}
@@ -9724,7 +9725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/10
+  m_text: 0/5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
   m_sharedMaterial: {fileID: 1998009110519147682, guid: e73aca626ca021d48b1d0ddcd67262e0, type: 2}
@@ -9751,7 +9752,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.7
+  m_fontSize: 0.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15365,7 +15366,7 @@ MonoBehaviour:
   _failClip: {fileID: 8300000, guid: a883c930c977c024b924ff626734ac61, type: 3}
   _cleanlinessMeter: {fileID: 440365763}
   _maximumValue: 100
-  _healPerAmount: 7
+  _healPerAmount: 10
   _cleanliness: 0
 --- !u!65 &1818454223
 BoxCollider:
@@ -17652,7 +17653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d285b14e95c7344bf4310692d53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillAmount: 10
+  _fillAmount: 5
   _currentFillAmount: 0
   _shootForce: 25
   _trashBall:
@@ -18609,7 +18610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d285b14e95c7344bf4310692d53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillAmount: 10
+  _fillAmount: 5
   _currentFillAmount: 0
   _shootForce: 25
   _trashBall:
